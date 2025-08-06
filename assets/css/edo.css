@@ -1,0 +1,285 @@
+/* -------------------- Styles from the first snippet -------------------- */
+.video-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    padding-bottom: 10px;
+}
+.video-row .video-item {
+    flex: 0 0 auto; /* Prevent shrinking, but allow growing */
+    width: clamp(200px, 25vw, 400px); /* Responsive width */
+    text-align: center;
+}
+.video-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.citation {
+    background-color: #f9f9f9;
+    border-left: 4px solid #ccc;
+    padding: 1em;
+    margin-top: 3em;
+    font-family: monospace;
+}
+
+/* -------------------- Styles from the second snippet -------------------- */
+:root {
+    --font-family-base: 'Open Sans', sans-serif;
+    
+    /* Muted Color Palette */
+    --color-background-primary: #ffffff; /* Very light grey, almost white */
+    --color-background-secondary: #ffffff; /* White for content cards/sections */
+    --color-text-primary: #495057;      /* Dark grey for body text, good readability */
+    --color-text-headings: #212529;   /* Near black for strong headings */
+    --color-text-prompt: #343a40;     /* Dark grey for prompts, bold */
+    --color-accent: #822433; /* #65a59e; */           /* Muted slate blue for subtle accents */
+    --color-border: #e9ecef;           /* Light grey for subtle borders */
+
+    /* Typography */
+    --font-size-base: 1.125rem; /* Approx 18px - bigger text */
+    --font-size-h1: 2.75rem;    /* Bigger H1 */
+    --font-size-h2: 2rem;      /* Bigger H2 */
+    --font-size-h4: 0.9rem;     /* Video titles */
+    --font-size-prompt: 1.15rem; /* Prompt text size */
+    --font-size-abstract: 1.05rem;
+
+    --line-height-base: 1.7;
+    --line-height-heading: 1.3;
+
+    --font-weight-normal: 400;
+    --font-weight-semibold: 600; /* For "bold letters" emphasis */
+    --font-weight-bold: 700;     /* For main headings */
+
+    /* Spacing & Smoothness */
+    --spacing-unit: 1rem;
+    --border-radius-normal: 8px; /* Softer corners */
+    --box-shadow-soft: 0 4px 12px rgba(0, 0, 0, 0.08); /* Softer shadow */
+}
+
+/* General Reset & Body Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family-base);
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Header (from second snippet) */
+header {
+    background-color: var(--color-background-secondary);
+    padding: calc(var(--spacing-unit) * 3) calc(var(--spacing-unit) * 1.5);
+    text-align: center;
+    border-bottom: 1px solid var(--color-border);
+}
+
+header h1 {
+    font-size: var(--font-size-h1);
+    font-weight: var(--font-weight-bold);
+    color: var(--color-text-headings);
+    line-height: var(--line-height-heading);
+    margin: 0 0 calc(var(--spacing-unit) * 0.75);
+}
+
+header .abstract {
+    max-width: 900px; /* Wider for better flow */
+    margin: 0 auto;
+    font-size: var(--font-size-abstract);
+    line-height: 1.8; /* More spacing for abstract */
+    color: var(--color-text-primary);
+}
+
+/* Main Content Area */
+main {
+    padding: calc(var(--spacing-unit) * 2);
+    max-width: 1400px; /* Increased max-width for wider layouts */
+    margin: calc(var(--spacing-unit) * 1.5) auto;
+}
+
+/* Sections */
+section {
+    margin-bottom: calc(var(--spacing-unit) * 3.5);
+    padding: calc(var(--spacing-unit) * 2);
+    background-color: var(--color-background-secondary);
+    border-radius: var(--border-radius-normal);
+    box-shadow: var(--box-shadow-soft);
+}
+
+section h2 {
+    font-size: var(--font-size-h2);
+    font-weight: var(--font-weight-bold); /* Bold section titles */
+    color: var(--color-text-headings);
+    line-height: var(--line-height-heading);
+    margin: 0 0 calc(var(--spacing-unit) * 1.5);
+    padding-bottom: calc(var(--spacing-unit) * 0.75);
+    border-bottom: 2px solid var(--color-accent); /* Subtle accent underline */
+}
+
+/* Video Grid & Items */
+.video-grid {
+    display: grid;
+    /* Adjusted minmax for potentially larger video displays if content allows */
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr)); 
+    gap: calc(var(--spacing-unit) * 2.5);
+}
+
+@media (max-width: 680px) { /* Keep responsive break-point */
+    .video-grid {
+        grid-template-columns: 1fr;
+    }
+    header h1 { font-size: 2rem; }
+    section h2 { font-size: 1.5rem; }
+}
+
+.video-item {
+    /* No specific background needed if section bg is white and item is on it */
+    /* Padding within the item is handled by its children or grid gap */
+}
+
+/* Prompt Caption - No bounding box, bold text */
+.prompt-caption {
+    font-size: var(--font-size-prompt);
+    font-weight: var(--font-weight-semibold); /* Bolder prompt */
+    color: var(--color-text-prompt);
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+    line-height: 1.6;
+    text-align: center;
+    /* Removed background, border, and excessive padding for a cleaner look */
+}
+
+.video-pair-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-unit) * 1.5);
+    justify-content: space-between;
+}
+
+.video-wrapper {
+    flex: 1;
+    min-width: 280px; 
+    display: flex;
+    flex-direction: column;
+}
+
+.video-wrapper h4 { /* Baseline Model / Unlearned Model titles */
+    font-size: var(--font-size-h4);
+    font-weight: var(--font-weight-semibold); /* Bolder sub-titles */
+    color: var(--color-text-headings);
+    margin: 0 0 calc(var(--spacing-unit) * 0.75);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border-radius: calc(var(--border-radius-normal) - 2px); /* Slightly smaller radius */
+    background-color: #f0f0f0; /* Placeholder bg for video area */
+    border: 1px solid var(--color-border);
+    display: block;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05); /* Subtle shadow on videos */
+}
+
+/* Warning Overlay Styles */
+.content-warning {
+    position: relative;
+}
+
+.warning-overlay {
+    position: absolute;
+    top: 5em;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(248, 249, 250, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    padding: calc(var(--spacing-unit) * 2);
+    border-radius: var(--border-radius-normal);
+    z-index: 10;
+}
+
+.warning-overlay.hidden {
+    display: none;
+}
+
+.warning-text {
+    font-size: var(--font-size-prompt);
+    font-weight: var(--font-weight-semibold);
+    color: var(--color-text-headings);
+    margin-bottom: calc(var(--spacing-unit) * 1.5);
+    max-width: 50vw;
+    line-height: 1.6;
+}
+
+.warning-button {
+    background-color: var(--color-accent);
+    color: white;
+    border: none;
+    padding: calc(var(--spacing-unit) * 0.75) calc(var(--spacing-unit) * 1.5);
+    border-radius: calc(var(--border-radius-normal) / 2);
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-semibold);
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.warning-button:hover {
+    background-color: #5a9490;
+}
+
+.section-content {
+    transition: opacity 0.3s ease;
+}
+
+.section-content.blurred {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Button styling (assuming Bootstrap-like classes from the first snippet) */
+.btn {
+    display: inline-block;
+    font-weight: 600;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0.375rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+                border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    text-decoration: none;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #822433; /* #65a59e; */
+    border-color: #822433; /* #65a59e; */
+}
+.btn-primary:hover {
+    background-color: #538a85;
+    border-color: #538a85;
+}
+
+/* Reset link colors inside buttons */
+.btn a {
+    color: inherit;
+    text-decoration: none;
+}
