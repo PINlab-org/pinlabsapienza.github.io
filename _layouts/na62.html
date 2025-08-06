@@ -1,0 +1,39 @@
+---
+layout: page
+---
+<div id="gnn_na62">
+    <section class="bg"></section>
+    <h1 class="title">{{ page.title }}</h1>
+    <div class="wrapper">
+    </div>
+
+    <div align="center">
+        <h1>Graph Neural Networks for particle tracking in NA62 Experiment</h1>
+        <h2><i>Incontri di Fisica delle Alte Energie (IFAE 2024)</i></h2>
+        <h5 style="color:grey"> <i>Leonardo Plini, Gemma Tinti, Tommaso Spadaro, Fabio Galasso
+</i>
+        </h5>
+        <!-- <h5 style="color:grey"> <i>Sapienza University of Rome, Italy</i></h5> -->
+    </div>
+
+    <hr>
+    <p align="center"><button type="button" class="btn btn-primary"><a href="#abstract">Abstract</a></button>
+        <!-- <button type="button" class="btn btn-primary"><a href="#qualitative">Paper Presentation</a></button> -->
+        <button type="button" class="btn btn-primary"><a href="https://cds.cern.ch/record/2936731/files/document.pdf">Paper</a></button>
+        <!-- <button type="button" class="btn btn-primary"><a href="#poster-and-slides">Poster and Slides</a></button> -->
+        <!-- <button type="button" class="btn btn-primary"><a href="#talk">Talk</a></button> -->
+        <!-- <button type="button" class="btn btn-primary"><a href="https://github.com/L-Scofano/SEEME">Code</a></button> -->
+    
+                <hr>
+
+            </p>
+    <p align="center">
+        <img src="\assets\img\projects\na62\teaser.jpg" width="700" height="600" alt="centered image" />
+    </p>
+    
+
+    <hr>
+    <h1 id="abstract">Abstract</h1>
+    boh
+    The NA62 experiment at the Super Proton Synchrotron at CERN is designed to measure the branching ratio of the ultra-rare channel K+ → π+ν¯ν with BR = (8.6 ± 0.42) × 10 −11. The spectrometer that measures the momentum and direction of the incoming hadron beam particles at a rate of 750 MHz is a silicon pixel detector, the GigaTracker. Managing pile-up, temporal matching and vertex reconstruction between beam kaons and pions produced in the decays is crucial for the success of the experiment’s analyses, but the problem is complex due to the combinatorial way in which the tracks are built in the currently adopted method. In this study, starting from a simulation reproducing the NA62 conditions, we have developed and applied to this problem for the first time a technique based on Graph Neural Networks to reconstruct the particle tracks observed at the four GigaTracker stations. In fact, within the field of machine learning, the de facto best strategy for modeling interaction between nodes is Graph Neural Networks. This study aims to bridge the gap between machine learning best practices and current modeling approaches in the NA62 experiment. We formulate the problem as a binary classification of the edges in the graph where each node represents a particle hit in the stations. The proposed strategy allows for setting topological constraints based on the physical knowledge of the experiment and considerable flexibility concerning the number of particles present in each event. The results show high efficiency and purity essential for the success of the analysis.
+</div>

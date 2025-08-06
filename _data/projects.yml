@@ -1,4 +1,14 @@
 - project:
+    title: Graph Neural Networks for particle tracking in NA62 Experiment
+    authors: Leonardo Plini, Gemma Tinti, Tommaso Spadaro, Fabio Galasso
+    event: # preprint
+    date: 2025
+    image:
+      path: "na62/teaser.jpg" # path: assets/img/projects/
+      alt: "Pictorial of the model"
+    webpage: na62
+
+- project:
     title: Video Unlearning via Low-Rank Refusal Vector
     authors: Simone Facchiano, Stefano Serravalle, Matteo Migliarini, Edoardo De Matteis, Alessio Sampieri, Andrea Pilzer, Emanuele Rodolà, Indro Spinelli, Luca Franco, Fabio Galasso
     event: # preprint
@@ -6,7 +16,6 @@
     image:
       path: "video-unlearning/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
-    # webpage: https://www.pinlab.org/video-unlearning
     webpage: video-unlearning
 
 - project:
@@ -17,7 +26,8 @@
     image:
       path: "hmu/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
-    webpage: https://www.pinlab.org/hmu
+    # webpage: https://www.pinlab.org/hmu
+    webpage: hmu
 
 - project:
     title: Social EgoMesh Estimation
@@ -27,7 +37,7 @@
     image:
       path: "seeme/teaser.jpg" # path: assets/img/projects/
       alt: "Pictorial of the model"
-    webpage: https://www.pinlab.org/seeme
+    webpage: seeme
 
 - project:
     title: Length-Aware Motion Synthesis via Latent Diffusion
