@@ -1,5 +1,5 @@
 ---
 layout: aboutlatentroles
-title: Projects
+title: # Projects
 description: About Latent Roles
 ---

@@ -1,5 +1,5 @@
 ---
 layout: stag
-title: Projects
+title: # Projects
 description: Staged Contact-Aware Global Human Motion Forecasting
 ---

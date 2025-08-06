@@ -1,5 +1,5 @@
 ---
 layout: video-unlearning
-title: Projects
+title: # Projects
 description: "Video Unlearning via Low-Rank Refusal Vector"
 ---

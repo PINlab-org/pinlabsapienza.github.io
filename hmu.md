@@ -1,5 +1,5 @@
 ---
 layout: hmu
-title: Projects
+title: # Projects
 description: "Human Motion Unlearning"
 ---

@@ -1,5 +1,5 @@
 ---
 layout: ladiff
-title: Projects
+title: # Projects
 description: Length-Aware Motion Synthesis via Latent Diffusion
 ---
