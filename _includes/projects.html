@@ -1,25 +1,24 @@
 <section id="project">
   <div class="project-wrap">
-    <p class="title">{{ site.theme_settings.projects_title }}</p>
+    {% include section-header.html title=site.theme_settings.projects_title %}
     <div class="card-container">
       {% for _ in site.data.projects %}
       {% assign project = _.project %}
       {% assign id = id | plus: 1 %}
       <div class="card-wrapper">
-        <div class="card">
+        <article class="card">
           {% if project.image %}
           <div class="img-wrap">
-            <img src="{{ project.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ project.image.alt }}">
+            <img src="{{ project.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ project.image.alt | default: project.title }}" loading="lazy" decoding="async">
           </div>
           {% endif %}
-          <div class="text-wrap {% if project.image %}{% endif %}">
+          <div class="text-wrap">
             <div class="title-wrap">
               <p class="date">{{ project.date }}</p>
-              <div class="title">{{ project.title }}</div>
+              <h3 class="title">{{ project.title }}</h3>
             </div>
             <div class="meta">
               {% if project.skills %}
-              &middot;
               {% for skill in project.skills %}
               <span>#{{ skill }}</span>
               {% endfor %}
@@ -29,25 +28,22 @@
           </div>
           <div class="icons">
             {% if project.url %}
-            {% assign url = project.url %}
-            <a href="{{ url }}"><i class="far fa-eye"></i></a>
+            <a href="{{ project.url }}" target="_blank" rel="noopener noreferrer" title="Open project"><i class="far fa-eye"></i></a>
             {% endif %}
             {% if project.modal %}
-            <a title="{{ id }}" onClick="open_modal(this.title)" class="modal-btn"><i class="fas fa-plus"></i></a>
+            <button type="button" class="modal-btn" data-modal-open data-modal-target="{{ id }}" aria-label="Open modal">
+              <i class="fas fa-plus"></i>
+            </button>
             {% endif %}
           </div>
-        </div>
+        </article>
       </div>
-      <!-- Modal Box -->
       {% if project.modal %}
       {% include modal.html %}
       {% endif %}
-      <!-- Modal Box -->
       {% endfor %}
     </div>
   </div>
-  <div class="bg"></div>
 </section>
 
-<!-- modal -->
-<script type="text/javascript" src="{{ '/assets/js/modal.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/modal.js' | relative_url }}" defer></script>

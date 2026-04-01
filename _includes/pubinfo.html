@@ -2,65 +2,6 @@
 {% if entry.type == "thesis" -%}
   {{reference}}
 {%- else %}
-  <!-- Author -->
-  <div class="author">
-    {%- for author in entry.author_array -%}
-      {%- assign author_is_self = false -%}
-      {%- if author.last == site.scholar.last_name %}
-        {%- if site.scholar.first_name contains author.first -%}
-          {%- assign author_is_self = true -%}
-        {%- endif -%}
-      {%- endif -%}
-      {%- assign coauthor_url = nil -%}
-      {%- if site.data.coauthors[author.last] -%}
-        {%- for coauthor in site.data.coauthors[author.last] -%}
-          {%- if coauthor.firstname contains author.first -%}
-            {%- assign coauthor_url = coauthor.url -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-      
-      {%- if forloop.length == 1 -%}
-        {%- if author_is_self %}
-          <!-- <em>{{author.last}} {{author.first}}</em> -->
-          <em>{{author.first}} {{author.last}}</em>
-        {%- else -%}
-          <!-- {{author.last}} {{author.first}} -->
-          {{author.first}} {{author.last}}
-
-        {%- endif -%}
-      {%- else -%}
-        {%- unless forloop.last -%}
-          {% if author_is_self %}
-            <!-- <em>{{author.last}} {{author.first}}</em>,&nbsp; -->
-            <em>{{author.first}} {{author.last}}</em>,&nbsp;
-
-          {%- else -%}
-            {% if coauthor_url -%}
-              <a href="{{coauthor_url}}" target="_blank" rel="noopener noreferrer">{{author.last}} {{author.first}}</a>,&nbsp;
-            {%- else -%}
-              <!-- {{author.last}} {{author.first}},&nbsp; -->
-              {{author.first}} {{author.last}},&nbsp;
-            {%- endif -%}
-          {%- endif -%}
-        {%- else -%}
-          {% if author_is_self -%}
-            <!-- and <em>{{author.last}} {{author.first}}</em> -->
-            and <em>{{author.first}} {{author.last}}</em>
-          {% else -%}
-            {%- if coauthor_url -%}
-              and <a href="{{coauthor_url}}" target="_blank" rel="noopener noreferrer">{{author.last}} {{author.first}}</a>
-            {% else -%}
-              <!-- and {{author.last}} {{author.first}} -->
-              and {{author.first}} {{author.last}}
-            {%- endif -%}
-          {%- endif -%}
-        {%- endunless -%}
-      {%- endif -%}
-    {%- endfor %}
-  </div>
-
   <!-- Journal/Book title and date -->
   {% assign thirdLine = "" %}
   {% if entry.type == "article" -%}
@@ -88,8 +29,31 @@
   {%- if entry.year -%}
     {%- capture thirdLine -%}{{ thirdLine }}{% if thirdLine != blank %}, {% endif %}{{ entry.year }}{%- endcapture -%}
   {%- endif -%}
+
+  {% assign primary_author = "" %}
+  {% assign multiple_authors = false %}
+
+  {% if entry.author_array and entry.author_array.size > 0 %}
+    {% assign first_author = entry.author_array | first %}
+    {% capture primary_author %}{% if first_author.first %}{{ first_author.first }} {% endif %}{{ first_author.last }}{% endcapture %}
+    {% if entry.author_array.size > 1 %}
+      {% assign multiple_authors = true %}
+    {% endif %}
+  {% elsif entry.author %}
+    {% assign author_array = entry.author | split: ' and ' %}
+    {% assign primary_author = author_array | first %}
+    {% if author_array.size > 1 %}
+      {% assign multiple_authors = true %}
+    {% endif %}
+  {% endif %}
+
   <!-- Title -->
-  <div class="title_pub">{{entry.title}}</div>
+  <div class="title_pub">{{ entry.title }}</div>
+
+  <!-- Author (first author only) -->
+  <div class="author">
+    {{ primary_author | strip }}{% if multiple_authors %} et al.{% endif %}
+  </div>
 
   <div class="third-line">
     {{ thirdLine | strip }}

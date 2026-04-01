@@ -2,38 +2,30 @@
 layout: page
 ---
 
-<head>
-  <link rel="stylesheet" href="/assets/css/edo.css">
-</head>
-
-<div id="mocodad">
+<div id="mocodad" class="project-page">
     <section class="bg"></section>
     <h1 class="title">{{ page.title }}</h1>
-    <div class="wrapper">
-    </div>
 
-    <div align="center">
+    <div class="align-center">
         <h1>Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection</h1>
         <h2><i>International Conference on Computer Vision (ICCV) 2023</i></h2>
-        <h5 style="color:grey"> <i>Alessandro Flaborea, Luca Collorone, Guido D'Amely, Stefano D'Arrigo, Bardh Prenkaj and Fabio Galasso</i>
+        <h5 class="text-muted"> <i>Alessandro Flaborea, Luca Collorone, Guido D'Amely, Stefano D'Arrigo, Bardh Prenkaj and Fabio Galasso</i>
         </h5>
-        <!-- <h5 style="color:grey"> <i>Sapienza University of Rome, Italy</i></h5> -->
+        <!-- <h5 class="text-muted"> <i>Sapienza University of Rome, Italy</i></h5> -->
     </div>
 
     <hr>
-    <p align="center"><button type="button" class="btn btn-primary"><a href="#abstract">Abstract</a></button>
-        <!-- <button type="button" class="btn btn-primary"><a href="#qualitative">Paper Presentation</a></button> -->
-        <button type="button" class="btn btn-primary"><a href="https://arxiv.org/abs/2307.07205">Paper</a></button>
-        <!-- <button type="button" class="btn btn-primary"><a href="#poster-and-slides">Poster and Slides</a></button> -->
-        <!-- <button type="button" class="btn btn-primary"><a href="#talk">Talk</a></button> -->
-        <button type="button" class="btn btn-primary"><a
-                href="https://github.com/aleflabo/MoCoDAD">Code</a></button>
-    
-                <hr>
+    <p class="align-center"><a class="btn btn-primary" href="#abstract">Abstract</a>
+        <!-- <a class="btn btn-primary" href="#qualitative">Paper Presentation</a> -->
+        <a class="btn btn-primary" href="https://arxiv.org/abs/2307.07205">Paper</a>
+        <!-- <a class="btn btn-primary" href="#poster-and-slides">Poster and Slides</a> -->
+        <!-- <a class="btn btn-primary" href="#talk">Talk</a> -->
+        <a class="btn btn-primary" href="https://github.com/aleflabo/MoCoDAD">Code</a>
+    </p>
 
-            </p>
-    <div align="center">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/IuDzVez--9U?si=CZuFyyUyK-s8vDm0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>        
+    <hr>
+    <div class="align-center">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/IuDzVez--9U?si=CZuFyyUyK-s8vDm0" title="MoCoDAD presentation video" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
         </div>
 
@@ -53,8 +45,8 @@ layout: page
     is not pertinent to the actual future. We validate our model on 4 established benchmarks: 
     UBnormal, HR-UBnormal, HR-STC, and HR-Avenue, with extensive experiments surpassing state-of-the-art results.
 
-    <p align="center">
-        <img src="\assets\img\projects\mocodad\mocodad.png" width="700" height="600" alt="centered image" />
+    <p class="align-center">
+        <img src="/assets/img/projects/mocodad/mocodad.webp" width="700" height="600" alt="centered image" />
     </p>
     <!-- <hr>
     <h1 id="qualitative">Paper Presentation</h1>

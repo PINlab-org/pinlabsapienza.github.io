@@ -1,5 +1,5 @@
 - people:
-  image: \assets\img\people\fab_pic.png # do not change
+  image: /assets/img/people/fab_pic.png # do not change
   name: Fabio Galasso
   status: Head of the lab & Full Professor
   category: "Faculty"
@@ -24,7 +24,7 @@
     instagram:
 
 # - people:
-#   image: \assets\img\people\smile.png  # do not change
+#   image: /assets/img/people/smile.png  # do not change
 #   name: Bharti Munjal
 #   status: Ph.D. Student
 
@@ -48,7 +48,7 @@
 #     instagram:
 
 - people:
-  image: \assets\img\people\indro.png # do not change
+  image: /assets/img/people/indro.png # do not change
   name: Indro Spinelli
   status: Assistant Professor
   category: "Faculty"
@@ -73,7 +73,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\guido.png # do not change
+  image: /assets/img/people/guido.png # do not change
   name: Guido Maria D'Amely di Melendugno, Ph.D.
   status: Post-Doc Research Associate
   category: "Senior"
@@ -98,7 +98,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\aleflabo.png
+  image: /assets/img/people/aleflabo.png
   name: Alessandro Flaborea, Ph.D.
   status: Start-up'er at ItalAI
   category: "Senior"
@@ -124,7 +124,7 @@
     instagram: aleflabo
 
 - people:
-  image: \assets\img\people\lucaF.jpeg # do not change
+  image: /assets/img/people/lucaF.jpeg # do not change
   name: Luca Franco, Ph.D.
   status: Manager at ItalAI
   category: "Senior"
@@ -150,7 +150,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\alessio.jpeg # do not change
+  image: /assets/img/people/alessio.jpeg # do not change
   name: Alessio Sampieri, Ph.D.
   status: Senior Researcher at ItalAI
   category: "Senior"
@@ -175,7 +175,7 @@
     instagram: alessio.sampieri
 
 - people:
-  image: \assets\img\people\lucaS.jpg # do not change
+  image: /assets/img/people/lucaS.jpg # do not change
   name: Luca Scofano, Ph.D.
   status: Post-Doc Research Associate
   category: "Senior"
@@ -200,7 +200,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\ram.jpg # do not change
+  image: /assets/img/people/ram.jpg # do not change
   name: Muhammad Rameez Ur Rahman, Ph.D.
   status: Post-Doc Research Associate at Ca' Foscari University of Venice
   category: "Alumni"
@@ -224,7 +224,7 @@
     Instagram:
 
 - people:
-  image: \assets\img\people\laura.jpg # do not change
+  image: /assets/img/people/laura.jpg # do not change
   name: Laura Laurenti, Ph.D.
   status: Post-Doc Research Associate at ETH Zurich
   category: "Alumni"
@@ -249,7 +249,7 @@
     Instagram:
 
 - people:
-  image: \assets\img\people\paolom.png
+  image: /assets/img/people/paolom.png
   name: Paolo Mandica, Ph.D.
   status: AI Research Scientist at Samsung
   category: "Alumni"
@@ -274,7 +274,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\giovanni.jpg # do not change
+  image: /assets/img/people/giovanni.jpg # do not change
   name: Giovanni Ficarra
   status: Ph.D. Student
   category: "Student"
@@ -300,7 +300,7 @@
     instagram: GioFic95
 
 - people:
-  image: \assets\img\people\lucaC_v2.jpg # do not change
+  image: /assets/img/people/lucaC_v2.jpg # do not change
   name: Luca Collorone
   status: Ph.D. Student
   category: "Student"
@@ -326,7 +326,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\stefano.jpeg # do not change
+  image: /assets/img/people/stefano.jpeg # do not change
   name: Stefano D’Arrigo
   status: Ph.D. Student
   category: "Student"
@@ -351,7 +351,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\edo.jpg # do not change
+  image: /assets/img/people/edo.jpg # do not change
   name: Edoardo De Matteis
   status: Ph.D. Student
   category: "Student"
@@ -377,7 +377,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\max.jpg # do not change
+  image: /assets/img/people/max.jpg # do not change
   name: Massimiliano Pappa
   status: Ph.D. Student
   category: "Student"
@@ -402,7 +402,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\danie.jpeg # do not change
+  image: /assets/img/people/danie.jpeg # do not change
   name: Daniele Trappolini
   status: Ph.D. Student
   category: "Student"
@@ -427,7 +427,7 @@
     instagram:
 
 # - people:
-#   image: \assets\img\people\stefano.gif  # do not change
+#   image: /assets/img/people/stefano.gif  # do not change
 #   name: Arturo Ghinassi
 #   status: Ph.D. Student
 
@@ -451,7 +451,7 @@
 #     instagram:
 
 - people:
-  image: \assets\img\people\matteog.jpg # do not change
+  image: /assets/img/people/matteog.jpg # do not change
   name: Matteo Gioia
   status: Ph.D. Student
   category: "Student"
@@ -476,7 +476,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\leo.jpg # do not change
+  image: /assets/img/people/leo.jpg # do not change
   name: Leonardo Plini
   status: Ph.D. Student
   category: "Student"
@@ -501,7 +501,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\valentino.jpeg # do not change
+  image: /assets/img/people/valentino.jpeg # do not change
   name: Valentino Sacco
   status: Ph.D. Student
   category: "Student"
@@ -526,7 +526,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\aurora.jpeg # do not change
+  image: /assets/img/people/aurora.jpeg # do not change
   name: Aurora Bassani
   status: Ph.D. Student
   category: "Student"
@@ -551,7 +551,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\Simone.jpg # do not change
+  image: /assets/img/people/Simone.jpg # do not change
   name: Simone Facchiano
   status: Ph.D. Student
   category: "Student"
@@ -576,7 +576,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\MatteoM.jpg # do not change
+  image: /assets/img/people/MatteoM.jpg # do not change
   name: Matteo Migliarini
   status: Ph.D. Student
   category: "Student"
@@ -601,7 +601,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\AlessioP.jpeg # do not change
+  image: /assets/img/people/AlessioP.jpeg # do not change
   name: Alessio Palma
   status: Ph.D. Student
   category: "Student"
@@ -626,7 +626,7 @@
     instagram:
 
 - people:
-  image: \assets\img\people\LucaR.jfif # do not change
+  image: /assets/img/people/LucaR.jfif # do not change
   name: Luca Romani
   status: Ph.D. Student
   category: "Student"
@@ -641,6 +641,58 @@
     semantic_scholar: # Full URL
     linkedin: https://www.linkedin.com/in/luca-romani-523039251/
     github: LucaRomani98
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+
+- people:
+  image: /assets/img/people/StefanoS.jpg # do not change
+  name: Stefano Saravalle
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://linkedin.com/in/stefano-saravalle-0670b9202/
+    github: 4idrossifenil-etanammide
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+
+- people:
+  image: /assets/img/people/
+  name: Pietro Signorino
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/pietro-sig/
+    github: pietrosig
     gitlab:
     bitbucket:
     google_plus:

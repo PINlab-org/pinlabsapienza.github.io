@@ -1,26 +1,22 @@
 ---
 layout: page
 ---
+
 <div id="projects">
-  <section class="bg"></section>
-  <h1 class="title">{{ page.title }}</h1>
+  {% include page-hero.html title=page.title description=page.description compact=true %}
   <ol class="project-list">
     {% for _ in site.data.projects %}
       {% assign project = _.project %}
       <li>
+        <h2 class="title"><a href="{{ project.webpage | relative_url }}">{{ project.title }}</a></h2>
         <div class="authors">{{ project.authors | markdownify }}</div>
-        <div class="title"> <a href="{{ project.webpage }}" class="btn btn-sm z-depth-0" role="button">{{project.title}}</a> </div>
-        <div class="event"> {{ project.event }}</div>
-        <div class="links">
-          <!-- {%- if project.webpage %}
-            [<a href="{{ project.webpage }}" class="btn btn-sm z-depth-0" role="button">Webpage</a>]
-          {%- endif %} -->
-          {% if project.image %}
-          <div class="img-wrap">
-            <img src="{{ project.image.path | prepend: '/assets/img/projects/' | relative_url }}" alt="{{ project.image.alt }}" width="400" height="500">
-          </div>
-          {% endif %}
+        {% if project.event %}<div class="event">{{ project.event }}</div>{% endif %}
+        <p class="date">{{ project.date }}</p>
+        {% if project.image %}
+        <div class="img-wrap">
+          <img src="{{ project.image.path | prepend: '/assets/img/projects/' | relative_url }}" alt="{{ project.image.alt | default: project.title }}" width="500" height="320" loading="lazy" decoding="async">
         </div>
+        {% endif %}
       </li>
     {% endfor %}
   </ol>

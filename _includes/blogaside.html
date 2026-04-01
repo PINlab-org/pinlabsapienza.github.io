@@ -1,4 +1,3 @@
-<!-- User Profile -->
 {% assign profile = site.data.profile %}
 {% assign urlstart = profile.image | split: '/' %}
 {% if urlstart == 'https:' %}
@@ -6,46 +5,42 @@
 {% else %}
   {% assign imgurl = profile.image | relative_url %}
 {% endif %}
+
 <div id="profile">
   <a href="{{ '/' | relative_url }}">
     <div class="img-wrap">
-      <img src="{{ imgurl }}" alt="profile-image">
+      <img src="{{ imgurl }}" alt="{{ profile.username }}" width="180" height="180" loading="lazy" decoding="async">
     </div>
   </a>
   <p class="username">{{ profile.username }}</p>
   <div class="description">{{ profile.description | markdownify }}</div>
 
-  <!-- Social icons from Font Awesome -->
-  <ul id="icons">
+  <ul class="social-links" aria-label="Profile links">
     {% include social.html %}
   </ul>
 </div>
-<!-- Tag Navigation -->
+
+{% if site.blog %}
 <div id="tag-wrap">
-  <a href="{{ '/tags' | relative_url }}">
-    <p class="title">TAGS</p>
-  </a>
+  <a href="{{ '/tags' | relative_url }}"><p class="title">Tags</p></a>
   {% for tag in site.tags %}
   {% capture tagurl %}/tags#{{ tag | first | cgi_encode }}{% endcapture %}
-  <a href="{{ tagurl | relative_url }}">
-    <span class="tag">{{ tag | first }}</span>
-  </a>
+  <a href="{{ tagurl | relative_url }}"><span class="tag">{{ tag | first }}</span></a>
   {% endfor %}
 </div>
-<!-- Project -->
+{% endif %}
+
 <div id="proj-wrap">
-  <a href="{{ '/#projects' | relative_url }}">
+  <a href="{{ '/#project' | relative_url }}">
     <p class="title">{{ site.theme_settings.projects_title }}</p>
-    <hr class="proj-hr">
-    {% for _ in site.data.projects %}
+  </a>
+  {% for _ in site.data.projects %}
     {% assign project = _.project %}
     {% if project.print %}
     <div class="proj-content">
       <div class="proj-title">{{ project.title }}</div>
       <div class="meta">{{ project.date }}</div>
     </div>
-    <hr class="proj-hr">
     {% endif %}
-    {% endfor %}
-  </a>
+  {% endfor %}
 </div>

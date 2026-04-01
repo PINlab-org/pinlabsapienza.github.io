@@ -1,0 +1,9 @@
+<section class="page-hero{% if include.compact %} is-compact{% endif %}">
+  {% if include.kicker %}
+  <p class="kicker">{{ include.kicker }}</p>
+  {% endif %}
+  <h1>{{ include.title }}</h1>
+  {% if include.description %}
+  <p class="lead">{{ include.description }}</p>
+  {% endif %}
+</section>

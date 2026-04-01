@@ -44,6 +44,17 @@ theme_settings:
   presentation_text: "Computer vision and machine learning have great potential to endow machines/robots with the (visual) perception of the environment and the intelligence to reason about it, and take decisions. The field has thrived in the past three decades, and it stands now as one of the key technological ingredients for autonomous driving, unmanned drones, and human-robot-collaboration, as well as the pervasive novel asset for other fields of science, including earthquake and weather forecasting."
   presentation_text2: "Our lab is interested in fundamental research and innovation transfer on computer vision and machine learning. Our specific research interests include distributed and multi-agent intelligent systems, perception (detection, recognition, re-identification, forecasting), and general intelligence (reasoning, meta-learning, domain adaptation), within sustainable (low-power-consumption and constrained-computational-resource sensors and devices) and interpretable (interpretable and verifiable AI) frameworks."
 
+# Optional UI Settings
+ui:
+  style_preset: "minimal-premium"
+  accent_color: "#7A1632"
+  accent_color_strong: "#5D1026"
+  surface_mode: "solid"
+  effects_level: "low"
+  max_content_width: "1120px"
+  heading_font: "Fraunces"
+  body_font: "Manrope"
+
 # Pagination
 # paginate: 5
 # paginate_path: "blog/page:num"
@@ -53,8 +64,6 @@ sass:
   sass_dir: _sass
   style: :compressed
 plugins: ["jekyll-paginate", "jekyll/scholar", "jekyll-seo-tag"]
-bootstrap:
-  assets: true
 
 # Bibliography settings
 scholar:
@@ -89,6 +98,3 @@ academicons:
 fontawesome:
   version: "5.15.4"
   integrity: "sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4="
-jquery:
-  version: "3.6.0"
-  integrity: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="

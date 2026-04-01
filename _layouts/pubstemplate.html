@@ -1,68 +1,70 @@
 ---
 ---
 <!-- Entry bib key -->
-<div id="{{entry.key}}">
+<div id="{{entry.key}}" data-pub-entry>
   {% include pubinfo.html entry=entry %}
 
-  <!-- Links/Buttons -->
-  <div class="links">
+  <!-- Publication actions -->
+  <div class="links pub-actions" aria-label="Publication actions">
     {%- if entry.abstract %}
-      [<a class="abstract btn btn-sm z-depth-0" role="button">Abstract</a>]
+      <button type="button" class="pub-link pub-toggle abstract" data-pub-toggle="abstract" aria-expanded="false">Abstract</button>
     {%- endif %}
     {%- if entry.arxiv %}
-      [<a href="http://arxiv.org/abs/{{ entry.arxiv }}" class="arxiv btn btn-sm z-depth-0" role="button">arXiv</a>]
+      <a href="https://arxiv.org/abs/{{ entry.arxiv }}" class="pub-link arxiv">arXiv</a>
     {%- endif %}
-    {%- if entry.bibtex_show %}
-      [<a class="bibtex btn btn-sm z-depth-0" role="button">Cite</a>]
+    {%- if entry.blog %}
+      <a href="{{ entry.blog }}" class="pub-link">Blog</a>
+    {%- endif %}
+    <button type="button" class="pub-link pub-toggle bibtex" data-pub-toggle="bibtex" aria-expanded="false">Cite</button>
+    {%- if entry.code %}
+      <a href="{{ entry.code }}" class="pub-link">Code</a>
+    {%- endif %}
+    {%- if entry.doi %}
+      {% if entry.doi contains '://' -%}
+        <a href="{{ entry.doi }}" class="pub-link">DOI</a>
+      {%- else -%}
+        <a href="{{ entry.doi | prepend: 'https://doi.org/' }}" class="pub-link">DOI</a>
+      {%- endif %}
     {%- endif %}
     {%- if entry.html %}
-      [<a href="{{ entry.html }}" class="html btn btn-sm z-depth-0" role="button">HTML</a>]
+      <a href="{{ entry.html }}" class="pub-link html">HTML</a>
+    {%- endif %}
+    {%- if entry.latex_src %}
+      <a href="{{ entry.latex_src }}" class="pub-link">LaTeX Source</a>
+    {%- endif %}
+    {%- if entry.url %}
+      <a href="{{ entry.url }}" class="pub-link url">Paper</a>
     {%- endif %}
     {%- if entry.pdf %}
       {% if entry.pdf contains '://' -%}
-        [<a href="{{ entry.pdf }}" class="pdf btn btn-sm z-depth-0" role="button">PDF</a>]
+        <a href="{{ entry.pdf }}" class="pub-link pdf">PDF</a>
       {%- else -%}
-        [<a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>]
+        <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="pub-link pdf">PDF</a>
       {%- endif %}
-    {%- endif %}
-    {%- if entry.supp %}
-      {% if entry.supp contains '://' -%}
-        [<a href="{{ entry.supp }}" class="supp btn btn-sm z-depth-0" role="button">Supp</a>]
-      {%- else -%}
-        [<a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Supp</a>]
-      {%- endif %}
-    {%- endif %}
-    {%- if entry.blog %}
-      [<a href="{{ entry.blog }}" class="btn btn-sm z-depth-0" role="button">Blog</a>]
-    {%- endif %}
-    {%- if entry.code %}
-      [<a href="{{ entry.code }}" class="btn btn-sm z-depth-0" role="button">Code</a>]
     {%- endif %}
     {%- if entry.poster %}
       {% if entry.poster contains '://' -%}
-        [<a href="{{ entry.poster }}" class="btn btn-sm z-depth-0" role="button">Poster</a>]
+        <a href="{{ entry.poster }}" class="pub-link">Poster</a>
       {%- else -%}
-        [<a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Poster</a>]
+        <a href="{{ entry.poster | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">Poster</a>
       {%- endif %}
     {%- endif %}
     {%- if entry.slides %}
       {% if entry.slides contains '://' -%}
-        [<a href="{{ entry.slides }}" class="btn btn-sm z-depth-0" role="button">Slides</a>]
+        <a href="{{ entry.slides }}" class="pub-link">Slides</a>
       {%- else -%}
-        [<a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">Slides</a>]
+        <a href="{{ entry.slides | prepend: '/assets/pdf/' | relative_url }}" class="pub-link">Slides</a>
+      {%- endif %}
+    {%- endif %}
+    {%- if entry.supp %}
+      {% if entry.supp contains '://' -%}
+        <a href="{{ entry.supp }}" class="pub-link supp">Supp</a>
+      {%- else -%}
+        <a href="{{ entry.supp | prepend: '/assets/pdf/' | relative_url }}" class="pub-link supp">Supp</a>
       {%- endif %}
     {%- endif %}
     {%- if entry.website %}
-      [<a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>]
-    {%- endif %}
-    {%- if entry.url %}
-      [<a href="{{ entry.url }}" class="url btn btn-sm z-depth-0" role="button">Paper</a>]
-    {%- endif %}
-    {%- if entry.doi %}
-      [<a href="{{ entry.doi | prepend: 'http://doi.org/' }}" class="btn btn-sm z-depth-0" role="button">DOI</a>]
-    {%- endif %}
-    {%- if entry.latex_src %}
-      [<a href="{{ entry.latex_src }}" class="btn btn-sm z-depth-0" role="button">LaTeX Source</a>]
+      <a href="{{ entry.website }}" class="pub-link">Website</a>
     {%- endif %}
   </div>
 
@@ -73,10 +75,18 @@
     </div>
   {%- endif -%}
 
-  {% if entry.bibtex_show -%}
-    <!-- Hidden bibtex block -->
-    <div class="bibtex hidden">
-      {% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
+  <!-- Hidden bibtex block -->
+  <div class="bibtex hidden">
+    <div class="bibtex-toolbar">
+      <button type="button" class="bibtex-copy" data-copy-bibtex {% unless entry.bibtex %}disabled{% endunless %}>Copy</button>
     </div>
-  {%- endif %}
+    <script type="text/plain" class="bibtex-raw">{% if entry.bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endif %}</script>
+    {% if entry.bibtex -%}
+      <div class="bibtex-content">
+        <pre class="bibtex-pre"><code>{{ entry.bibtex | hideCustomBibtex | escape }}</code></pre>
+      </div>
+    {%- else -%}
+      <p>BibTeX not available.</p>
+    {%- endif %}
+  </div>
 </div>

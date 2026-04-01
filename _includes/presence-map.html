@@ -1,0 +1,31 @@
+{% assign map_locations = site.data.locations | default: empty %}
+{% if map_locations.size > 0 %}
+<section id="presence-map" data-cycle-ms="4400" aria-label="Lab presence map">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  {% include section-header.html title="Global Presence" description="A visual trace of where our research network is active." %}
+
+  <div class="presence-stage">
+    <div class="presence-canvas" data-presence-canvas role="img" aria-label="Animated world map of lab presence"></div>
+    <div class="presence-mask" aria-hidden="true"></div>
+    <div class="presence-ui" aria-hidden="true">
+      <span class="presence-ui-pin" data-presence-ui-pin></span>
+      <div class="presence-ui-label" data-presence-ui-label>
+        <div class="presence-tip-inner">
+          <p class="presence-kicker" data-presence-ui-kicker>We are here</p>
+          <h3 class="presence-location" data-presence-ui-location>{{ map_locations.first.name }}</h3>
+          <p class="presence-description" data-presence-ui-description>{{ map_locations.first.description }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="presence-indicators" aria-hidden="true">
+      {% for location in map_locations %}
+      <span class="presence-dot{% if forloop.first %} is-active{% endif %}" data-presence-indicator title="{{ location.name }}"></span>
+      {% endfor %}
+    </div>
+  </div>
+
+  <script type="application/json" data-presence-data>{{ map_locations | jsonify }}</script>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+</section>
+{% endif %}

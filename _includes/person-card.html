@@ -1,0 +1,24 @@
+{% assign person = include.person %}
+{% assign normalized_person_image = person.image | default: '' | replace: '\\', '/' %}
+{% assign fallback_person_image = '/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png' %}
+{% assign person_image_parts = normalized_person_image | split: '.' %}
+{% if normalized_person_image == '' or person_image_parts.size == 1 %}
+  {% assign person_image = fallback_person_image | relative_url %}
+{% else %}
+  {% assign person_image = normalized_person_image | relative_url %}
+{% endif %}
+{% capture person_social_links %}{% include social-icons-items.html social=person.social %}{% endcapture %}
+{% assign has_social_links = person_social_links | strip %}
+<article class="person-card">
+  <div class="img-wrap">
+    <img src="{{ person_image }}" alt="Portrait of {{ person.name | strip_html }}" width="118" height="118" loading="lazy" decoding="async">
+  </div>
+  <em class="name">{{ person.name | markdownify | strip_html }}</em>
+  <p class="status">{{ person.status }}</p>
+  <ul class="social-links{% if has_social_links == '' %} is-empty{% endif %}" aria-label="{{ person.name | strip_html }} links">
+    {{ person_social_links }}
+    {% if has_social_links == '' %}
+      <li class="social-empty">No links available</li>
+    {% endif %}
+  </ul>
+</article>

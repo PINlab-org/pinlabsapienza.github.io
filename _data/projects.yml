@@ -1,33 +1,33 @@
 - project:
-    title: Graph Neural Networks for particle tracking in NA62 Experiment
-    authors: Leonardo Plini, Gemma Tinti, Tommaso Spadaro, Fabio Galasso
-    event: # preprint
-    date: 2025
-    image:
-      path: "na62/teaser.jpg" # path: assets/img/projects/
-      alt: "Pictorial of the model"
-    webpage: na62
-
-- project:
     title: Video Unlearning via Low-Rank Refusal Vector
     authors: Simone Facchiano, Stefano Serravalle, Matteo Migliarini, Edoardo De Matteis, Alessio Sampieri, Andrea Pilzer, Emanuele Rodolà, Indro Spinelli, Luca Franco, Fabio Galasso
-    event: # preprint
-    date: 2025
+    event: ICLR 2026
+    date: 2026
     image:
-      path: "video-unlearning/teaser.png" # path: assets/img/projects/
+      path: "video-unlearning/teaser.webp" # path: assets/img/projects/
       alt: "Pictorial of the model"
     webpage: video-unlearning
 
 - project:
     title: Human Motion Unlearning
     authors: Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso
-    event: # preprint
-    date: 2025
+    event: AAAI 2026
+    date: 2026
     image:
-      path: "hmu/teaser.png" # path: assets/img/projects/
+      path: "hmu/teaser.webp" # path: assets/img/projects/
       alt: "Pictorial of the model"
     # webpage: hmu
     webpage: hmu
+
+- project:
+    title: Graph Neural Networks for particle tracking in NA62 Experiment
+    authors: Leonardo Plini, Gemma Tinti, Tommaso Spadaro, Fabio Galasso
+    event: # preprint
+    date: 2025
+    image:
+      path: "na62/teaser.webp" # path: assets/img/projects/
+      alt: "Pictorial of the model"
+    webpage: na62
 
 - project:
     title: Social EgoMesh Estimation
@@ -35,7 +35,7 @@
     event: WACV 2025
     date: 2025
     image:
-      path: "seeme/teaser.jpg" # path: assets/img/projects/
+      path: "seeme/teaser.webp" # path: assets/img/projects/
       alt: "Pictorial of the model"
     webpage: seeme
 
@@ -45,7 +45,7 @@
     event: ECCV 2024
     date: 2024
     image:
-      path: "ladiff/teaser.png" # path: assets/img/projects/
+      path: "ladiff/teaser.webp" # path: assets/img/projects/
       alt: "Pictorial of the model"
     webpage: ladiff
 
@@ -55,7 +55,7 @@
     event: CVPR 2024
     date: 2024
     image:
-      path: "prego/teaser.png" # path: assets/img/projects/
+      path: "prego/teaser.webp" # path: assets/img/projects/
       alt: "Pictorial of the model"
     webpage: prego
 
@@ -65,7 +65,7 @@
     event: BMVC 2023
     date: 2023
     image:
-      path: "stag/teaser.png" # path: assets/project/
+      path: "stag/teaser.webp" # path: assets/project/
       alt: "Pictorial of the model"
     webpage: stag
 
@@ -75,7 +75,7 @@
     event: ICCV 2023
     date: 2023
     image:
-      path: "mocodad/mocodad.png" # path: assets/project/
+      path: "mocodad/mocodad.webp" # path: assets/project/
       alt: "Pictorial of the model"
     webpage: mocodad
 
@@ -84,7 +84,7 @@
     authors: Luca Franco, Paolo Mandica, Konstantinos Kallidromitis, Yu-Teng Li, Devin Guillory and Fabio Galasso
     date: 2023
     image:
-      path: "halo/halo.png" # path: assets/project/
+      path: "halo/halo.webp" # path: assets/project/
       alt: "Teaser of the paper"
     webpage: halo
 
@@ -94,7 +94,7 @@
     event: CVPR 2023 Precognition Workshop
     date: 2023
     image:
-      path: "2body/model_ext.png" # path: assets/project/
+      path: "2body/model_ext.webp" # path: assets/project/
       alt: "Teaser of the paper"
     webpage: bestpractices2body
 
@@ -104,7 +104,7 @@
     event: CVPR 2023 Visual Anomaly and Novelty Detection (VAND) Workshop
     date: 2023
     image:
-      path: "hypad/teaser_hypad.png" # path: assets/project/
+      path: "hypad/teaser_hypad.webp" # path: assets/project/
       alt: "Teaser of the paper"
     webpage: hypad
 
@@ -114,7 +114,7 @@
     event: Neural Processing Letters
     date: 2024
     image:
-      path: "nba/teaser.png" # path: assets/project/
+      path: "nba/teaser.webp" # path: assets/project/
       alt: "Teaser of the paper"
     webpage: aboutlatentroles
 # - project :

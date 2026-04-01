@@ -1,8 +1,9 @@
-$(document).ready(function() {
-    $('a.abstract').click(function() {
-        $(this).parent().parent().find(".abstract.hidden").toggleClass('open');
+(function () {
+  "use strict";
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("a.abstract, a.bibtex").forEach(function (trigger) {
+      trigger.setAttribute("href", trigger.getAttribute("href") || "#");
     });
-    $('a.bibtex').click(function() {
-        $(this).parent().parent().find(".bibtex.hidden").toggleClass('open');
-    });
-});
+  });
+})();

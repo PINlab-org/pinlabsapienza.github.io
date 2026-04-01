@@ -5,59 +5,45 @@
 {% else %}
   {% assign imgurl = profile.image | relative_url %}
 {% endif %}
+{% assign current_url = page.url | default: '/' %}
+{% assign project_layouts = "projects,aboutlatentroles,halo,hmu,hypad,ladiff,mocodad,multibody,na62,prego,seeme,stag,video-unlearning" | split: "," %}
+{% assign is_project_page = false %}
+{% for layout_name in project_layouts %}
+  {% if page.layout == layout_name %}
+    {% assign is_project_page = true %}
+  {% endif %}
+{% endfor %}
 
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
-    <div class="container">
+<nav class="site-nav" aria-label="Primary">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="{{ '/' | relative_url }}" aria-label="Home">
+      <img src="{{ imgurl }}" width="60" height="60" alt="{{ site.title | default: profile.username }} logo" loading="eager" decoding="async">
+      <span class="nav-brand-text">PINlab</span>
+    </a>
 
-        <!-- logo or branding image on left side -->
-        <div class="navbar-brand">
-            <a class="navbar-brand" href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">
-                 
-                <img src="{{imgurl}}" width="60" height="60" class="d-inline-block align-top" alt="">
-                
-            </a>
-            <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"data-target="navbar-menu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </div>
+    <button type="button" class="nav-toggle" data-nav-toggle aria-expanded="false" aria-controls="nav-links" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
 
-        <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
-        <div class="navbar-menu" id="navbar-menu">
-
-            <div class="navbar-end">
-                <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
-                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">Home</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/people">People</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/publications">Publications</a>
-                <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/presentations">Presentations</a> -->
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/projects">Projects</a>
-                <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/blog">Blog</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/tags">Tags</a> -->
-            </div>
-
-        </div>
-    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a class="nav-link{% if current_url == '/' %} is-active{% endif %}" href="{{ '/' | relative_url }}">Home</a></li>
+      {% if site.people %}
+      <li><a class="nav-link{% if current_url contains '/people' %} is-active{% endif %}" href="{{ '/people' | relative_url }}">People</a></li>
+      {% endif %}
+      {% if site.publications %}
+      <li><a class="nav-link{% if current_url contains '/publications' %} is-active{% endif %}" href="{{ '/publications' | relative_url }}">Publications</a></li>
+      {% endif %}
+      {% if site.presentations %}
+      <li><a class="nav-link{% if current_url contains '/presentations' %} is-active{% endif %}" href="{{ '/presentations' | relative_url }}">Presentations</a></li>
+      {% endif %}
+      {% if site.projects %}
+      <li><a class="nav-link{% if current_url contains '/projects' or is_project_page %} is-active{% endif %}" href="{{ '/projects' | relative_url }}">Projects</a></li>
+      {% endif %}
+      {% if site.blog %}
+      <li><a class="nav-link{% if current_url contains '/blog' %} is-active{% endif %}" href="{{ '/blog' | relative_url }}">Blog</a></li>
+      {% endif %}
+    </ul>
+  </div>
 </nav>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        /* Get all "navbar-burger" elements */
-        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        /* Check if there are any navbar burgers */
-        if ($navbarBurgers.length > 0) {
-            /* Add a click event on each of them */
-            $navbarBurgers.forEach(function ($el) {
-                $el.addEventListener('click', function () {
-                    /* Get the target from the "data-target" attribute */
-                    var target = $el.dataset.target;
-                    var $target = document.getElementById(target);
-                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
-                    $el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-    });
-</script>

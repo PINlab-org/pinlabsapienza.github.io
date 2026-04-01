@@ -3,58 +3,26 @@ layout: page
 title: Human Motion Unlearning
 ---
 
-<head>
-  <link rel="stylesheet" href="/assets/css/edo.css">
-</head>
-
-<style>
-.video-row {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    gap: 16px;
-    padding-bottom: 10px;
-    }
-.video-row .video-item {
-flex: 0 0 auto; /* Prevent shrinking, but allow growing */
-width: clamp(200px, 25vw, 400px); /* Responsive width */
-text-align: center;
-}
-.video-item video {
-width: 100%;
-height: auto;
-border-radius: 8px;
-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.citation {
-    background-color: #f9f9f9;
-    border-left: 4px solid #ccc;
-    padding: 1em;
-    margin-top: 3em;
-    font-family: monospace;
-  }
-</style>
-<div id="hmu">
+<div id="hmu" class="project-page">
   <section class="bg"></section>
   <h1 class="title">{{ page.title }}</h1>
   <div class="wrapper">
-    <div align="center">
+    <div class="align-center">
       <h1>Human Motion Unlearning</h1>
       <h2><i>arXiv preprint</i></h2>
-      <h5 style="color:grey">
+      <h5 class="text-muted">
         <i>Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso</i>
       </h5>
     </div>
     <hr>
-    <p align="center">
-      <button type="button" class="btn btn-primary"><a href="#abstract">Abstract</a></button>
-      <button type="button" class="btn btn-primary"><a href="https://arxiv.org/pdf/2503.18674">Paper</a></button>
-      <button type="button" class="btn btn-primary"><a href="https://github.com/edodema/human-motion-unlearning">Code</a></button>
+    <p class="align-center">
+      <a class="btn btn-primary" href="#abstract">Abstract</a>
+      <a class="btn btn-primary" href="https://arxiv.org/pdf/2503.18674">Paper</a>
+      <a class="btn btn-primary" href="https://github.com/edodema/human-motion-unlearning">Code</a>
     </p>
     <hr>
-    <p align="center">
-      <img src="/assets/img/projects/hmu/teaser.png" width="700" height="600" alt="teaser image" />
+    <p class="align-center">
+      <img src="/assets/img/projects/hmu/teaser.webp" width="700" height="600" alt="teaser image" />
     </p>
     <hr>
     <h1 id="abstract">Abstract</h1>
@@ -76,32 +44,32 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         <div class="video-row">
           <div class="video-item">
             <h4>MoMask Dr</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.png">
-              <source src="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="/assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>Base MoMask</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.png">
-              <source src="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="/assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>LCR</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.png">
-              <source src="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="/assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>UCE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.png">
-              <source src="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="/assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>RECE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.png">
-              <source src="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="/assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -109,32 +77,32 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         <div class="video-row">
           <div class="video-item">
             <h4>MoMask Dr</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>Base MoMask</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>LCR</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>UCE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>RECE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -144,26 +112,26 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         <div class="video-row">
           <div class="video-item">
             <h4>Base MoMask</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>LCR</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>UCE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>RECE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.png">
-              <source src="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="/assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -171,26 +139,26 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         <div class="video-row">
           <div class="video-item">
             <h4>Base MoMask</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.png">
-              <source src="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="/assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>LCR</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.png">
-              <source src="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="/assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>UCE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.png">
-              <source src="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="/assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>RECE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.png">
-              <source src="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="/assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
             </video>
           </div>
         </div>
@@ -198,26 +166,26 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         <div class="video-row">
           <div class="video-item">
             <h4>Base MoMask</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.png">
-              <source src="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="/assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>LCR</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.png">
-              <source src="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="/assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>UCE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.png">
-              <source src="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="/assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
             <h4>RECE</h4>
-            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.png">
-              <source src="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            <video autoplay loop muted playsinline poster="/assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="/assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
             </video>
           </div>
         </div>

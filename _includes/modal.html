@@ -1,24 +1,22 @@
-<div id="{{ id }}" class="modal">
-  <div class="modal-background" onClick="close_modal()"></div>
+<div id="{{ id }}" class="modal" role="dialog" aria-modal="true" aria-label="Project details">
+  <div class="modal-background" data-modal-close></div>
   <div class="modal-content">
-    <div class="close-modal" onClick="close_modal()">
-      <p>&times;</p>
-    </div>
+    <button type="button" class="close-modal btn" data-modal-close aria-label="Close modal">×</button>
     <div class="header">
       <p class="date">{{ project.date }}</p>
-      <p class="title">{{ project.title }}</p>
+      <h3 class="title">{{ project.title }}</h3>
       <p class="summary">{{ project.summary }}</p>
     </div>
     <div class="content">
       {% if project.image %}
-        <img src="{{ project.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ project.image.alt }}">
-      {% endif%}
+        <img src="{{ project.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ project.image.alt | default: project.title }}" loading="lazy" decoding="async">
+      {% endif %}
       <div class="description">{{ project.description }}</div>
       {% for content in project.contents %}
       <div class="sub-content">
-        <div class="title">{{ content.title }}</div>
+        <h4 class="title">{{ content.title }}</h4>
         {% if content.image %}
-          <img src="{{ content.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ content.image.alt }}">
+          <img src="{{ content.image.path | prepend: '/assets/project/' | relative_url }}" alt="{{ content.image.alt | default: content.title }}" loading="lazy" decoding="async">
         {% endif %}
         <div class="description">{{ content.description }}</div>
       </div>

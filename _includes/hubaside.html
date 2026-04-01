@@ -1,4 +1,3 @@
-<!-- User Profile -->
 {% assign profile = site.data.profile %}
 {% assign urlstart = profile.image | split: '/' %}
 {% if urlstart == 'https:' %}
@@ -6,16 +5,15 @@
 {% else %}
   {% assign imgurl = profile.image | relative_url %}
 {% endif %}
+
 <div id="profile">
-  <a href="{{ '/portfolio' | relative_url }}">
+  <a href="{{ '/' | relative_url }}">
     <div class="img-wrap">
-      <img src="{{ imgurl }}" alt="profile-image">
+      <img src="{{ imgurl }}" alt="{{ profile.username }}" width="180" height="180" loading="lazy" decoding="async">
     </div>
   </a>
   <p class="username">{{ profile.username }}</p>
-
-  <!-- Social icons from Font Awesome -->
-  <ul id="icons">
+  <ul class="social-links" aria-label="Profile links">
     {% include social.html %}
   </ul>
 </div>

@@ -2,37 +2,25 @@
 layout: page
 ---
 {% assign profile = site.data.profile %}
-{% assign urlstart = profile.image | split: '/' %}
-{% if urlstart == 'https:' %}
-  {% assign imgurl = profile.image %}
-{% else %}
-  {% assign imgurl = profile.image | relative_url %}
-{% endif %}
+{% assign home_logo = '/assets/img/logo_white.png' | relative_url %}
 
-</div><!-- This Tag means End .container -->
 <div id="portfolio">
-  <section id="about-me">
+  {% include presence-map.html %}
+
+  <section id="about-me" style="--about-watermark: url('{{ home_logo }}');">
     <div class="row">
-      <div class="img-wrap col-12 col-md-4">
-        <div class="img">
-          <img src="{{ imgurl }}" alt="user_image">
-        </div>
-      </div>
-      <div class="text-wrap col-12 col-md-8">
+      <div class="text-wrap col-12">
         <h2 class="username">{{ profile.username }}</h2>
         <div class="description">{{ profile.description | markdownify }}</div>
         <div class="description">{{ profile.description2 | markdownify }}</div>
 
-        <ul id="icons">
+        <ul class="social-links" aria-label="Profile links">
           {% include social.html %}
         </ul>
       </div>
     </div>
-    <div class="bg"></div>
   </section>
 
-  
   {% include presentation.html %}
   {% include two-column-section.html %}
-
 </div>

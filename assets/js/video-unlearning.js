@@ -1,17 +1,41 @@
-function showSection(sectionId) {
-  const warning = document.getElementById(sectionId + '-warning');
-  const content = document.getElementById(sectionId + '-content');
+(function () {
+  "use strict";
 
-  warning.classList.add('hidden');
-  content.classList.remove('blurred');
-}
+  function showSection(sectionId) {
+    var warning = document.getElementById(sectionId + "-warning");
+    var content = document.getElementById(sectionId + "-content");
 
-const videos = document.querySelectorAll('video');
-videos.forEach(video => {
-  const container = video.parentElement;
-  container.addEventListener('mouseenter', () => video.play());
-  container.addEventListener('click', () => {
-    if (video.paused) video.play();
-    else video.pause();
+    if (warning) {
+      warning.classList.add("hidden");
+    }
+    if (content) {
+      content.classList.remove("blurred");
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("click", function (event) {
+      var revealTrigger = event.target.closest("[data-reveal-section]");
+      if (!revealTrigger) {
+        return;
+      }
+      showSection(revealTrigger.getAttribute("data-reveal-section"));
+    });
+
+    document.querySelectorAll(".video-wrapper video, .video-item video").forEach(function (video) {
+      video.addEventListener("click", function () {
+        if (video.paused) {
+          var playPromise = video.play();
+          if (playPromise && typeof playPromise.catch === "function") {
+            playPromise.catch(function () {});
+          }
+        } else {
+          video.pause();
+        }
+      });
+    });
   });
-});
+
+  // Backward compatibility for any legacy template hooks.
+  window.showSection = showSection;
+})();

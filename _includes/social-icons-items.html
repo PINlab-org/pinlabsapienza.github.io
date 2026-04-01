@@ -1,0 +1,124 @@
+{% assign social = include.social %}
+{% if social %}
+  {% assign webpage = social.webpage | default: social.Webpage %}
+  {% assign email = social.email | default: social.Email %}
+  {% assign orcid = social.orcid | default: social.Orcid %}
+  {% assign scholar = social.scholar | default: social.Scholar %}
+  {% assign publons = social.publons | default: social.Publons %}
+  {% assign research_gate = social.research_gate | default: social.Research_gate %}
+  {% assign dblp = social.dblp | default: social.DBLP %}
+  {% assign semantic_scholar = social.semantic_scholar | default: social.Semantic_scholar %}
+  {% assign linkedin = social.linkedin | default: social.LinkedIn %}
+  {% assign github = social.github | default: social.GitHub %}
+  {% assign gitlab = social.gitlab | default: social.GitLab %}
+  {% assign bitbucket = social.bitbucket | default: social.Bitbucket %}
+  {% assign mastodon = social.mastodon | default: social.Mastodon %}
+  {% assign twitter = social.twitter | default: social.Twitter %}
+  {% assign youtube = social.youtube | default: social.YouTube %}
+  {% assign facebook = social.facebook | default: social.Facebook %}
+  {% assign instagram = social.instagram | default: social.Instagram %}
+
+  {% if webpage %}
+  <li><a href="{{ webpage }}" target="_blank" rel="noopener noreferrer" title="Webpage"><i class="fas fa-globe-europe"></i></a></li>
+  {% endif %}
+
+  {% if email %}
+  <li><a href="mailto:{{ email | encode_email }}" target="_blank" rel="noopener noreferrer" title="Email"><i class="fas fa-envelope"></i></a></li>
+  {% endif %}
+
+  {% if orcid %}
+  <li><a href="https://orcid.org/{{ orcid }}" target="_blank" rel="noopener noreferrer" title="ORCID"><i class="ai ai-orcid"></i></a></li>
+  {% endif %}
+
+  {% if scholar %}
+    {% if scholar contains 'http' %}
+    <li><a href="{{ scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
+    {% else %}
+    <li><a href="https://scholar.google.com/citations?user={{ scholar }}" target="_blank" rel="noopener noreferrer" title="Google Scholar"><i class="ai ai-google-scholar"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if publons %}
+  <li><a href="https://publons.com/a/{{ publons }}/" target="_blank" rel="noopener noreferrer" title="Publons"><i class="ai ai-publons"></i></a></li>
+  {% endif %}
+
+  {% if research_gate %}
+    {% if research_gate contains 'http' %}
+    <li><a href="{{ research_gate }}" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="ai ai-researchgate"></i></a></li>
+    {% else %}
+    <li><a href="https://www.researchgate.net/profile/{{ research_gate }}/" target="_blank" rel="noopener noreferrer" title="ResearchGate"><i class="ai ai-researchgate"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if dblp %}
+  <li><a href="{{ dblp }}" target="_blank" rel="noopener noreferrer" title="DBLP"><i class="ai ai-dblp"></i></a></li>
+  {% endif %}
+
+  {% if semantic_scholar %}
+  <li><a href="{{ semantic_scholar }}" target="_blank" rel="noopener noreferrer" title="Semantic Scholar"><i class="ai ai-semantic-scholar"></i></a></li>
+  {% endif %}
+
+  {% if linkedin %}
+  <li><a href="{{ linkedin }}" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+  {% endif %}
+
+  {% if github %}
+    {% if github contains 'http' %}
+    <li><a href="{{ github }}" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a></li>
+    {% else %}
+    <li><a href="https://github.com/{{ github }}" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if gitlab %}
+    {% if gitlab contains 'http' %}
+    <li><a href="{{ gitlab }}" target="_blank" rel="noopener noreferrer" title="GitLab"><i class="fab fa-gitlab"></i></a></li>
+    {% else %}
+    <li><a href="https://gitlab.com/{{ gitlab }}" target="_blank" rel="noopener noreferrer" title="GitLab"><i class="fab fa-gitlab"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if bitbucket %}
+    {% if bitbucket contains 'http' %}
+    <li><a href="{{ bitbucket }}" target="_blank" rel="noopener noreferrer" title="Bitbucket"><i class="fab fa-bitbucket"></i></a></li>
+    {% else %}
+    <li><a href="https://bitbucket.org/{{ bitbucket }}" target="_blank" rel="noopener noreferrer" title="Bitbucket"><i class="fab fa-bitbucket"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if mastodon %}
+  <li><a rel="me noopener noreferrer" href="{{ mastodon }}" target="_blank" title="Mastodon"><i class="fab fa-mastodon"></i></a></li>
+  {% endif %}
+
+  {% if twitter %}
+    {% if twitter contains 'http' %}
+    <li><a href="{{ twitter }}" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+    {% else %}
+    <li><a href="https://twitter.com/{{ twitter }}" target="_blank" rel="noopener noreferrer" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if youtube %}
+    {% if youtube contains 'http' %}
+    <li><a href="{{ youtube }}" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a></li>
+    {% else %}
+    <li><a href="https://www.youtube.com/user/{{ youtube }}" target="_blank" rel="noopener noreferrer" title="YouTube"><i class="fab fa-youtube"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if facebook %}
+    {% if facebook contains 'http' %}
+    <li><a href="{{ facebook }}" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+    {% else %}
+    <li><a href="https://www.facebook.com/{{ facebook }}" target="_blank" rel="noopener noreferrer" title="Facebook"><i class="fab fa-facebook-f"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if instagram %}
+    {% if instagram contains 'http' %}
+    <li><a href="{{ instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+    {% else %}
+    <li><a href="https://instagram.com/{{ instagram }}" target="_blank" rel="noopener noreferrer" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+    {% endif %}
+  {% endif %}
+{% endif %}

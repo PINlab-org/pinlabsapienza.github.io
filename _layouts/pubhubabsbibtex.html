@@ -2,5 +2,17 @@
 ---
 <h2>Abstract</h2>
 <p>{{ entry.abstract }}</p>
-<h2>Bibtex</h2>
-{% highlight bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endhighlight %}
+<section class="bibtex-panel">
+  <h2>Bibtex</h2>
+  <div class="bibtex-toolbar">
+    <button type="button" class="bibtex-copy" data-copy-bibtex {% unless entry.bibtex %}disabled{% endunless %}>Copy</button>
+  </div>
+  <script type="text/plain" class="bibtex-raw">{% if entry.bibtex %}{{ entry.bibtex | hideCustomBibtex }}{% endif %}</script>
+  {% if entry.bibtex -%}
+    <div class="bibtex-content">
+      <pre class="bibtex-pre"><code>{{ entry.bibtex | hideCustomBibtex | escape }}</code></pre>
+    </div>
+  {%- else -%}
+    <p>BibTeX not available.</p>
+  {%- endif %}
+</section>

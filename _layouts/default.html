@@ -3,17 +3,17 @@ layout: compress
 ---
 
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
-{% include head.html %}
-{% include scripts/jquery.html %}
-{% include navbar.html %}
-<body>
-  
-  <div class="container">
-    {{ content }}
-  </div>
-</body>
-
-
-
+<html lang="{{ site.lang | default: 'en' }}">
+  {% include head.html %}
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    {% include navbar.html %}
+    <main id="main-content" class="site-main">
+      <div class="container">
+        {{ content }}
+      </div>
+    </main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/main.js' | relative_url }}" defer></script>
+  </body>
 </html>

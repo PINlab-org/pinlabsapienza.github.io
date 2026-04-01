@@ -1,0 +1,14 @@
+- name: Rome, Italy
+  lat: 41.9028
+  lng: 12.4964
+  description: PINlab is based at Sapienza University of Rome.
+
+- name: San Francisco, United States
+  lat: 37.7749
+  lng: -122.4194
+  description: Collaborations and activities with ItalAI also reach the Bay Area.
+
+- name: Max Planck Institute
+  lat: 49.25677
+  lng: 7.04869
+  description: Collaborations with the Max Planck Institute for Informatics in Saarbrücken, Germany.

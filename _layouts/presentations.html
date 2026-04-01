@@ -2,27 +2,27 @@
 layout: page
 ---
 <div id="presentations">
-  <section class="bg"></section>
-  <h1 class="title">{{ page.title }}</h1>
+  {% include page-hero.html title=page.title description=page.description compact=true %}
   <ol class="presentations-list">
     {% for _ in site.data.presentations %}
       {% assign presentation = _.presentation %}
       <li>
-        <em class="title">{{ presentation.title }}</em> at <em class="event">{{ presentation.event }}</em> <em class="date">({{ presentation.date }})</em>
-        <p class="comment">{{ presentation.comment | markdownify }}</p>
-        <div class="links">
+        <h2 class="title">{{ presentation.title }}</h2>
+        <p class="event">{{ presentation.event }} <span class="date">({{ presentation.date }})</span></p>
+        <div class="comment">{{ presentation.comment | markdownify }}</div>
+        <div class="action-links">
           {%- if presentation.slides %}
             {% if presentation.slides contains '://' -%}
-              [<a href="{{ presentation.slides }}" class="btn btn-sm z-depth-0" role="button" title="Slides">Slides</a>]
+              <a href="{{ presentation.slides }}" class="btn" role="button" title="Slides" target="_blank" rel="noopener noreferrer">Slides</a>
             {%- else -%}
-              [<a href="{{ presentation.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button" title="Slides">Slides</a>]
+              <a href="{{ presentation.slides | prepend: '/assets/pdf/' | relative_url }}" class="btn" role="button" title="Slides">Slides</a>
             {%- endif %}
           {%- endif %}
           {%- if presentation.recording %}
-            [<a href="{{ presentation.recording }}" class="btn btn-sm z-depth-0" role="button">Recording</a>]
+            <a href="{{ presentation.recording }}" class="btn" role="button" target="_blank" rel="noopener noreferrer">Recording</a>
           {%- endif %}
           {%- if presentation.hub %}
-            [<a href="{{ presentation.hub | relative_url }}" class="btn btn-sm z-depth-0" role="button">All Information</a>]
+            <a href="{{ presentation.hub | relative_url }}" class="btn" role="button">All Information</a>
           {%- endif %}
         </div>
       </li>
