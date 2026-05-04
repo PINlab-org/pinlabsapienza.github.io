@@ -29,4 +29,5 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./_site
-          commit_message: Publish commit ${{ github.sha }}
+          cname: www.pinlab.org
+          commit_message: Publish commit 
