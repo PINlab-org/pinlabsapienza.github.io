@@ -3,6 +3,7 @@ source "https://rubygems.org"
 gemspec
 
 gem "webrick"
+gem "erb"
 gem "kramdown-parser-gfm"
 gem 'racc'
 group :jekyll_plugins do
@@ -11,4 +12,3 @@ group :jekyll_plugins do
   gem "jekyll-paginate"
   gem "jekyll-seo-tag"
 end
-
