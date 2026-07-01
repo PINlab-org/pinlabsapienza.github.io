@@ -276,8 +276,8 @@
 - people:
   image: \assets\img\people\giovanni.jpg # do not change
   name: Giovanni Ficarra
-  status: Ph.D. Student
-  category: "Student"
+  status: Ph.D.
+  category: "Alumni"
 
   social:
     webpage:
@@ -302,8 +302,8 @@
 - people:
   image: \assets\img\people\lucaC_v2.jpg # do not change
   name: Luca Collorone
-  status: Ph.D. Student
-  category: "Student"
+  status: Ph.D. 
+  category: "Alumni"
 
   social:
     Webpage:
@@ -328,11 +328,11 @@
 - people:
   image: \assets\img\people\stefano.jpeg # do not change
   name: Stefano D’Arrigo
-  status: Ph.D. Student
-  category: "Student"
+  status: AI Researcher @ DeepPlants
+  category: "Alumni"
 
   social:
-    webpage: https://phd.uniroma1.it/web/STEFANO-D'ARRIGO_nP1960500_IT.aspx
+    webpage: 
     orcid:
     scholar:
     publons:
@@ -353,8 +353,8 @@
 - people:
   image: \assets\img\people\edo.jpg # do not change
   name: Edoardo De Matteis
-  status: Ph.D. Student
-  category: "Student"
+  status: Ph.D. 
+  category: "Alumni"
 
   social:
     webpage: https://edodema.github.io/
@@ -379,8 +379,8 @@
 - people:
   image: \assets\img\people\max.jpg # do not change
   name: Massimiliano Pappa
-  status: Ph.D. Student
-  category: "Student"
+  status: Ph.D. 
+  category: "Alumni"
 
   social:
     webpage:
@@ -390,7 +390,7 @@
     research_gate:
     dblp: # Full URL
     semantic_scholar: # Full URL
-    linkedin:
+    linkedin: https://www.linkedin.com/in/massimiliano-pappa-4734a6246/
     github:
     gitlab:
     bitbucket:
@@ -404,8 +404,8 @@
 - people:
   image: \assets\img\people\danie.jpeg # do not change
   name: Daniele Trappolini
-  status: Ph.D. Student
-  category: "Student"
+  status: Ph.D.
+  category: "Alumni"
 
   social:
     webpage:
@@ -641,6 +641,56 @@
     semantic_scholar: # Full URL
     linkedin: https://www.linkedin.com/in/luca-romani-523039251/
     github: LucaRomani98
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
+  image: \assets\img\people\stefanoS.jpeg # do not change
+  name: Stefano Saravalle
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar: https://scholar.google.com/citations?user=uQxwnnUAAAAJ&hl=en&authuser=2
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: www.linkedin.com/in/stefano-saravalle-0670b9202
+    github: 4idrossifenil-etanammide
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
+  image: \assets\img\people\pietroS.jpg # do not change
+  name: Pietro Signorino
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/pietro-sig/
+    github: pietrosig
     gitlab:
     bitbucket:
     google_plus:
