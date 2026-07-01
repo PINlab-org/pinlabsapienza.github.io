@@ -275,8 +275,8 @@
 
 - people:
   image: \assets\img\people\giovanni.jpg # do not change
-  name: Giovanni Ficarra
-  status: Ph.D.
+  name: Giovanni Ficarra, Ph.D.
+  status: 
   category: "Alumni"
 
   social:
@@ -301,8 +301,8 @@
 
 - people:
   image: \assets\img\people\lucaC_v2.jpg # do not change
-  name: Luca Collorone
-  status: Ph.D. 
+  name: Luca Collorone, Ph.D.
+  status: 
   category: "Alumni"
 
   social:
@@ -327,7 +327,7 @@
 
 - people:
   image: \assets\img\people\stefano.jpeg # do not change
-  name: Stefano D’Arrigo
+  name: Stefano D’Arrigo, Ph.D.
   status: AI Researcher @ DeepPlants
   category: "Alumni"
 
@@ -352,8 +352,8 @@
 
 - people:
   image: \assets\img\people\edo.jpg # do not change
-  name: Edoardo De Matteis
-  status: Ph.D. 
+  name: Edoardo De Matteis, Ph.D.
+  status: 
   category: "Alumni"
 
   social:
@@ -378,8 +378,8 @@
 
 - people:
   image: \assets\img\people\max.jpg # do not change
-  name: Massimiliano Pappa
-  status: Ph.D. 
+  name: Massimiliano Pappa, Ph.D.
+  status: 
   category: "Alumni"
 
   social:
@@ -403,8 +403,8 @@
 
 - people:
   image: \assets\img\people\danie.jpeg # do not change
-  name: Daniele Trappolini
-  status: Ph.D.
+  name: Daniele Trappolini, Ph.D.
+  status: 
   category: "Alumni"
 
   social:
