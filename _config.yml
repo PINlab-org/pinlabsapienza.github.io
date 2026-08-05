@@ -15,14 +15,14 @@ halo: True
 lang: en
 
 # Search engine optimization settings
-title: Perception and Intelligence Laboratory (PINlab)
+title: PINlab
 tagline: Department of Computer Science, Sapienza University of Rome, Italy
 
 description: The PINlab focuses on fundamental research in computer vision and machine learning, with a focus on distributed and multi-agent systems, perception, and general intelligence. Our research is conducted within sustainable and interpretable frameworks.
 author: PINlab
 twitter:
   username: SapienzaPINlab
-  card: Perception and Intelligence Laboratory (PINlab)
+  card: PINlab
 logo: assets/img/Concluded_logo_y_padded_squared_Lesspadded.png
 social:
   name: PINlab
@@ -66,10 +66,17 @@ scholar:
   first_name: [Myself, M.]
   sort_by: year,month
   order: descending,ascending
+  type_order: [inproceedings, article, misc, unpublished]
+  type_names:
+    inproceedings: Conference
+    article: Journal
+    misc: arXiv Preprint
+    unpublished: arXiv Preprint
 
 filtered_bibtex_keywords: [
     abbr,
     abstract,
+    abstractnote,
     arxiv,
     bibtex_show,
     html,

@@ -81,13 +81,13 @@
   social:
     webpage:
     orcid:
-    scholar:
+    scholar: KK7yLp8AAAAJ
     publons:
     research_gate:
     dblp: # Full URL
     semantic_scholar: # Full URL
-    linkedin:
-    github:
+    linkedin: https://www.linkedin.com/in/guido-d-amely-2b43b020a/
+    github: GDam90
     gitlab:
     bitbucket:
     google_plus:
@@ -100,8 +100,8 @@
 - people:
   image: \assets\img\people\aleflabo.png
   name: Alessandro Flaborea, Ph.D.
-  status: Start-up'er at ItalAI
-  category: "Senior"
+  status: Co-founder of Procedo
+  category: "Alumni"
 
   social:
     webpage: https://aleflabo.github.io/
@@ -152,8 +152,8 @@
 - people:
   image: \assets\img\people\alessio.jpeg # do not change
   name: Alessio Sampieri, Ph.D.
-  status: Senior Researcher at ItalAI
-  category: "Senior"
+  status: Senior AI Researcher at Translated
+  category: "Alumni"
 
   social:
     email: sampieri@diag.uniroma1.it # Full email address, e.g. "sample@google.com"
@@ -177,8 +177,8 @@
 - people:
   image: \assets\img\people\lucaS.jpg # do not change
   name: Luca Scofano, Ph.D.
-  status: Post-Doc Research Associate
-  category: "Senior"
+  status: Senior AI Researcher at Translated
+  category: "Alumni"
 
   social:
     webpage: https://l-scofano.github.io/
@@ -302,7 +302,7 @@
 - people:
   image: \assets\img\people\lucaC_v2.jpg # do not change
   name: Luca Collorone, Ph.D.
-  status: 
+  status: Post-Doc Research Associate at Technical University of Munich
   category: "Alumni"
 
   social:
@@ -353,7 +353,7 @@
 - people:
   image: \assets\img\people\edo.jpg # do not change
   name: Edoardo De Matteis, Ph.D.
-  status: 
+  status: AI Expert at Agenzia per la Cybersicurezza Nazionale
   category: "Alumni"
 
   social:
@@ -514,8 +514,8 @@
     research_gate:
     dblp: # Full URL
     semantic_scholar: # Full URL
-    linkedin:
-    github:
+    linkedin: https://www.linkedin.com/in/valentino-sacco-61b84113b/
+    github: S4b3
     gitlab:
     bitbucket:
     google_plus:
@@ -691,6 +691,105 @@
     semantic_scholar: # Full URL
     linkedin: https://www.linkedin.com/in/pietro-sig/
     github: pietrosig
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
+  image: \assets\img\people\paoloBarba.jpeg # do not change
+  name: Paolo Barba
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/paolo-barba-a45054233/
+    github:
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
+  image: \assets\img\people\xavier.jpg # do not change
+  name: Xavier Del Giudice
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/xavier-del-giudice-56b422292/
+    github: delgiudice1967219
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
+  image: \assets\img\people\michelePalma.jpeg # do not change
+  name: Michele Palma
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/michele-palma-plm/
+    github: palmaaaa
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+- people:
+  image: \assets\img\people\anja.jpeg # do not change
+  name: Anja Stanić
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    orcid:
+    scholar:
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin: https://www.linkedin.com/in/anja-stani%C4%87-230094217/
+    github: Anjaas85
     gitlab:
     bitbucket:
     google_plus:

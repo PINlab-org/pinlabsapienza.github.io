@@ -1,27 +1,33 @@
 ---
 layout: page
 ---
-<div id="projects">
-  <section class="bg"></section>
-  <h1 class="title">{{ page.title }}</h1>
-  <ol class="project-list">
-    {% for _ in site.data.projects %}
-      {% assign project = _.project %}
-      <li>
-        <div class="authors">{{ project.authors | markdownify }}</div>
-        <div class="title"> <a href="{{ project.webpage }}" class="btn btn-sm z-depth-0" role="button">{{project.title}}</a> </div>
-        <div class="event"> {{ project.event }}</div>
-        <div class="links">
-          <!-- {%- if project.webpage %}
-            [<a href="{{ project.webpage }}" class="btn btn-sm z-depth-0" role="button">Webpage</a>]
-          {%- endif %} -->
-          {% if project.image %}
-          <div class="img-wrap">
-            <img src="{{ project.image.path | prepend: '/assets/img/projects/' | relative_url }}" alt="{{ project.image.alt }}" width="400" height="500">
-          </div>
+
+<section class="projects-grid" aria-label="Projects">
+  {% for _ in site.data.projects %}
+    {% assign project = _.project %}
+    <article class="project-card">
+      <a class="project-card-image" href="{{ project.webpage | relative_url }}" aria-label="Open {{ project.title }}">
+        {% if project.image %}
+          <img src="{{ project.image.path | prepend: '/assets/img/projects/' | relative_url }}" alt="{{ project.image.alt | default: project.title }}">
+        {% else %}
+          <span class="project-card-placeholder" aria-hidden="true">PINlab</span>
+        {% endif %}
+      </a>
+      <div class="project-card-body">
+        <div class="project-card-meta">
+          {% if project.event %}
+            {% if project.citekey %}
+              <a href="{{ '/publications' | relative_url }}#{{ project.citekey }}">{{ project.event }}</a>
+            {% else %}
+              <span>{{ project.event }}</span>
+            {% endif %}
           {% endif %}
+          <time datetime="{{ project.date }}">{{ project.date }}</time>
         </div>
-      </li>
-    {% endfor %}
-  </ol>
-</div>
+        <h2><a href="{{ project.webpage | relative_url }}">{{ project.title }}</a></h2>
+        <p class="project-card-authors">{{ project.authors }}</p>
+        <a class="project-card-link" href="{{ project.webpage | relative_url }}">View project <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+      </div>
+    </article>
+  {% endfor %}
+</section>

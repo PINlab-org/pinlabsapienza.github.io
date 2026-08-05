@@ -1,11 +1,6 @@
 ---
-layout: page
-title: Human Motion Unlearning
+layout: academic-project
 ---
-
-<head>
-  <link rel="stylesheet" href="/assets/css/edo.css">
-</head>
 
 <style>
 .video-row {
@@ -13,12 +8,44 @@ title: Human Motion Unlearning
     flex-wrap: nowrap;
     overflow-x: auto;
     gap: 16px;
+    margin: 1rem 0 2rem;
     padding-bottom: 10px;
     }
 .video-row .video-item {
 flex: 0 0 auto; /* Prevent shrinking, but allow growing */
 width: clamp(200px, 25vw, 400px); /* Responsive width */
 text-align: center;
+}
+.video-row-carousel {
+position: relative;
+}
+.video-row-carousel .video-row {
+scroll-behavior: smooth;
+}
+.video-row-control {
+position: absolute;
+z-index: 1;
+top: calc(50% - 1rem);
+display: grid;
+width: 2rem;
+height: 2rem;
+padding: 0;
+border: 1px solid #7a1632;
+border-radius: 50%;
+background: #fff;
+color: #7a1632;
+place-items: center;
+}
+.video-row-control:hover,
+.video-row-control:focus-visible {
+background: #7a1632;
+color: #fff;
+}
+.video-row-control.previous {
+left: -1rem;
+}
+.video-row-control.next {
+right: -1rem;
 }
 .video-item video {
 width: 100%;
@@ -27,49 +54,8 @@ border-radius: 8px;
 box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.citation {
-    background-color: #f9f9f9;
-    border-left: 4px solid #ccc;
-    padding: 1em;
-    margin-top: 3em;
-    font-family: monospace;
-  }
 </style>
-<div id="hmu">
-  <section class="bg"></section>
-  <h1 class="title">{{ page.title }}</h1>
-  <div class="wrapper">
-    <div align="center">
-      <h1>Human Motion Unlearning</h1>
-      <h2><i>arXiv preprint</i></h2>
-      <h5 style="color:grey">
-        <i>Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso</i>
-      </h5>
-    </div>
-    <hr>
-    <p align="center">
-      <button type="button" class="btn btn-primary"><a href="#abstract">Abstract</a></button>
-      <button type="button" class="btn btn-primary"><a href="https://arxiv.org/pdf/2503.18674">Paper</a></button>
-      <button type="button" class="btn btn-primary"><a href="https://github.com/Mamiglia/hmu">Code</a></button>
-    </p>
-    <hr>
-    <p align="center">
-      <img src="/assets/img/projects/hmu/teaser.png" width="700" height="600" alt="teaser image" />
-    </p>
-    <hr>
-    <h1 id="abstract">Abstract</h1>
-    <p>
-      We introduce the task of human motion unlearning to prevent the synthesis of toxic animations while preserving the general text-to-motion generative performance.
-      Unlearning toxic motions is challenging as those can be generated from explicit text prompts and from implicit toxic combinations of safe motions (e.g., "kicking" is "loading and swinging a leg").
-      We propose the first motion unlearning benchmark by filtering toxic motions from the large and recent text-to-motion datasets of HumanML3D and Motion-X.
-      We propose baselines, by adapting state-of-the-art image unlearning techniques to process spatio-temporal signals.
-      Finally, we propose a novel motion unlearning model based on Latent Code Replacement, which we dub LCR.
-      LCR is training-free and suitable to the discrete latent spaces of state-of-the-art text-to-motion diffusion models.
-      LCR is simple and consistently outperforms baselines qualitatively and quantitatively.
-    </p>
-    <hr>
-
-    <section id="forget" class="example-videos">
+<section id="forget" class="example-videos">
         <h2>Forget Examples</h2>
         <p>Given a prompt describing a toxic action, we demonstrate how our LCR approach effectively unlearns it while preserving smoothness and motion realism.</p>
         <p><strong>Prompt:</strong> "A man kicks with force."</p>
@@ -223,20 +209,22 @@ box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         </div>
       </section>
 
-    <h2>Citation</h2>
-    <p>If you find this work useful in your research, please cite our paper:</p>
-    <pre class="citation">
-    @misc{dematteis2025humanmotionunlearning,
-      title={Human Motion Unlearning}, 
-      author={Edoardo De Matteis and Matteo Migliarini and Alessio Sampieri and Indro Spinelli and Fabio Galasso},
-      year={2025},
-      eprint={2503.18674},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.18674}, 
-    }
-    </pre>
-      
-    </section>
-  </div>
-</div>
+<script>
+document.querySelectorAll('.academic-project-content .video-row').forEach((row) => {
+  const carousel = document.createElement('div');
+  carousel.className = 'video-row-carousel';
+  row.parentNode.insertBefore(carousel, row);
+  carousel.appendChild(row);
+
+  [['previous', -0.8, 'Previous examples', 'fa-chevron-left'], ['next', 0.8, 'Next examples', 'fa-chevron-right']].forEach(([direction, amount, label, icon]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `video-row-control ${direction}`;
+    button.setAttribute('aria-label', label);
+    button.title = label;
+    button.innerHTML = `<i class="fas ${icon}" aria-hidden="true"></i>`;
+    button.addEventListener('click', () => row.scrollBy({ left: row.clientWidth * amount, behavior: 'smooth' }));
+    carousel.appendChild(button);
+  });
+});
+</script>

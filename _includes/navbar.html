@@ -1,63 +1,40 @@
-{% assign profile = site.data.profile %}
-{% assign urlstart = profile.image | split: '/' %}
-{% if urlstart == 'https:' %}
-  {% assign imgurl = profile.image %}
-{% else %}
-  {% assign imgurl = profile.image | relative_url %}
-{% endif %}
+<header class="site-header" role="banner">
+  {% assign current_path = page.url | replace: '.html', '' | replace: '/index', '' %}
 
-<nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar">
-    <div class="container">
+  <nav class="navbar navbar-expand-sm navbar-light px-0">
 
-        <!-- logo or branding image on left side -->
-        <div class="navbar-brand">
-            <a class="navbar-brand" href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">
-                 
-                <img src="{{imgurl}}" width="60" height="60" class="d-inline-block align-top" alt="">
-                
-            </a>
-            <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"data-target="navbar-menu">
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-            </div>
-        </div>
+    <!-- Navbar brand -->
+    <a class="navbar-brand{% if current_path == '/' %} navbar-brand-active{% endif %}" href="{{ '/' | relative_url }}"{% if current_path == '/' %} aria-current="page"{% endif %}>{{ site.title }}</a>
 
-        <!-- children of navbar-menu must be navbar-start and/or navbar-end -->
-        <div class="navbar-menu" id="navbar-menu">
+    <!-- Navbar toggler button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-            <div class="navbar-end">
-                <a class="navbar-item {% if page.layout == 'default' %}is-active{% endif %}"
-                    href="{% if page.layout == 'default' %}{{site.url}}{{site.baseurl}}/#{% else %}{{site.url}}{{site.baseurl}}/{% endif %}">Home</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/people">People</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/publications">Publications</a>
-                <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/presentations">Presentations</a> -->
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/projects">Projects</a>
-                <!-- <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/blog">Blog</a>
-                <a class="navbar-item" href="{{site.url}}{{site.baseurl}}/tags">Tags</a> -->
-            </div>
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto">
+        {% if site.people %}
+        <li>
+          <a class="nav-link{% if current_path == '/people' %} nav-link-active{% endif %}" href="{{ '/people' | relative_url }}"{% if current_path == '/people' %} aria-current="page"{% endif %}>People</a>
+        </li>
+        {% endif %}
 
-        </div>
+        {% if site.publications %}
+        <li>
+          <a class="nav-link{% if current_path == '/publications' %} nav-link-active{% endif %}" href="{{ '/publications' | relative_url }}"{% if current_path == '/publications' %} aria-current="page"{% endif %}>Publications</a>
+        </li>
+        {% endif %}
+
+        {% if site.projects %}
+        <li>
+          <a class="nav-link{% if current_path == '/projects' %} nav-link-active{% endif %}" href="{{ '/projects' | relative_url }}"{% if current_path == '/projects' %} aria-current="page"{% endif %}>Projects</a>
+        </li>
+        {% endif %}
+      </ul>
     </div>
-</nav>
 
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        /* Get all "navbar-burger" elements */
-        var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
-        /* Check if there are any navbar burgers */
-        if ($navbarBurgers.length > 0) {
-            /* Add a click event on each of them */
-            $navbarBurgers.forEach(function ($el) {
-                $el.addEventListener('click', function () {
-                    /* Get the target from the "data-target" attribute */
-                    var target = $el.dataset.target;
-                    var $target = document.getElementById(target);
-                    /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */
-                    $el.classList.toggle('is-active');
-                    $target.classList.toggle('is-active');
-                });
-            });
-        }
-    });
-</script>
+  </nav>
+
+</header>

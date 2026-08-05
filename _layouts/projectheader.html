@@ -1,0 +1,19 @@
+---
+---
+{%- capture authors -%}
+  {%- for author in entry.author_array -%}
+    {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- assign venue = entry.booktitle | default: entry.journal | default: entry.eprint | default: "Publication" -%}
+<header class="academic-project-header">
+  <h1>{{ entry.title }}</h1>
+  <p class="academic-project-venue">{{ venue }}{% if entry.year %} {{ entry.year }}{% endif %}</p>
+  <p class="academic-project-authors">{{ authors | strip }}</p>
+  <div class="academic-project-links" aria-label="Project links">
+    {% if entry.url %}<a href="{{ entry.url }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Paper</a>{% endif %}
+    {% if entry.code %}<a href="{{ entry.code }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+    {% if entry.video %}<a href="{{ entry.video }}" target="_blank" rel="noopener"><i class="fas fa-play" aria-hidden="true"></i> Video</a>{% endif %}
+    {% if entry.slides %}<a href="{{ entry.slides }}" target="_blank" rel="noopener"><i class="fas fa-chalkboard" aria-hidden="true"></i> Slides</a>{% endif %}
+  </div>
+</header>

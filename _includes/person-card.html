@@ -1,0 +1,14 @@
+{% assign person = include.person %}
+{% assign person_image = person.image | default: '/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png' | replace: '\', '/' | relative_url %}
+{% capture links %}{% include social-icons-items.html social=person.social %}{% endcapture %}
+<li class="media mb-5">
+  <img class="align-self-center mr-3 person-photo"
+       src="{{ person_image }}"
+       alt="{{ person.name | strip_html }}">
+
+  <div class="media-body">
+    <h5 class="mt-0 text-primary">{{ person.name | markdownify | strip_html }}</h5>
+    <p>{{ person.status }}</p>
+    <ul class="list-inline list-unstyled">{{ links }}</ul>
+  </div>
+</li>

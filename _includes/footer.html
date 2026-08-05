@@ -1,8 +1,38 @@
-<footer>
-  <div class="footer">
-    Copyright © 2022
-    <a href="{{ site.theme_settings.profile.webpage }}">{{ site.theme_settings.profile.username }}</a>.
-    Powered by Jekyll with
-    <a href="https://github.com/chrjabs/Grape-Academic-Theme">Grape Academic Theme</a>.
+<div id="footer" class="site-footer mt-5">
+  <div class="mt-3">
+    <div class="row d-flex">
+
+      <div class="col-sm-6">
+        <p class="font-weight-bold">{{ site.title }}</p>
+        <a class="footer-affiliation-logo" href="https://www.uniroma1.it/en/pagina-strutturale/home" target="_blank" rel="noopener">
+          <img src="{{ '/assets/img/sapienza-logo.png' | relative_url }}" alt="Sapienza University of Rome">
+        </a>
+        <a class="footer-pinlab-logo" href="{{ '/' | relative_url }}" aria-label="PINlab home">
+          <img src="{{ '/assets/img/full_logo.jpeg' | relative_url }}" alt="PINlab">
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <p class="font-weight-bold">Links</p>
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/PINlabSapienza">Github</a></li>
+          <li><a href="https://twitter.com/SapienzaPINlab">Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-3">
+        <p class="font-weight-bold">Contact</p>
+
+        Department of Computer Science<br>
+        Sapienza University of Rome<br>
+        Italy<br>
+        <a href="mailto:pinlab.sapienza@gmail.com">pinlab.sapienza@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+      © {{ 'now' | date: '%Y' }} {{ site.author }}
+      <span class="d-block">Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and design adapted from <a href="https://github.com/rt2lab/rt2lab.github.io" target="_blank" rel="noopener">RT2Lab</a>.</span>
+    </div>
   </div>
-</footer>
+</div>

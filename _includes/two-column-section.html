@@ -1,9 +1,7 @@
 <section id="two-column-section">
-    <div class="column">
-      <div class="recentpubs-wrap">
-      <p class="title">{{ site.theme_settings.recentpubs_title }}</p>
-      [<a class="btn" href="{{ '/publications' | relative_url }}" title="Publications">All Publications</a>]
-      {% bibliography --template recentpubstemplate --max 5 %}
-    </div>
-    </div>
-  </section>
+  <div class="recentpubs-wrap">
+    <p class="font-weight-bold">{{ site.theme_settings.recentpubs_title }}</p>
+    <p><a class="btn" href="{{ '/publications' | relative_url }}" title="Publications">All Publications</a></p>
+    {% bibliography --template recentpubstemplate --max 5 %}
+  </div>
+</section>

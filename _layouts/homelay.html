@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<div>
+	<div class="img-cover mb-5 pinlab-cover pinlab-home-cover">
+		<div class="pinlab-hero-copy">
+			<h1>Perception and Intelligence Laboratory</h1>
+			<p>Department of Computer Science<br>Sapienza University of Rome, Italy</p>
+			<ul class="pinlab-hero-links list-inline list-unstyled">
+				{% include social-icons-items.html social=site.data.profile.social %}
+			</ul>
+		</div>
+		<div class="pinlab-logo-frame">
+			<img src="{{ '/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png' | relative_url }}" alt="PINlab logo">
+		</div>
+	</div>
+
+	<div class="pinlab-home-main">
+		{{ content }}
+	</div>
+</div>

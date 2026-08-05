@@ -1,0 +1,9 @@
+---
+---
+{% assign publication_abstract = entry.abstract | default: entry.abstractnote %}
+{% if publication_abstract %}
+<section class="academic-project-abstract">
+  <h2>Abstract</h2>
+  <p>{{ publication_abstract }}</p>
+</section>
+{% endif %}

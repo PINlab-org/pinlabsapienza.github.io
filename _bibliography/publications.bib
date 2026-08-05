@@ -13,450 +13,1216 @@ References
 %website     = {https://www.google.com},
 %latex_src   = {https://www.google.com},
 
+
+@inproceedings{Collorone_2025_ICCV,
+  author = {Collorone, Luca and Gioia, Matteo and Pappa, Massimiliano and Leoni,
+            Paolo and Ficarra, Giovanni and Litany, Or and Spinelli, Indro and
+            Galasso, Fabio},
+  title = {MonSTeR: a Unified Model for Motion, Scene, Text Retrieval},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer
+               Vision (ICCV)},
+  month = {October},
+  year = {2025},
+  pages = {10940-10949},
+}
+
+@misc{pappa2026describethenactproactiveagentsteering,
+  title = {Describe-Then-Act: Proactive Agent Steering via Distilled
+           Language-Action World Models},
+  author = {Massimiliano Pappa and Luca Romani and Valentino Sacco and Alessio
+            Palma and Stéphane Lathuilière and Fabio Galasso and Xavier
+            Alameda-Pineda and Indro Spinelli},
+  year = {2026},
+  eprint = {2603.23149},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.AI},
+  url = {https://arxiv.org/abs/2603.23149},
+}
+
+
+@misc{sacco2026robotsaskwaycommunicationenabled,
+  title = {Robots Ask the Way: Communication-Enabled Social Navigation},
+  author = {Valentino Sacco and Luca Scofano and Indro Spinelli and Fabio
+            Galasso},
+  year = {2026},
+  eprint = {2607.01044},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.RO},
+  url = {https://arxiv.org/abs/2607.01044},
+}
+
 @article{Plini:2936731,
-      author        = "Plini, L and Tinti, G and Spadaro, T and Galasso, F",
-      title         = "{Graph Neural Networks for particle tracking in NA62
-                       Experiment}",
-      journal       = "Nuovo Cimento C",
-      volume        = "48",
-      number        = "3",
-      pages         = "149",
-      year          = "2025",
-      url           = "https://cds.cern.ch/record/2936731",
-      doi           = "10.1393/ncc/i2025-25149-3",
+  author = "Plini, L and Tinti, G and Spadaro, T and Galasso, F",
+  title = "{Graph Neural Networks for particle tracking in NA62 Experiment}",
+  journal = "Nuovo Cimento C",
+  volume = "48",
+  number = "3",
+  pages = "149",
+  year = "2025",
+  url = "https://cds.cern.ch/record/2936731",
+  doi = "10.1393/ncc/i2025-25149-3",
+  abstract = {The NA62 experiment at the Super Proton Synchrotron at CERN is
+              designed to measure the branching ratio of the ultra-rare channel
+              K+ → π+ν¯ν with BR = (8.6 ± 0.42) × 10 −11. The spectrometer that
+              measures the momentum and direction of the incoming hadron beam
+              particles at a rate of 750 MHz is a silicon pixel detector, the
+              GigaTracker. Managing pile-up, temporal matching and vertex
+              reconstruction between beam kaons and pions produced in the decays
+              is crucial for the success of the experiment’s analyses, but the
+              problem is complex due to the combinatorial way in which the tracks
+              are built in the currently adopted method. In this study, starting
+              from a simulation reproducing the NA62 conditions, we have
+              developed and applied to this problem for the first time a
+              technique based on Graph Neural Networks to reconstruct the
+              particle tracks observed at the four GigaTracker stations. In fact,
+              within the field of machine learning, the de facto best strategy
+              for modeling interaction between nodes is Graph Neural Networks.
+              This study aims to bridge the gap between machine learning best
+              practices and current modeling approaches in the NA62 experiment.
+              We formulate the problem as a binary classification of the edges in
+              the graph where each node represents a particle hit in the
+              stations. The proposed strategy allows for setting topological
+              constraints based on the physical knowledge of the experiment and
+              considerable flexibility concerning the number of particles present
+              in each event. The results show high efficiency and purity
+              essential for the success of the analysis.},
 }
 
-@misc{facchiano2025videounlearninglowrankrefusal,
-      title={Video Unlearning via Low-Rank Refusal Vector}, 
-      author={Simone Facchiano and Stefano Saravalle and Matteo Migliarini and Edoardo De Matteis and Alessio Sampieri and Andrea Pilzer and Emanuele Rodolà and Indro Spinelli and Luca Franco and Fabio Galasso},
-      year={2025},
-      eprint={2506.07891},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2506.07891},
-      bibtex_show = true,
-      abstract={Video generative models democratize the creation of visual content through intuitive instruction following, but they also inherit the biases and harmful concepts embedded within their web-scale training data. This inheritance creates a significant risk, as users can readily generate undesirable and even illegal content. This work introduces the first unlearning technique tailored explicitly for video diffusion models to address this critical issue. Our method requires 5 multi-modal prompt pairs only. Each pair contains a “safe” and an “unsafe” example that differ only by the target concept. Averaging their per-layer latent differences produces a “refusal vector”, which, once subtracted from the model parameters, neutralizes the unsafe concept. We introduce a novel low-rank factorization approach on the covariance difference of embeddings that yields robust refusal vectors. This isolates the target concept while minimizing collateral unlearning of other semantics, thus preserving the visual quality of the generated video. Our method preserves the model’s generation quality while operating without retraining or access to the original training data. By embedding the refusal direction directly into the model’s weights, the suppression mechanism becomes inherently more robust against adversarial bypass attempts compared to surface-level input-output filters. In a thorough qualitative and quantitative evaluation, we show that we can neutralize a variety of harmful contents, including explicit nudity, graphic violence, copyrights, and trademarks.}
+@inproceedings{facchiano2026video,
+  title = {Video Unlearning via Low-Rank Refusal Vector},
+  author = {Simone Facchiano and Stefano Saravalle and Matteo Migliarini and
+            Edoardo De Matteis and Alessio Sampieri and Andrea Pilzer and
+            Emanuele Rodol{\`a} and Indro Spinelli and Luca Franco and Fabio
+            Galasso},
+  booktitle = {The Fourteenth International Conference on Learning
+               Representations},
+  year = {2026},
+  website = {video-unlearning},
+  code = {https://github.com/4idrossifenil-etanammide/Video-Unlearning},
+  url = {https://openreview.net/forum?id=U1XBHtXl7Y},
+  abstract = {Video generative models democratize the creation of visual content
+              through intuitive instruction following, but they also inherit the
+              biases and harmful concepts embedded within their web-scale
+              training data. This inheritance creates a significant risk, as
+              users can readily generate undesirable and even illegal content.
+              This work introduces the first unlearning technique tailored
+              explicitly for video diffusion models to address this critical
+              issue. Our method requires 5 multi-modal prompt pairs only. Each
+              pair contains a “safe” and an “unsafe” example that differ only by
+              the target concept. Averaging their per-layer latent differences
+              produces a “refusal vector”, which, once subtracted from the model
+              parameters, neutralizes the unsafe concept. We introduce a novel
+              low-rank factorization approach on the covariance difference of
+              embeddings that yields robust refusal vectors. This isolates the
+              target concept while minimizing collateral unlearning of other
+              semantics, thus preserving the visual quality of the generated
+              video. Our method preserves the model’s generation quality while
+              operating without retraining or access to the original training
+              data. By embedding the refusal direction directly into the model’s
+              weights, the suppression mechanism becomes inherently more robust
+              against adversarial bypass attempts compared to surface-level
+              input-output filters. In a thorough qualitative and quantitative
+              evaluation, we show that we can neutralize a variety of harmful
+              contents, including explicit nudity, graphic violence, copyrights,
+              and trademarks.},
 }
 
-@misc{dematteis2025humanmotionunlearning,
-      title={Human Motion Unlearning}, 
-      author={Edoardo De Matteis and Matteo Migliarini and Alessio Sampieri and Indro Spinelli and Fabio Galasso},
-      year={2025},
-      eprint={2503.18674},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.18674}, 
-      bibtex_show = true,
-      abstract={We introduce the task of human motion unlearning to prevent the synthesis of toxic animations while preserving the general text-to-motion generative performance. Unlearning toxic motions is challenging as those can be generated from explicit text prompts and from implicit toxic combinations of safe motions (e.g., "kicking" is "loading and swinging a leg"). We propose the first motion unlearning benchmark by filtering toxic motions from the large and recent text-to-motion datasets of HumanML3D and Motion-X. We propose baselines, by adapting state-of-the-art image unlearning techniques to process spatio-temporal signals. Finally, we propose a novel motion unlearning model based on Latent Code Replacement, which we dub LCR. LCR is training-free and suitable to the discrete latent spaces of state-of-the-art text-to-motion diffusion models. LCR is simple and consistently outperforms baselines qualitatively and quantitatively.}
+@inproceedings{dematteis2026hmu,
+  title = {Human Motion Unlearning},
+  volume = {40},
+  url = {https://ojs.aaai.org/index.php/AAAI/article/view/37351},
+  DOI = {10.1609/aaai.v40i5.37351},
+  number = {5},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {De Matteis, Edoardo and Migliarini, Matteo and Sampieri, Alessio and
+            Spinelli, Indro and Galasso, Fabio},
+  year = {2026},
+  month = {Mar.},
+  pages = {3533-3541},
+  abstractNote = {We introduce Human Motion Unlearning and motivate it through
+                  the concrete task of preventing violent 3D motion synthesis, an
+                  important safety requirement given that popular text-to-motion
+                  datasets (HumanML3D and Motion-X) contain from 7% to 15%
+                  violent sequences spanning both atomic gestures (e.g., a single
+                  punch) and highly compositional actions (e.g., loading and
+                  swinging a leg to kick). By focusing on violence unlearning, we
+                  demonstrate how removing a challenging, multifaceted concept
+                  can serve as a proxy for the broader capability of motion
+                  &amp;quot;forgetting.&amp;quot; To enable systematic evaluation
+                  of Human Motion Unlearning, we establish the first motion
+                  unlearning benchmark by automatically filtering HumanML3D and
+                  Motion-X datasets to create distinct forget sets (violent
+                  motions) and retain sets (safe motions). We introduce
+                  evaluation metrics tailored to sequential unlearning, measuring
+                  both suppression efficacy and the preservation of realism and
+                  smooth transitions. We adapt two state-of-the-art,
+                  training-free image unlearning methods (UCE and RECE) to
+                  leading text-to-motion architectures (MoMask and BAMM), and
+                  propose Latent Code Replacement (LCR), a novel, training-free
+                  approach that identifies violent codes in a discrete codebook
+                  representation and substitutes them with safe alternatives. Our
+                  experiments show that unlearning violent motions is indeed
+                  feasible and that acting on latent codes strikes the best
+                  trade-off between violence suppression and preserving overall
+                  motion quality. This work establishes a foundation for
+                  advancing safe motion synthesis across diverse applications.},
+  website = {hmu},
+  code = {https://github.com/Mamiglia/hmu},
 }
 
-@InProceedings{Scofano_2025_WACV,
-    author    = {Scofano, Luca and Sampieri, Alessio and De Matteis, Edoardo and Spinelli, Indro and Galasso, Fabio},
-    title     = {Social EgoMesh Estimation},
-    booktitle = {Winter Conference on Applications of Computer Vision (WACV)},
-    year      = {2025},
-    url       = {https://arxiv.org/abs/2411.04598},
-    bibtex_show = true,
-    abstract = {Accurately estimating the 3D pose of the camera wearer in egocentric video sequences is crucial to modeling human behavior in virtual and augmented reality applications. The task presents unique challenges due to the limited visibility of the user's body caused by the front-facing camera mounted on their head. Recent research has explored the utilization of the scene and ego-motion but it has overlooked humans' interactive nature. We propose a novel framework for Social Egocentric Estimation of body MEshes (SEE-ME). Our approach is the first to estimate the wearer's mesh using only a latent probabilistic diffusion model which we condition on the scene and for the first time on the social wearer-interactee interactions. Our in depth study sheds light on when social interaction matters most for ego-mesh estimation: it quantifies the impact of interpersonal distance and gaze direction. Overall SEE-ME surpasses the current best technique reducing the pose estimation error (MPJPE) by 53%.},
+@inproceedings{Scofano_2025_WACV,
+  author = {Scofano, Luca and Sampieri, Alessio and De Matteis, Edoardo and
+            Spinelli, Indro and Galasso, Fabio},
+  title = {Social EgoMesh Estimation},
+  booktitle = {Winter Conference on Applications of Computer Vision (WACV)},
+  year = {2025},
+  url = {https://arxiv.org/abs/2411.04598},
+  bibtex_show = true,
+  abstract = {Accurately estimating the 3D pose of the camera wearer in
+              egocentric video sequences is crucial to modeling human behavior in
+              virtual and augmented reality applications. The task presents
+              unique challenges due to the limited visibility of the user's body
+              caused by the front-facing camera mounted on their head. Recent
+              research has explored the utilization of the scene and ego-motion
+              but it has overlooked humans' interactive nature. We propose a
+              novel framework for Social Egocentric Estimation of body MEshes
+              (SEE-ME). Our approach is the first to estimate the wearer's mesh
+              using only a latent probabilistic diffusion model which we
+              condition on the scene and for the first time on the social
+              wearer-interactee interactions. Our in depth study sheds light on
+              when social interaction matters most for ego-mesh estimation: it
+              quantifies the impact of interpersonal distance and gaze direction.
+              Overall SEE-ME surpasses the current best technique reducing the
+              pose estimation error (MPJPE) by 53%.},
 }
 
 @inproceedings{pal2024compositionalentailmentlearninghyperbolic,
-      title={Compositional Entailment Learning for Hyperbolic Vision-Language Models}, 
-      author={Avik Pal and Max van Spengler and Guido Maria D'Amely di Melendugno and Alessandro Flaborea and Fabio Galasso and Pascal Mettes},
-      year={2025},
-      booktitle={International Conference on Learning Representation (ICLR)},
-      url={https://arxiv.org/abs/2410.06912}, 
-      bibtex_show = true,
-      abstract={Image-text representation learning forms a cornerstone in vision-language models, where pairs of images and textual descriptions are contrastively aligned in a shared embedding space. Since visual and textual concepts are naturally hierarchical, recent work has shown that hyperbolic space can serve as a high-potential manifold to learn vision-language representation with strong downstream performance. In this work, for the first time we show how to fully leverage the innate hierarchical nature of hyperbolic embeddings by looking beyond individual image-text pairs. We propose Compositional Entailment Learning for hyperbolic vision-language models. The idea is that an image is not only described by a sentence but is itself a composition of multiple object boxes, each with their own textual description. Such information can be obtained freely by extracting nouns from sentences and using openly available localized grounding models. We show how to hierarchically organize images, image boxes, and their textual descriptions through contrastive and entailment-based objectives. Empirical evaluation on a hyperbolic vision-language model trained with millions of image-text pairs shows that the proposed compositional learning approach outperforms conventional Euclidean CLIP learning, as well as recent hyperbolic alternatives, with better zero-shot and retrieval generalization and clearly stronger hierarchical performance.
-}
+  title = {Compositional Entailment Learning for Hyperbolic Vision-Language
+           Models},
+  author = {Avik Pal and Max van Spengler and Guido Maria D'Amely di Melendugno
+            and Alessandro Flaborea and Fabio Galasso and Pascal Mettes},
+  year = {2025},
+  booktitle = {International Conference on Learning Representation (ICLR)},
+  url = {https://arxiv.org/abs/2410.06912},
+  bibtex_show = true,
+  abstract = {Image-text representation learning forms a cornerstone in
+              vision-language models, where pairs of images and textual
+              descriptions are contrastively aligned in a shared embedding space.
+              Since visual and textual concepts are naturally hierarchical,
+              recent work has shown that hyperbolic space can serve as a
+              high-potential manifold to learn vision-language representation
+              with strong downstream performance. In this work, for the first
+              time we show how to fully leverage the innate hierarchical nature
+              of hyperbolic embeddings by looking beyond individual image-text
+              pairs. We propose Compositional Entailment Learning for hyperbolic
+              vision-language models. The idea is that an image is not only
+              described by a sentence but is itself a composition of multiple
+              object boxes, each with their own textual description. Such
+              information can be obtained freely by extracting nouns from
+              sentences and using openly available localized grounding models. We
+              show how to hierarchically organize images, image boxes, and their
+              textual descriptions through contrastive and entailment-based
+              objectives. Empirical evaluation on a hyperbolic vision-language
+              model trained with millions of image-text pairs shows that the
+              proposed compositional learning approach outperforms conventional
+              Euclidean CLIP learning, as well as recent hyperbolic alternatives,
+              with better zero-shot and retrieval generalization and clearly
+              stronger hierarchical performance. },
 }
 
 @inproceedings{scofano2024followinghumanthreadsocial,
-      title={Following the Human Thread in Social Navigation}, 
-      author={Luca Scofano and Alessio Sampieri and Tommaso Campari and Valentino Sacco and Indro Spinelli and Lamberto Ballan and Fabio Galasso},
-      year={2025},
-      url={https://arxiv.org/abs/2404.11327}, 
-      booktitle={International Conference on Learning Representation (ICLR)},
-      abstract={The success of collaboration between humans and robots in shared environments relies on the robot's real-time adaptation to human motion. Specifically, in Social Navigation, the agent should be close enough to assist but ready to back up to let the human move freely, avoiding collisions. Human trajectories emerge as crucial cues in Social Navigation, but they are partially observable from the robot's egocentric view and computationally complex to process.
-              We propose the first Social Dynamics Adaptation model (SDA) based on the robot's state-action history to infer the social dynamics. We propose a two-stage Reinforcement Learning framework: the first learns to encode the human trajectories into social dynamics and learns a motion policy conditioned on this encoded information, the current status, and the previous action. Here, the trajectories are fully visible, i.e., assumed as privileged information. In the second stage, the trained policy operates without direct access to trajectories. Instead, the model infers the social dynamics solely from the history of previous actions and statuses in real-time. Tested on the novel Habitat 3.0 platform, SDA sets a novel state of the art (SoA) performance in finding and following humans.},
-      bibtex_show = true
+  title = {Following the Human Thread in Social Navigation},
+  author = {Luca Scofano and Alessio Sampieri and Tommaso Campari and Valentino
+            Sacco and Indro Spinelli and Lamberto Ballan and Fabio Galasso},
+  year = {2025},
+  url = {https://arxiv.org/abs/2404.11327},
+  booktitle = {International Conference on Learning Representation (ICLR)},
+  abstract = {The success of collaboration between humans and robots in shared
+              environments relies on the robot's real-time adaptation to human
+              motion. Specifically, in Social Navigation, the agent should be
+              close enough to assist but ready to back up to let the human move
+              freely, avoiding collisions. Human trajectories emerge as crucial
+              cues in Social Navigation, but they are partially observable from
+              the robot's egocentric view and computationally complex to process.
+              We propose the first Social Dynamics Adaptation model (SDA) based
+              on the robot's state-action history to infer the social dynamics.
+              We propose a two-stage Reinforcement Learning framework: the first
+              learns to encode the human trajectories into social dynamics and
+              learns a motion policy conditioned on this encoded information, the
+              current status, and the previous action. Here, the trajectories are
+              fully visible, i.e., assumed as privileged information. In the
+              second stage, the trained policy operates without direct access to
+              trajectories. Instead, the model infers the social dynamics solely
+              from the history of previous actions and statuses in real-time.
+              Tested on the novel Habitat 3.0 platform, SDA sets a novel state of
+              the art (SoA) performance in finding and following humans.},
+  bibtex_show = true,
 }
 
 @article{laurenti2024probing,
-  title={Probing the evolution of fault properties during the seismic cycle with deep learning},
-  author={Laurenti, Laura and Paoletti, Gabriele, and Tinti, Elisa and Galasso, Fabio and Collettini, Cristiano and Marone, Chris },
-  journal={Nature Communications},
-  year={2024},
+  title = {Probing the evolution of fault properties during the seismic cycle
+           with deep learning},
+  author = {Laurenti, Laura and Paoletti, Gabriele, and Tinti, Elisa and Galasso
+            , Fabio and Collettini, Cristiano and Marone, Chris },
+  journal = {Nature Communications},
+  year = {2024},
   bibtex_show = true,
   url = {https://doi.org/10.1038/s41467-024-54153-w},
   doi = {https://doi.org/10.1038/s41467-024-54153-w},
-  abstract = {We use seismic waves that pass through the hypocentral region of the 2016 M6.5 Norcia earthquake together with Deep Learning (DL) to distinguish between foreshocks, aftershocks and time-to-failure (TTF). Binary and N-class models defined by TTF correctly identify seismograms in test with > 90% accuracy. We use raw seismic records as input to a 7 layer CNN model to perform the classification. Here we show that DL models successfully distinguish seismic waves pre/post mainshock in accord with lab and theoretical expectations of progressive changes in crack density prior to abrupt change at failure and gradual postseismic recovery. Performance is lower for band-pass filtered seismograms (below 10 Hz) suggesting that DL models learn from the evolution of subtle changes in elastic wave attenuation. Tests to verify that our results indeed provide a proxy for fault properties included DL models trained with the wrong mainshock time and those using seismic waves far from the Norcia mainshock; both show degraded performance. Our results demonstrate that DL models have the potential to track the evolution of fault zone properties during the seismic cycle. If this result is generalizable it could improve earthquake early warning and seismic hazard analysis.},
+  abstract = {We use seismic waves that pass through the hypocentral region of
+              the 2016 M6.5 Norcia earthquake together with Deep Learning (DL) to
+              distinguish between foreshocks, aftershocks and time-to-failure
+              (TTF). Binary and N-class models defined by TTF correctly identify
+              seismograms in test with > 90% accuracy. We use raw seismic records
+              as input to a 7 layer CNN model to perform the classification. Here
+              we show that DL models successfully distinguish seismic waves
+              pre/post mainshock in accord with lab and theoretical expectations
+              of progressive changes in crack density prior to abrupt change at
+              failure and gradual postseismic recovery. Performance is lower for
+              band-pass filtered seismograms (below 10 Hz) suggesting that DL
+              models learn from the evolution of subtle changes in elastic wave
+              attenuation. Tests to verify that our results indeed provide a
+              proxy for fault properties included DL models trained with the
+              wrong mainshock time and those using seismic waves far from the
+              Norcia mainshock; both show degraded performance. Our results
+              demonstrate that DL models have the potential to track the
+              evolution of fault zone properties during the seismic cycle. If
+              this result is generalizable it could improve earthquake early
+              warning and seismic hazard analysis.},
 }
 
 @article{trappolini2024cold,
-  title={Cold Diffusion Model for Seismic Denoising},
-  author={Trappolini, Daniele and Laurenti, Laura and Poggiali, Giulio, and Tinti, Elisa and Galasso, Fabio and Alberto, Michelini and Marone, Chris },
-  journal={Journal of Geophysical Research: Machine Learning and Computation},
-  year={2024},
+  title = {Cold Diffusion Model for Seismic Denoising},
+  author = {Trappolini, Daniele and Laurenti, Laura and Poggiali, Giulio, and
+            Tinti, Elisa and Galasso, Fabio and Alberto, Michelini and Marone,
+            Chris },
+  journal = {Journal of Geophysical Research: Machine Learning and Computation},
+  year = {2024},
   bibtex_show = true,
   url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2024JH000179},
   doi = {https://doi.org/10.1029/2024JH000179},
-  abstract = {Abstract Seismic waves contain information about the earthquake source, the geologic structure they traverse, and many forms of noise. Separating the noise from the earthquake is a difficult task because optimal parameters for filtering noise typically vary with time and, if chosen inappropriately, may strongly alter the original seismic waveform. Diffusion models based on Deep Learning have demonstrated remarkable capabilities in restoring images and audio signals. However, those models assume a Gaussian distribution of noise, which is not the case for typical seismic noise. Motivated by the effectiveness of “cold” diffusion models in speech enhancement, medical anomaly detection, and image restoration, we present a cold variant for seismic data restoration. We describe the first Cold Diffusion Model for Seismic Denoising (CDiffSD), including key design aspects, model architecture, and noise handling. Using metrics to quantify the performance of CDiffSD models compared to previous works, we demonstrate that it provides a new standard in performance. CDiffSD significantly improved the Signal to Noise Ratio by about 18\% compared to previous models. It also enhanced Cross-correlation by 6\%, showing a better match between denoised and original signals. Moreover, testing revealed a 50\% increase in the recall of P-wave picks for seismic picking. Our work show that CDiffSD outperforms existing benchmarks, further underscoring its effectiveness in seismic data denoising and analysis. Additionally, the versatility of this model suggests its potential applicability across a range of tasks and domains, such as GNSS, Lab Acoustic Emission, and Distributed Acoustic Sensing data, offering promising avenues for further utilization.},
+  abstract = {Abstract Seismic waves contain information about the earthquake
+              source, the geologic structure they traverse, and many forms of
+              noise. Separating the noise from the earthquake is a difficult task
+              because optimal parameters for filtering noise typically vary with
+              time and, if chosen inappropriately, may strongly alter the
+              original seismic waveform. Diffusion models based on Deep Learning
+              have demonstrated remarkable capabilities in restoring images and
+              audio signals. However, those models assume a Gaussian distribution
+              of noise, which is not the case for typical seismic noise.
+              Motivated by the effectiveness of “cold” diffusion models in speech
+              enhancement, medical anomaly detection, and image restoration, we
+              present a cold variant for seismic data restoration. We describe
+              the first Cold Diffusion Model for Seismic Denoising (CDiffSD),
+              including key design aspects, model architecture, and noise
+              handling. Using metrics to quantify the performance of CDiffSD
+              models compared to previous works, we demonstrate that it provides
+              a new standard in performance. CDiffSD significantly improved the
+              Signal to Noise Ratio by about 18\% compared to previous models. It
+              also enhanced Cross-correlation by 6\%, showing a better match
+              between denoised and original signals. Moreover, testing revealed a
+              50\% increase in the recall of P-wave picks for seismic picking.
+              Our work show that CDiffSD outperforms existing benchmarks, further
+              underscoring its effectiveness in seismic data denoising and
+              analysis. Additionally, the versatility of this model suggests its
+              potential applicability across a range of tasks and domains, such
+              as GNSS, Lab Acoustic Emission, and Distributed Acoustic Sensing
+              data, offering promising avenues for further utilization.},
 }
 
 @inproceedings{rahman2024ovoseopenvocabularysemanticsegmentation,
-      title={OVOSE: Open-Vocabulary Semantic Segmentation in Event-Based Cameras}, 
-      author={Muhammad Rameez Ur Rahman and Jhony H. Giraldo and Indro Spinelli and Stéphane Lathuilière and Fabio Galasso},
-      year={2024},
-      booktitle={International Conference on Pattern Recognition (ICPR)},
-      url={https://arxiv.org/abs/2408.09424}, 
-      bibtex_show = true,
-      abstract={Event cameras, known for low-latency operation and superior performance in challenging lighting conditions, are suitable for sensitive computer vision tasks such as semantic segmentation in autonomous driving. However, challenges arise due to limited event-based data and the absence of large-scale segmentation benchmarks. Current works are confined to closed-set semantic segmentation, limiting their adaptability to other applications. In this paper, we introduce OVOSE, the first Open-Vocabulary Semantic Segmentation algorithm for Event cameras. OVOSE leverages synthetic event data and knowledge distillation from a pre-trained image-based foundation model to an event-based counterpart, effectively preserving spatial context and transferring open-vocabulary semantic segmentation capabilities. We evaluate the performance of OVOSE on two driving semantic segmentation datasets DDD17, and DSEC-Semantic, comparing it with existing conventional image open-vocabulary models adapted for event-based data. Similarly, we compare OVOSE with state-of-the-art methods designed for closed-set settings in unsupervised domain adaptation for event-based semantic segmentation. OVOSE demonstrates superior performance, showcasing its potential for real-world applications}
+  title = {OVOSE: Open-Vocabulary Semantic Segmentation in Event-Based Cameras},
+  author = {Muhammad Rameez Ur Rahman and Jhony H. Giraldo and Indro Spinelli
+            and Stéphane Lathuilière and Fabio Galasso},
+  year = {2024},
+  booktitle = {International Conference on Pattern Recognition (ICPR)},
+  url = {https://arxiv.org/abs/2408.09424},
+  bibtex_show = true,
+  abstract = {Event cameras, known for low-latency operation and superior
+              performance in challenging lighting conditions, are suitable for
+              sensitive computer vision tasks such as semantic segmentation in
+              autonomous driving. However, challenges arise due to limited
+              event-based data and the absence of large-scale segmentation
+              benchmarks. Current works are confined to closed-set semantic
+              segmentation, limiting their adaptability to other applications. In
+              this paper, we introduce OVOSE, the first Open-Vocabulary Semantic
+              Segmentation algorithm for Event cameras. OVOSE leverages synthetic
+              event data and knowledge distillation from a pre-trained
+              image-based foundation model to an event-based counterpart,
+              effectively preserving spatial context and transferring
+              open-vocabulary semantic segmentation capabilities. We evaluate the
+              performance of OVOSE on two driving semantic segmentation datasets
+              DDD17, and DSEC-Semantic, comparing it with existing conventional
+              image open-vocabulary models adapted for event-based data.
+              Similarly, we compare OVOSE with state-of-the-art methods designed
+              for closed-set settings in unsupervised domain adaptation for
+              event-based semantic segmentation. OVOSE demonstrates superior
+              performance, showcasing its potential for real-world applications},
 }
 
 @inproceedings{mandica2024hyperboliclearningmultimodallarge,
-      title={Hyperbolic Learning with Multimodal Large Language Models}, 
-      author={Paolo Mandica and Luca Franco and Konstantinos Kallidromitis and Suzanne Petryk and Fabio Galasso},
-      year={2024},
-      booktitle={European Conference on Computer Vision (ECCV) workshops},
-      url={https://arxiv.org/abs/2408.05097}, 
-      abstract={Hyperbolic embeddings have demonstrated their effectiveness in capturing measures of uncertainty and hierarchical relationships across various deep-learning tasks, including image segmentation and active learning. However, their application in modern vision-language models (VLMs) has been limited. A notable exception is MERU, which leverages the hierarchical properties of hyperbolic space in the CLIP ViT-large model, consisting of hundreds of millions parameters. In our work, we address the challenges of scaling multi-modal hyperbolic models by orders of magnitude in terms of parameters (billions) and training complexity using the BLIP-2 architecture. Although hyperbolic embeddings offer potential insights into uncertainty not present in Euclidean embeddings, our analysis reveals that scaling these models is particularly difficult. We propose a novel training strategy for a hyperbolic version of BLIP-2, which allows to achieve comparable performance to its Euclidean counterpart, while maintaining stability throughout the training process and showing a meaningful indication of uncertainty with each embedding.
-      },
-      bibtex_show = true
+  title = {Hyperbolic Learning with Multimodal Large Language Models},
+  author = {Paolo Mandica and Luca Franco and Konstantinos Kallidromitis and
+            Suzanne Petryk and Fabio Galasso},
+  year = {2024},
+  booktitle = {European Conference on Computer Vision (ECCV) workshops},
+  url = {https://arxiv.org/abs/2408.05097},
+  abstract = {Hyperbolic embeddings have demonstrated their effectiveness in
+              capturing measures of uncertainty and hierarchical relationships
+              across various deep-learning tasks, including image segmentation
+              and active learning. However, their application in modern
+              vision-language models (VLMs) has been limited. A notable exception
+              is MERU, which leverages the hierarchical properties of hyperbolic
+              space in the CLIP ViT-large model, consisting of hundreds of
+              millions parameters. In our work, we address the challenges of
+              scaling multi-modal hyperbolic models by orders of magnitude in
+              terms of parameters (billions) and training complexity using the
+              BLIP-2 architecture. Although hyperbolic embeddings offer potential
+              insights into uncertainty not present in Euclidean embeddings, our
+              analysis reveals that scaling these models is particularly
+              difficult. We propose a novel training strategy for a hyperbolic
+              version of BLIP-2, which allows to achieve comparable performance
+              to its Euclidean counterpart, while maintaining stability
+              throughout the training process and showing a meaningful indication
+              of uncertainty with each embedding. },
+  bibtex_show = true,
 }
 
 @inproceedings{sampieri2024lengthawaremotionsynthesislatent,
-  title={Length-Aware Motion Synthesis via Latent Diffusion},
-  author={Alessio Sampieri and Alessio Palma and Indro Spinelli and Fabio Galasso},
-  booktitle={European Conference on Computer Vision (ECCV)},
-  year={2024},
-  organization={Springer},
-  eprint={2407.11532},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV},
-  abstract = {
-            The target duration of a synthesized human motion is a critical attribute that requires modeling control over the motion dynamics and style. Speeding up an action performance is not merely fast-forwarding it. However, state-of-the-art techniques for human behavior synthesis have limited control over the target sequence length.
-We introduce the problem of generating length-aware 3D human motion sequences from textual descriptors, and we propose a novel model to synthesize motions of variable target lengths, which we dub "Length-Aware Latent Diffusion" (LADiff). LADiff consists of two new modules: 1) a length-aware variational auto-encoder to learn motion representations with length-dependent latent codes; 2) a length-conforming latent diffusion model to generate motions with a richness of details that increases with the required target sequence length. LADiff significantly improves over the state-of-the-art across most of the existing motion synthesis metrics on the two established benchmarks of HumanML3D and KIT-ML.
-  },
-  url= {https://arxiv.org/abs/2407.11532},
-  bibtex_show = true
+  title = {Length-Aware Motion Synthesis via Latent Diffusion},
+  author = {Alessio Sampieri and Alessio Palma and Indro Spinelli and Fabio
+            Galasso},
+  booktitle = {European Conference on Computer Vision (ECCV)},
+  year = {2024},
+  organization = {Springer},
+  eprint = {2407.11532},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  abstract = { The target duration of a synthesized human motion is a critical
+              attribute that requires modeling control over the motion dynamics
+              and style. Speeding up an action performance is not merely
+              fast-forwarding it. However, state-of-the-art techniques for human
+              behavior synthesis have limited control over the target sequence
+              length. We introduce the problem of generating length-aware 3D
+              human motion sequences from textual descriptors, and we propose a
+              novel model to synthesize motions of variable target lengths, which
+              we dub "Length-Aware Latent Diffusion" (LADiff). LADiff consists of
+              two new modules: 1) a length-aware variational auto-encoder to
+              learn motion representations with length-dependent latent codes; 2)
+              a length-conforming latent diffusion model to generate motions with
+              a richness of details that increases with the required target
+              sequence length. LADiff significantly improves over the
+              state-of-the-art across most of the existing motion synthesis
+              metrics on the two established benchmarks of HumanML3D and KIT-ML.
+              },
+  url = {https://arxiv.org/abs/2407.11532},
+  bibtex_show = true,
 }
 
 @article{damely24,
- 
-  author = {Di Melendugno, Guido Maria D'Amely and Flaborea, Alessandro and Mettes, Pascal and Galasso, Fabio},
-  
+  author = {Di Melendugno, Guido Maria D'Amely and Flaborea, Alessandro and
+            Mettes, Pascal and Galasso, Fabio},
   keywords = {Robotics (cs.RO); Computer Vision and Pattern Recognition (cs.CV)},
-  
   title = {Hyp2Nav: Hyperbolic Planning and Curiosity for Crowd Navigation},
-  journal={IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
- 
+  journal = {IEEE/RSJ International Conference on Intelligent Robots and Systems
+             (IROS)},
   year = {2024},
   arxiv = {2407.13567},
   bibtex_show = true,
-  abstract = {Autonomous robots are increasingly becoming a strong fixture in social environments. Effective crowd navigation requires not only safe yet fast planning, but should also enable interpretability and computational efficiency for working in real-time on embedded devices. In this work, we advocate for hyperbolic learning to enable crowd navigation and we introduce Hyp2Nav. Different from conventional reinforcement learning-based crowd navigation methods, Hyp2Nav leverages the intrinsic properties of hyperbolic geometry to better encode the hierarchical nature of decision-making processes in navigation tasks. We propose a hyperbolic policy model and a hyperbolic curiosity module that results in effective social navigation, best success rates, and returns across multiple simulation settings, using up to 6 times fewer parameters than competitor state-of-the-art models. With our approach, it becomes even possible to obtain policies that work in 2-dimensional embedding spaces, opening up new possibilities for low-resource crowd navigation and model interpretability. Insightfully, the internal hyperbolic representation of Hyp2Nav correlates with how much attention the robot pays to the surrounding crowds, e.g. due to multiple people occluding its pathway or to a few of them showing colliding plans, rather than to its own planned route.}
+  abstract = {Autonomous robots are increasingly becoming a strong fixture in
+              social environments. Effective crowd navigation requires not only
+              safe yet fast planning, but should also enable interpretability and
+              computational efficiency for working in real-time on embedded
+              devices. In this work, we advocate for hyperbolic learning to
+              enable crowd navigation and we introduce Hyp2Nav. Different from
+              conventional reinforcement learning-based crowd navigation methods,
+              Hyp2Nav leverages the intrinsic properties of hyperbolic geometry
+              to better encode the hierarchical nature of decision-making
+              processes in navigation tasks. We propose a hyperbolic policy model
+              and a hyperbolic curiosity module that results in effective social
+              navigation, best success rates, and returns across multiple
+              simulation settings, using up to 6 times fewer parameters than
+              competitor state-of-the-art models. With our approach, it becomes
+              even possible to obtain policies that work in 2-dimensional
+              embedding spaces, opening up new possibilities for low-resource
+              crowd navigation and model interpretability. Insightfully, the
+              internal hyperbolic representation of Hyp2Nav correlates with how
+              much attention the robot pays to the surrounding crowds, e.g. due
+              to multiple people occluding its pathway or to a few of them
+              showing colliding plans, rather than to its own planned route.},
 }
 
 @article{pappa2024modipotexttomotionalignmentaifeedbackdriven,
-      title={MoDiPO: text-to-motion alignment via AI-feedback-driven Direct Preference Optimization}, 
-      author={Massimiliano Pappa and Luca Collorone and Giovanni Ficarra and Indro Spinelli and Fabio Galasso},
-      year={2024},
-      eprint={2405.03803},
-      archivePrefix={arXiv},
-      journal={arXiv preprint arXiv:2404.11327},
-      url={https://arxiv.org/abs/2405.03803},
-      arxiv = {2404.11327},
-      primaryClass={cs.CV},
-      abstract={Diffusion Models have revolutionized the field of human motion generation by offering exceptional generation quality and fine-grained controllability through natural language conditioning. Their inherent stochasticity, that is the ability to generate various outputs from a single input, is key to their success. However, this diversity should not be unrestricted, as it may lead to unlikely generations. Instead, it should be confined within the boundaries of text-aligned and realistic generations. To address this issue, we propose MoDiPO (Motion Diffusion DPO), a novel methodology that leverages Direct Preference Optimization (DPO) to align text-to-motion models. We streamline the laborious and expensive process of gathering human preferences needed in DPO by leveraging AI feedback instead. This enables us to experiment with novel DPO strategies, using both online and offline generated motion-preference pairs. To foster future research we contribute with a motion-preference dataset which we dub Pick-a-Move. We demonstrate, both qualitatively and quantitatively, that our proposed method yields significantly more realistic motions. In particular, MoDiPO substantially improves Frechet Inception Distance (FID) while retaining the same RPrecision and Multi-Modality performances.
-      },
-      bibtex_show = true
-}
-
-
-
-@article{trappolini2024cold,
-  title={Cold Diffusion Model for Seismic Denoising},
-  author={Trappolini, Daniele and Laurenti, Laura and Poggiali, Giulio, and Tinti, Elisa and Galasso, Fabio and Alberto, Michelini and Marone, Chris },
-  journal={Journal of Geophysical Research: Machine Learning and Computation},
-  year={2024},
+  title = {MoDiPO: text-to-motion alignment via AI-feedback-driven Direct
+           Preference Optimization},
+  author = {Massimiliano Pappa and Luca Collorone and Giovanni Ficarra and Indro
+            Spinelli and Fabio Galasso},
+  year = {2024},
+  eprint = {2405.03803},
+  archivePrefix = {arXiv},
+  journal = {arXiv preprint arXiv:2404.11327},
+  url = {https://arxiv.org/abs/2405.03803},
+  arxiv = {2404.11327},
+  primaryClass = {cs.CV},
+  abstract = {Diffusion Models have revolutionized the field of human motion
+              generation by offering exceptional generation quality and
+              fine-grained controllability through natural language conditioning.
+              Their inherent stochasticity, that is the ability to generate
+              various outputs from a single input, is key to their success.
+              However, this diversity should not be unrestricted, as it may lead
+              to unlikely generations. Instead, it should be confined within the
+              boundaries of text-aligned and realistic generations. To address
+              this issue, we propose MoDiPO (Motion Diffusion DPO), a novel
+              methodology that leverages Direct Preference Optimization (DPO) to
+              align text-to-motion models. We streamline the laborious and
+              expensive process of gathering human preferences needed in DPO by
+              leveraging AI feedback instead. This enables us to experiment with
+              novel DPO strategies, using both online and offline generated
+              motion-preference pairs. To foster future research we contribute
+              with a motion-preference dataset which we dub Pick-a-Move. We
+              demonstrate, both qualitatively and quantitatively, that our
+              proposed method yields significantly more realistic motions. In
+              particular, MoDiPO substantially improves Frechet Inception
+              Distance (FID) while retaining the same RPrecision and
+              Multi-Modality performances. },
   bibtex_show = true,
-  url = {https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2024JH000179},
-  doi = {https://doi.org/10.1029/2024JH000179},
-  abstract = {Abstract Seismic waves contain information about the earthquake source, the geologic structure they traverse, and many forms of noise. Separating the noise from the earthquake is a difficult task because optimal parameters for filtering noise typically vary with time and, if chosen inappropriately, may strongly alter the original seismic waveform. Diffusion models based on Deep Learning have demonstrated remarkable capabilities in restoring images and audio signals. However, those models assume a Gaussian distribution of noise, which is not the case for typical seismic noise. Motivated by the effectiveness of “cold” diffusion models in speech enhancement, medical anomaly detection, and image restoration, we present a cold variant for seismic data restoration. We describe the first Cold Diffusion Model for Seismic Denoising (CDiffSD), including key design aspects, model architecture, and noise handling. Using metrics to quantify the performance of CDiffSD models compared to previous works, we demonstrate that it provides a new standard in performance. CDiffSD significantly improved the Signal to Noise Ratio by about 18\% compared to previous models. It also enhanced Cross-correlation by 6\%, showing a better match between denoised and original signals. Moreover, testing revealed a 50\% increase in the recall of P-wave picks for seismic picking. Our work show that CDiffSD outperforms existing benchmarks, further underscoring its effectiveness in seismic data denoising and analysis. Additionally, the versatility of this model suggests its potential applicability across a range of tasks and domains, such as GNSS, Lab Acoustic Emission, and Distributed Acoustic Sensing data, offering promising avenues for further utilization.},
 }
-
-}
-
-
-
-
-
 
 
 @article{flaborea24,
   doi = {10.48550/ARXIV.2301.09489},
-  
-  
-  author = {Flaborea, Alessandro and Di Melendugno, Guido Maria D'Amely and D'arrigo, Stefano and Sterpa, Marco Aurelio and Sampieri, Alessio and Galasso, Fabio},
-  
-  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and information sciences, FOS: Computer and information sciences},
-  
-  title = {Contracting Skeletal Kinematics for Human-Related Video Anomaly Detection},
-  journal={Pattern Recognition},
- 
+  author = {Flaborea, Alessandro and Di Melendugno, Guido Maria D'Amely and
+            D'arrigo, Stefano and Sterpa, Marco Aurelio and Sampieri, Alessio and
+            Galasso, Fabio},
+  keywords = {Computer Vision and Pattern Recognition (cs.CV), FOS: Computer and
+              information sciences, FOS: Computer and information sciences},
+  title = {Contracting Skeletal Kinematics for Human-Related Video Anomaly
+           Detection},
+  journal = {Pattern Recognition},
   year = {2024},
   arxiv = {2209.10250},
   bibtex_show = true,
-  abstract = {Detecting the anomaly of human behavior is paramount to timely recognizing endangering situations, such as street fights or elderly falls. However, anomaly detection is complex since anomalous events are rare and because it is an open set recognition task, i.e., what is anomalous at inference has not been observed at training. We propose COSKAD, a novel model that encodes skeletal human motion by a graph convolutional network and learns to COntract SKeletal kinematic embeddings onto a latent hypersphere of minimum volume for Video Anomaly Detection. We propose three latent spaces: the commonly-adopted Euclidean and the novel spherical and hyperbolic. All variants outperform the state-of-the-art on the most recent UBnormal dataset, for which we contribute a human-related version with annotated skeletons. COSKAD sets a new state-of-the-art on the human-related versions of ShanghaiTech Campus and CUHK Avenue, with performance comparable to video-based methods. Source code and dataset will be released upon acceptance.}
+  abstract = {Detecting the anomaly of human behavior is paramount to timely
+              recognizing endangering situations, such as street fights or
+              elderly falls. However, anomaly detection is complex since
+              anomalous events are rare and because it is an open set recognition
+              task, i.e., what is anomalous at inference has not been observed at
+              training. We propose COSKAD, a novel model that encodes skeletal
+              human motion by a graph convolutional network and learns to
+              COntract SKeletal kinematic embeddings onto a latent hypersphere of
+              minimum volume for Video Anomaly Detection. We propose three latent
+              spaces: the commonly-adopted Euclidean and the novel spherical and
+              hyperbolic. All variants outperform the state-of-the-art on the
+              most recent UBnormal dataset, for which we contribute a
+              human-related version with annotated skeletons. COSKAD sets a new
+              state-of-the-art on the human-related versions of ShanghaiTech
+              Campus and CUHK Avenue, with performance comparable to video-based
+              methods. Source code and dataset will be released upon acceptance.},
 }
 
 
-@InProceedings{franco2023halo,
-      title={Hyperbolic Active Learning for Semantic Segmentation under Domain Shift}, 
-      author={Luca Franco and Paolo Mandica and Konstantinos Kallidromitis and Devin Guillory and Yu-Teng Li and Fabio Galasso},
-      year={2024},
-      booktitle={International Conference on Machine Learning (ICML)},
-      bibtex_show = true,
-      url = {https://arxiv.org/abs/2306.11180},
-      abstract = {For the task of semantic segmentation (SS) under domain shift, active learning (AL) acquisition strategies based on image regions and pseudo labels are state-of-the-art (SoA). The presence of diverse pseudo-labels within a region identifies pixels between different classes, which is a labeling efficient active learning data acquisition strategy. However, by design, pseudo-label variations are limited to only select the contours of classes, limiting the final AL performance.
-We approach AL for SS in the Poincaré hyperbolic ball model for the first time and leverage the variations of the radii of pixel embeddings within regions as a novel data acquisition strategy. This stems from a novel geometric property of a hyperbolic space trained without enforced hierarchies, which we experimentally prove. Namely, classes are mapped into compact hyperbolic areas with a comparable intra-class radii variance, as the model places classes of increasing explainable difficulty at denser hyperbolic areas, i.e. closer to the Poincaré ball edge. The variation of pixel embedding radii identifies well the class contours, but they also select a few intra-class peculiar details, which boosts the final performance.
-Our proposed HALO (Hyperbolic Active Learning Optimization) surpasses the supervised learning performance for the first time in AL for SS under domain shift, by only using a small portion of labels (i.e., 1%). The extensive experimental analysis is based on two established benchmarks, i.e. GTAV → Cityscapes and SYNTHIA → Cityscapes, where we set a new SoA. The code will be released.}
+@inproceedings{franco2023halo,
+  title = {Hyperbolic Active Learning for Semantic Segmentation under Domain
+           Shift},
+  author = {Luca Franco and Paolo Mandica and Konstantinos Kallidromitis and
+            Devin Guillory and Yu-Teng Li and Fabio Galasso},
+  year = {2024},
+  booktitle = {International Conference on Machine Learning (ICML)},
+  bibtex_show = true,
+  url = {https://arxiv.org/abs/2306.11180},
+  abstract = {For the task of semantic segmentation (SS) under domain shift,
+              active learning (AL) acquisition strategies based on image regions
+              and pseudo labels are state-of-the-art (SoA). The presence of
+              diverse pseudo-labels within a region identifies pixels between
+              different classes, which is a labeling efficient active learning
+              data acquisition strategy. However, by design, pseudo-label
+              variations are limited to only select the contours of classes,
+              limiting the final AL performance. We approach AL for SS in the
+              Poincaré hyperbolic ball model for the first time and leverage the
+              variations of the radii of pixel embeddings within regions as a
+              novel data acquisition strategy. This stems from a novel geometric
+              property of a hyperbolic space trained without enforced hierarchies
+              , which we experimentally prove. Namely, classes are mapped into
+              compact hyperbolic areas with a comparable intra-class radii
+              variance, as the model places classes of increasing explainable
+              difficulty at denser hyperbolic areas, i.e. closer to the Poincaré
+              ball edge. The variation of pixel embedding radii identifies well
+              the class contours, but they also select a few intra-class peculiar
+              details, which boosts the final performance. Our proposed HALO
+              (Hyperbolic Active Learning Optimization) surpasses the supervised
+              learning performance for the first time in AL for SS under domain
+              shift, by only using a small portion of labels (i.e., 1%). The
+              extensive experimental analysis is based on two established
+              benchmarks, i.e. GTAV → Cityscapes and SYNTHIA → Cityscapes, where
+              we set a new SoA. The code will be released.},
 }
 
-@InProceedings{flaborea2024prego,
-  title={PREGO: online mistake detection in PRocedural EGOcentric Videos},
-  author={Flaborea, Alessandro and D’Amely Di Melendugno, Guido Maria and Plini, Leonardo and Scofano, Luca and De Matteis, Edoardo and Furnari, Antonino and Farinella, Giovanni Maria and Galasso, Fabio},
-  booktitle={Computer Vision and Pattern Recognition (CVPR)},
-  year={2024},
+@inproceedings{flaborea2024prego,
+  title = {PREGO: online mistake detection in PRocedural EGOcentric Videos},
+  author = {Flaborea, Alessandro and D’Amely Di Melendugno, Guido Maria and
+            Plini, Leonardo and Scofano, Luca and De Matteis, Edoardo and Furnari
+            , Antonino and Farinella, Giovanni Maria and Galasso, Fabio},
+  booktitle = {Computer Vision and Pattern Recognition (CVPR)},
+  year = {2024},
   url = {https://arxiv.org/abs/2404.01933},
   bibtex_show = true,
-  abstract = {Promptly identifying procedural errors from egocentric videos in an online setting is highly challenging and valuable for detecting mistakes as soon as they happen. This capability has a wide range of applications across various fields, such as manufacturing and healthcare. The nature of procedural mistakes is open-set since novel types of failures might occur, which calls for one-class classifiers trained on correctly executed procedures. However, no technique can currently detect open-set procedural mistakes online. We propose PREGO, the first online one-class classification model for mistake detection in PRocedural EGOcentric videos. PREGO is based on an online action recognition component to model the current action, and a symbolic reasoning module to predict the next actions. Mistake detection is performed by comparing the recognized current action with the expected future one. We evaluate PREGO on two procedural egocentric video datasets, Assembly101 and Epic-tent, which we adapt for online benchmarking of procedural mistake detection to establish suitable benchmarks, thus defining the Assembly101-O and Epic-tent-O datasets, respectively.
-}
+  abstract = {Promptly identifying procedural errors from egocentric videos in
+              an online setting is highly challenging and valuable for detecting
+              mistakes as soon as they happen. This capability has a wide range
+              of applications across various fields, such as manufacturing and
+              healthcare. The nature of procedural mistakes is open-set since
+              novel types of failures might occur, which calls for one-class
+              classifiers trained on correctly executed procedures. However, no
+              technique can currently detect open-set procedural mistakes online.
+              We propose PREGO, the first online one-class classification model
+              for mistake detection in PRocedural EGOcentric videos. PREGO is
+              based on an online action recognition component to model the
+              current action, and a symbolic reasoning module to predict the next
+              actions. Mistake detection is performed by comparing the recognized
+              current action with the expected future one. We evaluate PREGO on
+              two procedural egocentric video datasets, Assembly101 and Epic-tent
+              , which we adapt for online benchmarking of procedural mistake
+              detection to establish suitable benchmarks, thus defining the
+              Assembly101-O and Epic-tent-O datasets, respectively. },
 }
 
 
 @article{scofano2024nba,
-title={About latent roles in forecasting players in team sports},
-journal = {Neural Processing Letters},
-volume = {56},
-pages = {1-12},
-year = {2024},
-doi = {https://doi.org/10.1007/s11063-024-11532-0},
-url = {https://link.springer.com/article/10.1007/s11063-024-11532-0},
-author={Scofano, Luca and Sampieri, Alessio and Re, Giuseppe and Almanza, Matteo and Panconesi, Alessandro and Galasso, Fabio},
-bibtex_show = true,
-abstract = {Forecasting players in sports has grown in popularity due to the potential for a tactical advantage and the applicability of such research to multi-agent interaction systems. Team sports contain a significant social component that influences interactions between teammates and opponents. However, it still needs to be fully exploited. In this work, we hypothesize that each participant has a specific function in each action and that role-based interaction is critical for predicting players’ future moves. We create RolFor, a novel end-to-end model for Role-based Forecasting. RolFor uses a new module we developed called Ordering Neural Networks (OrderNN) to permute the order of the players such that each player is assigned to a latent role. The latent role is then modeled with a RoleGCN. Thanks to its graph representation, it provides a fully learnable adjacency matrix that captures the relationships between roles and is subsequently used to forecast the players’ future trajectories. Extensive experiments on a challenging NBA basketball dataset back up the importance of roles and justify our goal of modeling them using optimizable models. When an oracle provides roles, the proposed RolFor compares favorably to the current state-of-the-art (it ranks first in terms of ADE and second in terms of FDE errors). However, training the end-to-end RolFor incurs the issues of differentiability of permutation methods, which we experimentally review. Finally, this work restates differentiable ranking as a difficult open problem and its great potential in conjunction with graph-based interaction models.
-}
+  title = {About latent roles in forecasting players in team sports},
+  journal = {Neural Processing Letters},
+  volume = {56},
+  pages = {1-12},
+  year = {2024},
+  doi = {https://doi.org/10.1007/s11063-024-11532-0},
+  url = {https://link.springer.com/article/10.1007/s11063-024-11532-0},
+  author = {Scofano, Luca and Sampieri, Alessio and Re, Giuseppe and Almanza,
+            Matteo and Panconesi, Alessandro and Galasso, Fabio},
+  bibtex_show = true,
+  abstract = {Forecasting players in sports has grown in popularity due to the
+              potential for a tactical advantage and the applicability of such
+              research to multi-agent interaction systems. Team sports contain a
+              significant social component that influences interactions between
+              teammates and opponents. However, it still needs to be fully
+              exploited. In this work, we hypothesize that each participant has a
+              specific function in each action and that role-based interaction is
+              critical for predicting players’ future moves. We create RolFor, a
+              novel end-to-end model for Role-based Forecasting. RolFor uses a
+              new module we developed called Ordering Neural Networks (OrderNN)
+              to permute the order of the players such that each player is
+              assigned to a latent role. The latent role is then modeled with a
+              RoleGCN. Thanks to its graph representation, it provides a fully
+              learnable adjacency matrix that captures the relationships between
+              roles and is subsequently used to forecast the players’ future
+              trajectories. Extensive experiments on a challenging NBA basketball
+              dataset back up the importance of roles and justify our goal of
+              modeling them using optimizable models. When an oracle provides
+              roles, the proposed RolFor compares favorably to the current
+              state-of-the-art (it ranks first in terms of ADE and second in
+              terms of FDE errors). However, training the end-to-end RolFor
+              incurs the issues of differentiability of permutation methods,
+              which we experimentally review. Finally, this work restates
+              differentiable ranking as a difficult open problem and its great
+              potential in conjunction with graph-based interaction models. },
 }
 
 @misc{plini2024tipregochainthoughtincontext,
-      title={TI-PREGO: Chain of Thought and In-Context Learning for Online Mistake Detection in PRocedural EGOcentric Videos}, 
-      author={Leonardo Plini and Luca Scofano and Edoardo De Matteis and Guido Maria D'Amely di Melendugno and Alessandro Flaborea and Andrea Sanchietti and Giovanni Maria Farinella and Fabio Galasso and Antonino Furnari},
-      year={2024},
-      eprint={2411.02570},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2411.02570}, 
+  title = {TI-PREGO: Chain of Thought and In-Context Learning for Online Mistake
+           Detection in PRocedural EGOcentric Videos},
+  author = {Leonardo Plini and Luca Scofano and Edoardo De Matteis and Guido
+            Maria D'Amely di Melendugno and Alessandro Flaborea and Andrea
+            Sanchietti and Giovanni Maria Farinella and Fabio Galasso and
+            Antonino Furnari},
+  year = {2024},
+  eprint = {2411.02570},
+  archivePrefix = {arXiv},
+  primaryClass = {cs.CV},
+  url = {https://arxiv.org/abs/2411.02570},
 }
 
-@InProceedings{scofano2023staged,
-  title={Staged Contact-Aware Global Human Motion Forecasting},
-  author={Scofano, Luca and Sampieri, Alessio and Schiele, Elisabeth and De Matteis, Edoardo and Leal-Taixé, Laura  and Galasso, Fabio},
-  booktitle={British Machine Vision Conference (BMVC)},
-  year={2023},
+@inproceedings{scofano2023staged,
+  title = {Staged Contact-Aware Global Human Motion Forecasting},
+  author = {Scofano, Luca and Sampieri, Alessio and Schiele, Elisabeth and De
+            Matteis, Edoardo and Leal-Taixé, Laura and Galasso, Fabio},
+  booktitle = {British Machine Vision Conference (BMVC)},
+  year = {2023},
   bibtex_show = true,
   url = {https://arxiv.org/abs/2309.08947},
-  abstract = {Scene-aware global human motion forecasting is critical for manifold applications, including virtual reality, robotics, and sports. The task combines human trajectory and pose forecasting within the provided scene context, which represents a significant challenge.
-So far, only Mao et al. NeurIPS'22 have addressed scene-aware global motion, cascading the prediction of future scene contact points and the global motion estimation. They perform the latter as the end-to-end forecasting of future trajectories and poses. However, end-to-end contrasts with the coarse-to-fine nature of the task and it results in lower performance, as we demonstrate here empirically.
-We propose a STAGed contact-aware global human motion forecasting STAG, a novel three-stage pipeline for predicting global human motion in a 3D environment. We first consider the scene and the respective human interaction as contact points. Secondly, we model the human trajectory forecasting within the scene, predicting the coarse motion of the human body as a whole. The third and last stage matches a plausible fine human joint motion to complement the trajectory considering the estimated contacts.
-Compared to the state-of-the-art (SoA), STAG achieves a 1.8% and 16.2% overall improvement in pose and trajectory prediction, respectively, on the scene-aware GTA-IM dataset. A comprehensive ablation study confirms the advantages of staged modeling over end-to-end approaches. Furthermore, we establish the significance of a newly proposed temporal counter called the "time-to-go", which tells how long it is before reaching scene contact and endpoints. Notably, STAG showcases its ability to generalize to datasets lacking a scene and achieves a new state-of-the-art performance on CMU-Mocap, without leveraging any social cues. Our code is released at: this https URL
-
+  abstract = {Scene-aware global human motion forecasting is critical for
+              manifold applications, including virtual reality, robotics, and
+              sports. The task combines human trajectory and pose forecasting
+              within the provided scene context, which represents a significant
+              challenge. So far, only Mao et al. NeurIPS'22 have addressed
+              scene-aware global motion, cascading the prediction of future scene
+              contact points and the global motion estimation. They perform the
+              latter as the end-to-end forecasting of future trajectories and
+              poses. However, end-to-end contrasts with the coarse-to-fine nature
+              of the task and it results in lower performance, as we demonstrate
+              here empirically. We propose a STAGed contact-aware global human
+              motion forecasting STAG, a novel three-stage pipeline for
+              predicting global human motion in a 3D environment. We first
+              consider the scene and the respective human interaction as contact
+              points. Secondly, we model the human trajectory forecasting within
+              the scene, predicting the coarse motion of the human body as a
+              whole. The third and last stage matches a plausible fine human
+              joint motion to complement the trajectory considering the estimated
+              contacts. Compared to the state-of-the-art (SoA), STAG achieves a
+              1.8% and 16.2% overall improvement in pose and trajectory
+              prediction, respectively, on the scene-aware GTA-IM dataset. A
+              comprehensive ablation study confirms the advantages of staged
+              modeling over end-to-end approaches. Furthermore, we establish the
+              significance of a newly proposed temporal counter called the "
+              time-to-go", which tells how long it is before reaching scene
+              contact and endpoints. Notably, STAG showcases its ability to
+              generalize to datasets lacking a scene and achieves a new
+              state-of-the-art performance on CMU-Mocap, without leveraging any
+              social cues. Our code is released at: this https URL },
 }
-}
 
 
-@InProceedings{flaborea2023mocodad,
-  title={Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection},
-  author={Flaborea, Alessandro and Collorone, Luca and D’Amely Di Melendugno, Guido Maria and D'Arrigo, Stefano and Prenkaj, Bardh and Galasso, Fabio},
-  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-  year      = {2023},
-  pages     = {10318-10329},
+@inproceedings{flaborea2023mocodad,
+  title = {Multimodal Motion Conditioned Diffusion Model for Skeleton-based
+           Video Anomaly Detection},
+  author = {Flaborea, Alessandro and Collorone, Luca and D’Amely Di Melendugno,
+            Guido Maria and D'Arrigo, Stefano and Prenkaj, Bardh and Galasso,
+            Fabio},
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer
+               Vision (ICCV)},
+  year = {2023},
+  pages = {10318-10329},
   bibtex_show = true,
   url = {https://arxiv.org/abs/2307.07205},
-  abstract = {Anomalies are rare and anomaly detection is often therefore framed as One-Class Classification (OCC), i.e. trained solely on normalcy. Leading OCC techniques constrain the latent representations of normal motions to limited volumes and detect as abnormal anything outside, which accounts satisfactorily for the openset'ness of anomalies. But normalcy shares the same openset'ness property, since humans can perform the same action in several ways, which the leading techniques neglect. We propose a novel generative model for video anomaly detection (VAD), which assumes that both normality and abnormality are multimodal. We consider skeletal representations and leverage state-of-the-art diffusion probabilistic models to generate multimodal future human poses. We contribute a novel conditioning on the past motion of people, and exploit the improved mode coverage capabilities of diffusion processes to generate different-but-plausible future motions. Upon the statistical aggregation of future modes, anomaly is detected when the generated set of motions is not pertinent to the actual future. We validate our model on 4 established benchmarks: UBnormal, HR-UBnormal, HR-STC, and HR-Avenue, with extensive experiments surpassing state-of-the-art results.
+  abstract = {Anomalies are rare and anomaly detection is often therefore framed
+              as One-Class Classification (OCC), i.e. trained solely on normalcy.
+              Leading OCC techniques constrain the latent representations of
+              normal motions to limited volumes and detect as abnormal anything
+              outside, which accounts satisfactorily for the openset'ness of
+              anomalies. But normalcy shares the same openset'ness property,
+              since humans can perform the same action in several ways, which the
+              leading techniques neglect. We propose a novel generative model for
+              video anomaly detection (VAD), which assumes that both normality
+              and abnormality are multimodal. We consider skeletal
+              representations and leverage state-of-the-art diffusion
+              probabilistic models to generate multimodal future human poses. We
+              contribute a novel conditioning on the past motion of people, and
+              exploit the improved mode coverage capabilities of diffusion
+              processes to generate different-but-plausible future motions. Upon
+              the statistical aggregation of future modes, anomaly is detected
+              when the generated set of motions is not pertinent to the actual
+              future. We validate our model on 4 established benchmarks: UBnormal
+              , HR-UBnormal, HR-STC, and HR-Avenue, with extensive experiments
+              surpassing state-of-the-art results. },
 }
-}
 
 
 
-@InProceedings{franco2023hyperbolic,
-  title={HYperbolic Self-Paced Learning for Self-Supervised Skeleton-based Action Representations},
-  author={Franco, Luca and Mandica, Paolo and Munjal, Bharti and Galasso, Fabio},
-  booktitle={International Conference on Learning Representation},
-  year={2023},
+@inproceedings{franco2023hyperbolic,
+  title = {HYperbolic Self-Paced Learning for Self-Supervised Skeleton-based
+           Action Representations},
+  author = {Franco, Luca and Mandica, Paolo and Munjal, Bharti and Galasso,
+            Fabio},
+  booktitle = {International Conference on Learning Representation},
+  year = {2023},
   bibtex_show = true,
   url = {https://arxiv.org/abs/2303.06242},
-  abstract = {Self-paced learning has been beneficial for tasks where some initial knowledge is available, such as weakly supervised learning and domain adaptation, to select and order the training sample sequence, from easy to complex. However its applicability remains unexplored in unsupervised learning, whereby the knowledge of the task matures during training. We propose a novel HYperbolic Self-Paced model (HYSP) for learning skeleton-based action representations. HYSP adopts self-supervision: it uses data augmentations to generate two views of the same sample, and it learns by matching one (named online) to the other (the target). We propose to use hyperbolic uncertainty to determine the algorithmic learning pace, under the assumption that less uncertain samples should be more strongly driving the training, with a larger weight and pace. Hyperbolic uncertainty is a by-product of the adopted hyperbolic neural networks, it matures during training and it comes with no extra cost, compared to the established Euclidean SSL framework counterparts. When tested on three established skeleton-based action recognition datasets, HYSP outperforms the state-of-the-art on PKU-MMD I, as well as on 2 out of 3 downstream tasks on NTU-60 and NTU-120. Additionally, HYSP only uses positive pairs and bypasses therefore the complex and computationally-demanding mining procedures required for the negatives in contrastive techniques. Code is available at this https URL.
+  abstract = {Self-paced learning has been beneficial for tasks where some
+              initial knowledge is available, such as weakly supervised learning
+              and domain adaptation, to select and order the training sample
+              sequence, from easy to complex. However its applicability remains
+              unexplored in unsupervised learning, whereby the knowledge of the
+              task matures during training. We propose a novel HYperbolic
+              Self-Paced model (HYSP) for learning skeleton-based action
+              representations. HYSP adopts self-supervision: it uses data
+              augmentations to generate two views of the same sample, and it
+              learns by matching one (named online) to the other (the target). We
+              propose to use hyperbolic uncertainty to determine the algorithmic
+              learning pace, under the assumption that less uncertain samples
+              should be more strongly driving the training, with a larger weight
+              and pace. Hyperbolic uncertainty is a by-product of the adopted
+              hyperbolic neural networks, it matures during training and it comes
+              with no extra cost, compared to the established Euclidean SSL
+              framework counterparts. When tested on three established
+              skeleton-based action recognition datasets, HYSP outperforms the
+              state-of-the-art on PKU-MMD I, as well as on 2 out of 3 downstream
+              tasks on NTU-60 and NTU-120. Additionally, HYSP only uses positive
+              pairs and bypasses therefore the complex and
+              computationally-demanding mining procedures required for the
+              negatives in contrastive techniques. Code is available at this
+              https URL. },
 }
+
+@inproceedings{Rahman_2023_CVPR,
+  author = {Rahman*, Muhammad Rameez Ur and Scofano*, Luca and De Matteis,
+            Edoardo and Flaborea, Alessandro and Sampieri, Alessio and Galasso,
+            Fabio},
+  title = {Best Practices for 2-Body Pose Forecasting},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and
+               Pattern Recognition (CVPR) Workshops},
+  year = {2023},
+  pages = {3613-3623},
+  abstract = {The task of collaborative human pose forecasting stands for
+              predicting the future poses of multiple interacting people, given
+              those in previous frames. Predicting two people in interaction,
+              instead of each separately, promises better performance, due to
+              their body-body motion correlations. But the task has remained so
+              far primarily unexplored. In this paper, we review the progress in
+              human pose forecasting and provide an in-depth assessment of the
+              single-person practices that perform best for 2-body collaborative
+              motion forecasting. Our study confirms the positive impact of
+              frequency input representations, space-time separable and
+              fully-learnable interaction adjacencies for the encoding GCN and FC
+              decoding. Other single-person practices do not transfer to 2-body,
+              so the proposed best ones do not include hierarchical body modeling
+              or attention-based interaction encoding. We further contribute a
+              novel initialization procedure for the 2-body spatial interaction
+              parameters of the encoder, which benefits performance and
+              stability. Altogether, our proposed 2-body pose forecasting best
+              practices yield a performance improvement of 21.9% over the
+              state-of-the-art on the most recent ExPI dataset, whereby the novel
+              initialization accounts for 3.5%. See our project page at
+              https://www.pinlab.org/bestpractices2body. },
+  website = {https://www.pinlab.org/bestpractices2body},
+  bibtex_show = true,
 }
 
-@InProceedings{Rahman_2023_CVPR,
-    author    = {Rahman*, Muhammad Rameez Ur and Scofano*, Luca and De Matteis, Edoardo and Flaborea, Alessandro and Sampieri, Alessio and Galasso, Fabio},
-    title     = {Best Practices for 2-Body Pose Forecasting},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    year      = {2023},
-    pages     = {3613-3623},
-    abstract = {The task of collaborative human pose forecasting stands for predicting the future poses of multiple interacting people, given those in previous frames. Predicting two people in interaction, instead of each separately, promises better performance, due to their body-body motion correlations. But the task has remained so far primarily unexplored.
-    In this paper, we review the progress in human pose forecasting and provide an in-depth assessment of the single-person practices that perform best for 2-body collaborative motion forecasting.
-    Our study confirms the positive impact of frequency input representations, space-time separable and fully-learnable interaction adjacencies for the encoding GCN and FC decoding.
-    Other single-person practices do not transfer to 2-body, so the proposed best ones do not include hierarchical body modeling or attention-based interaction encoding.
-    We further contribute a novel initialization procedure for the 2-body spatial interaction parameters of the encoder, which benefits performance and stability. 
-    Altogether, our proposed 2-body pose forecasting best practices yield a performance improvement of 21.9% over the state-of-the-art on the most recent ExPI dataset, whereby the novel initialization accounts for 3.5%.
-    See our project page at https://www.pinlab.org/bestpractices2body.
-    },
-    website= {https://www.pinlab.org/bestpractices2body},
-    bibtex_show = true
 
-}
-
-
-@InProceedings{Flaborea_2023_CVPR,
-    author    = {Flaborea, Alessandro and Prenkaj, Bardh and Munjal, Bharti and Sterpa, Marco Aurelio and Aragona, Dario and Podo, Luca and Galasso, Fabio},
-    title     = {Are We Certain It's Anomalous?},
-    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR) Workshops},
-    year      = {2023},
-    pages     = {2896-2906},
-    website = {https://www.pinlab.org/hypad},
-    abstract={The progress in modelling time series and, more generally, sequences of structured-data has recently revamped research in anomaly detection. The task stands for identifying abnormal behaviours in financial series, IT systems, aerospace measurements, and the medical domain, where anomaly detection may aid in isolating cases of depression and attend the elderly. Anomaly detection in time series is a complex task since anomalies are rare due to highly non-linear temporal correlations and since the definition of anomalous is sometimes subjective. Here we propose the novel use of Hyperbolic uncertainty for Anomaly Detection (HypAD). HypAD learns self-supervisedly to reconstruct the input signal. We adopt best practices from the state-of-the-art to encode the sequence by an LSTM, jointly learnt with a decoder to reconstruct the signal, with the aid of GAN critics. Uncertainty is estimated end-to-end by means of a hyperbolic neural network. By using uncertainty, HypAD may assess whether it is certain about the input signal but it fails to reconstruct it because this is anomalous; or whether the reconstruction error does not necessarily imply anomaly, as the model is uncertain, e.g. a complex but regular input signal. The novel key idea is that a detectable anomaly is one where the model is certain but it predicts wrongly. HypAD outperforms the current state-of-the-art for univariate anomaly detection on established benchmarks based on data from NASA, Yahoo, Numenta, Amazon, Twitter. It also yields state-of-the-art performance on a multivariate dataset of anomaly activities in elderly home residences, and it outperforms the baseline on SWaT. Overall, HypAD yields the lowest false alarms at the best performance rate, thanks to successfully identifying detectable anomalies.
-    },
-    bibtex_show = true
+@inproceedings{Flaborea_2023_CVPR,
+  author = {Flaborea, Alessandro and Prenkaj, Bardh and Munjal, Bharti and
+            Sterpa, Marco Aurelio and Aragona, Dario and Podo, Luca and Galasso,
+            Fabio},
+  title = {Are We Certain It's Anomalous?},
+  booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and
+               Pattern Recognition (CVPR) Workshops},
+  year = {2023},
+  pages = {2896-2906},
+  website = {https://www.pinlab.org/hypad},
+  abstract = {The progress in modelling time series and, more generally,
+              sequences of structured data has recently revamped research in
+              anomaly detection. The task stands for identifying abnormal
+              behaviors in financial series, IT systems, aerospace measurements,
+              and the medical domain, where anomaly detection may aid in
+              isolating cases of depression and attend the elderly. Anomaly
+              detection in time series is a complex task since anomalies are rare
+              due to highly non-linear temporal correlations and since the
+              definition of anomalous is sometimes subjective. Here we propose
+              the novel use of Hyperbolic uncertainty for Anomaly Detection
+              (HypAD). HypAD learns self-supervisedly to reconstruct the input
+              signal. We adopt best practices from the state-of-the-art to encode
+              the sequence by an LSTM, jointly learned with a decoder to
+              reconstruct the signal, with the aid of GAN critics. Uncertainty is
+              estimated end-to-end by means of a hyperbolic neural network. By
+              using uncertainty, HypAD may assess whether it is certain about the
+              input signal but it fails to reconstruct it because this is
+              anomalous; or whether the reconstruction error does not necessarily
+              imply anomaly, as the model is uncertain, e.g. a complex but
+              regular input signal. The novel key idea is that a detectable
+              anomaly is one where the model is certain but it predicts wrongly.
+              HypAD outperforms the current state-of-the-art for univariate
+              anomaly detection on established benchmarks based on data from NASA
+              , Yahoo, Numenta, Amazon, and Twitter. It also yields
+              state-of-the-art performance on a multivariate dataset of anomaly
+              activities in elderly home residences, and it outperforms the
+              baseline on SWaT. Overall, HypAD yields the lowest false alarms at
+              the best performance rate, thanks to successfully identifying
+              detectable anomalies.},
+  bibtex_show = true,
 }
 
 
 @article{FRANCO2023109372,
-title = {Under the hood of transformer networks for trajectory forecasting},
-journal = {Pattern Recognition},
-volume = {138},
-pages = {109372},
-year = {2023},
-issn = {0031-3203},
-doi = {https://doi.org/10.1016/j.patcog.2023.109372},
-url = {https://www.sciencedirect.com/science/article/pii/S0031320323000730},
-author = {Luca Franco and Leonardo Placidi and Francesco Giuliari and Irtiza Hasan and Marco Cristani and Fabio Galasso},
-keywords = {Trajectory forecasting, Human behavior, Transformer networks, BERT, Multi-modal future prediction},
-bibtex_show = true,
-abstract = {Transformer Networks have established themselves as the de-facto state-of-the-art for trajectory forecasting but there is currently no systematic study on their capability to model the motion patterns of people, without interactions with other individuals nor the social context. There is abundant literature on LSTMs, CNNs and GANs on this subject. However methods adopting Transformer techniques achieve great performances by complex models and a clear analysis of their adoption as plain sequence models is missing. This paper proposes the first in-depth study of Transformer Networks (TF) and the Bidirectional Transformers (BERT) for the forecasting of the individual motion of people, without bells and whistles. We conduct an exhaustive evaluation of the input/output representations, problem formulations and sequence modelling, including a novel analysis of their capability to predict multi-modal futures. Out of comparative evaluation on the ETH+UCY benchmark, both TF and BERT are top performers in predicting individual motions and remain within a narrow margin wrt more complex techniques, including both social interactions and scene contexts. Source code will be released for all conducted experiments.}
+  title = {Under the hood of transformer networks for trajectory forecasting},
+  journal = {Pattern Recognition},
+  volume = {138},
+  pages = {109372},
+  year = {2023},
+  issn = {0031-3203},
+  doi = {https://doi.org/10.1016/j.patcog.2023.109372},
+  url = {https://www.sciencedirect.com/science/article/pii/S0031320323000730},
+  author = {Luca Franco and Leonardo Placidi and Francesco Giuliari and Irtiza
+            Hasan and Marco Cristani and Fabio Galasso},
+  keywords = {Trajectory forecasting, Human behavior, Transformer networks, BERT
+              , Multi-modal future prediction},
+  bibtex_show = true,
+  abstract = {Transformer Networks have established themselves as the de-facto
+              state-of-the-art for trajectory forecasting but there is currently
+              no systematic study on their capability to model the motion
+              patterns of people, without interactions with other individuals nor
+              the social context. There is abundant literature on LSTMs, CNNs and
+              GANs on this subject. However methods adopting Transformer
+              techniques achieve great performances by complex models and a clear
+              analysis of their adoption as plain sequence models is missing.
+              This paper proposes the first in-depth study of Transformer
+              Networks (TF) and the Bidirectional Transformers (BERT) for the
+              forecasting of the individual motion of people, without bells and
+              whistles. We conduct an exhaustive evaluation of the input/output
+              representations, problem formulations and sequence modelling,
+              including a novel analysis of their capability to predict
+              multi-modal futures. Out of comparative evaluation on the ETH+UCY
+              benchmark, both TF and BERT are top performers in predicting
+              individual motions and remain within a narrow margin wrt more
+              complex techniques, including both social interactions and scene
+              contexts. Source code will be released for all conducted
+              experiments.},
 }
 
 
 @article{MUNJAL2023109049,
-title = {Query-guided networks for few-shot fine-grained classification and person search},
-journal = {Pattern Recognition},
-volume = {133},
-pages = {109049},
-year = {2023},
-issn = {0031-3203},
-doi = {https://doi.org/10.1016/j.patcog.2022.109049},
-url = {https://www.sciencedirect.com/science/article/pii/S0031320322005295},
-author = {Munjal, Bharti and Flaborea, Alessandro and Amin, Sikandar and Tombari, Federico and Galasso, Fabio},
-keywords = {Meta-learning, Few-shot learning, Fine-grained classification, Person search, Person re-identification},
-arxiv       = {2209.10250},
-bibtex_show = true,
-abstract = {Few-shot fine-grained classification and person search appear as distinct tasks and literature has treated them separately. But a closer look unveils important similarities: both tasks target categories that can only be discriminated by specific object details; and the relevant models should generalize to new categories, not seen during training. We propose a novel unified Query-Guided Network (QGN) applicable to both tasks. QGN consists of a Query-guided Siamese-Squeeze-and-Excitation subnetwork which re-weights both the query and gallery features across all network layers, a Query-guided Region Proposal subnetwork for query-specific localisation, and a Query-guided Similarity subnetwork for metric learning. QGN improves on a few recent few-shot fine-grained datasets, outperforming other techniques on CUB by a large margin. QGN also performs competitively on the person search CUHK-SYSU and PRW datasets, where we perform in-depth analysis.}
+  title = {Query-guided networks for few-shot fine-grained classification and
+           person search},
+  journal = {Pattern Recognition},
+  volume = {133},
+  pages = {109049},
+  year = {2023},
+  issn = {0031-3203},
+  doi = {https://doi.org/10.1016/j.patcog.2022.109049},
+  url = {https://www.sciencedirect.com/science/article/pii/S0031320322005295},
+  author = {Munjal, Bharti and Flaborea, Alessandro and Amin, Sikandar and
+            Tombari, Federico and Galasso, Fabio},
+  keywords = {Meta-learning, Few-shot learning, Fine-grained classification,
+              Person search, Person re-identification},
+  arxiv = {2209.10250},
+  bibtex_show = true,
+  abstract = {Few-shot fine-grained classification and person search appear as
+              distinct tasks and literature has treated them separately. But a
+              closer look unveils important similarities: both tasks target
+              categories that can only be discriminated by specific object
+              details; and the relevant models should generalize to new
+              categories, not seen during training. We propose a novel unified
+              Query-Guided Network (QGN) applicable to both tasks. QGN consists
+              of a Query-guided Siamese-Squeeze-and-Excitation subnetwork which
+              re-weights both the query and gallery features across all network
+              layers, a Query-guided Region Proposal subnetwork for
+              query-specific localisation, and a Query-guided Similarity
+              subnetwork for metric learning. QGN improves on a few recent
+              few-shot fine-grained datasets, outperforming other techniques on
+              CUB by a large margin. QGN also performs competitively on the
+              person search CUHK-SYSU and PRW datasets, where we perform in-depth
+              analysis.},
 }
 
 @article{PRENKAJ2023102454,
-title = {A self-supervised algorithm to detect signs of social isolation in the elderly from daily activity sequences},
-journal = {Artificial Intelligence in Medicine},
-volume = {135},
-pages = {102454},
-year = {2023},
-issn = {0933-3657},
-publisher={Elsevier},
-doi = {https://doi.org/10.1016/j.artmed.2022.102454},
-url = {https://www.sciencedirect.com/science/article/pii/S0933365722002068},
-author = {Prenkaj, Bardh and Aragona, Dario and Flaborea, Alessandro and Galasso, Fabio and Gravina, Saverio and Podo, Luca and Reda, Emilia and Velardi, Paola},
-keywords = {Anomaly detection, ADL, Elderly social isolation, HyperNN, Hyperbolic uncertainty},
-bibtex_show = true,
-abstract = {Considering the increasing aging of the population, multi-device monitoring of the activities of daily living (ADL) of older people becomes crucial to support independent living and early detection of symptoms of mental illnesses, such as depression and Alzheimer’s disease. Anomalies can anticipate the diagnosis of these pathologies in the patient’s normal behavior, such as reduced hygiene, changes in sleep habits, and fewer social interactions. These abnormalities are often subtle and hard to detect. Especially using non-intrusive monitoring devices might cause anomaly detectors to generate false alarms or ignore relevant clues. This limitation may hinder their usage by caregivers. Furthermore, the notion of abnormality here is context and patient-dependent, thus requiring untrained approaches. To reduce these problems, we propose a self-supervised model for multi-sensor time series signals based on Hyperbolic uncertainty for Anomaly Detection, which we dub HypAD. HypAD estimates uncertainty end-to-end, thanks to hyperbolic neural networks, and integrates it into the ”classic” notion of reconstruction loss in anomaly detection. Based on hyperbolic uncertainty, HypAD introduces the principle of a detectable anomaly. HypAD assesses whether it is sure about the input signal and fails to reconstruct it because it is anomalous or whether the high reconstruction loss is due to the model uncertainty, e.g., a complex but regular signal (cf. this parallels the residual model error upon training). The proposed solution has been incorporated into an end-to-end ADL monitoring system for elderly patients in retirement homes, developed within a funded project leveraging an interdisciplinary consortium of computer scientists, engineers, and geriatricians. Healthcare professionals were involved in the design and verification process to foster trust in the system. In addition, the system has been equipped with explainability features.}
+  title = {A self-supervised algorithm to detect signs of social isolation in
+           the elderly from daily activity sequences},
+  journal = {Artificial Intelligence in Medicine},
+  volume = {135},
+  pages = {102454},
+  year = {2023},
+  issn = {0933-3657},
+  publisher = {Elsevier},
+  doi = {https://doi.org/10.1016/j.artmed.2022.102454},
+  url = {https://www.sciencedirect.com/science/article/pii/S0933365722002068},
+  author = {Prenkaj, Bardh and Aragona, Dario and Flaborea, Alessandro and
+            Galasso, Fabio and Gravina, Saverio and Podo, Luca and Reda, Emilia
+            and Velardi, Paola},
+  keywords = {Anomaly detection, ADL, Elderly social isolation, HyperNN,
+              Hyperbolic uncertainty},
+  bibtex_show = true,
+  abstract = {Considering the increasing aging of the population, multi-device
+              monitoring of the activities of daily living (ADL) of older people
+              becomes crucial to support independent living and early detection
+              of symptoms of mental illnesses, such as depression and Alzheimer’s
+              disease. Anomalies can anticipate the diagnosis of these
+              pathologies in the patient’s normal behavior, such as reduced
+              hygiene, changes in sleep habits, and fewer social interactions.
+              These abnormalities are often subtle and hard to detect. Especially
+              using non-intrusive monitoring devices might cause anomaly
+              detectors to generate false alarms or ignore relevant clues. This
+              limitation may hinder their usage by caregivers. Furthermore, the
+              notion of abnormality here is context and patient-dependent, thus
+              requiring untrained approaches. To reduce these problems, we
+              propose a self-supervised model for multi-sensor time series
+              signals based on Hyperbolic uncertainty for Anomaly Detection,
+              which we dub HypAD. HypAD estimates uncertainty end-to-end, thanks
+              to hyperbolic neural networks, and integrates it into the ”classic”
+              notion of reconstruction loss in anomaly detection. Based on
+              hyperbolic uncertainty, HypAD introduces the principle of a
+              detectable anomaly. HypAD assesses whether it is sure about the
+              input signal and fails to reconstruct it because it is anomalous or
+              whether the high reconstruction loss is due to the model
+              uncertainty, e.g., a complex but regular signal (cf. this parallels
+              the residual model error upon training). The proposed solution has
+              been incorporated into an end-to-end ADL monitoring system for
+              elderly patients in retirement homes, developed within a funded
+              project leveraging an interdisciplinary consortium of computer
+              scientists, engineers, and geriatricians. Healthcare professionals
+              were involved in the design and verification process to foster
+              trust in the system. In addition, the system has been equipped with
+              explainability features.},
 }
 
 @article{laurenti2023using,
-  title={Using Deep Learning to understand variations in fault zone properties: distinguishing foreshocks from aftershocks},
-  author={Laurenti, Laura and Paoletti, Gabriele and Tinti, Elisa and Galasso, Fabio and Franco, Luca and Collettini, Cristiano and Marone, Chris},
-  journal={EGU European Geoscience Union General Assembly 2023},
-  year={2023},
+  title = {Using Deep Learning to understand variations in fault zone
+           properties: distinguishing foreshocks from aftershocks},
+  author = {Laurenti, Laura and Paoletti, Gabriele and Tinti, Elisa and Galasso,
+            Fabio and Franco, Luca and Collettini, Cristiano and Marone, Chris},
+  journal = {EGU European Geoscience Union General Assembly 2023},
+  year = {2023},
   bibtex_show = true,
   url = {https://meetingorganizer.copernicus.org/EGU23/EGU23-5810.html},
-  doi={https://doi.org/10.5194/egusphere-egu23-5810},
-  abstract = {Fault zone properties can change significantly during the seismic cycle in response to stress changes, microcracking and wall rock damage. Lab experiments show consistent changes in elastic properties prior to and after lab earthquakes (EQ) and previous works show that machine learning/deep learning (ML/DL) techniques are successful for capturing such changes. Here, we apply DL techniques to assess whether similar changes occur during the seismic cycle of tectonic EQ. The main motivation is to generalize lab-based findings to tectonic faulting, to predict failure and identify precursors. The novelty is that we use EQ traces as probing signals to estimate the fault state.
-              We train DL model to distinguish foreshocks, aftershocks and time to failure of the Mw 6.5 2016 Norcia EQ in central Italy, October 30th 2016. We analyze a 25-second window of 3-component data around the P- and S-wave arrivals for events near the Norcia fault with M>0.5 and ±2 months before/after the Norcia mainshock. Normalized waveforms are used to train a Convolutional Neural Network (CNN). As a first task we divide events into two classes (foreshocks/aftershocks), and then refine the classification as a function of time-to-failure (TTF) for the mainshock. Our DL model perform very well for TTF classification into 2, 4, 8, or 9-classes for the 2 months before/after the mainshock. We explore a range of seismic ray paths near, through, and away from the Norcia mainshock fault zone. Model performance exceeds 90% for most stations. Waveform investigations show that wave amplitude is not the key factor; other waveform properties dictate model performance. Models derived from seismic spectra, rather than time-domain data, are equally good. We challenged the model in several ways to confirm the results. We found reduced performance in training the model with the wrong mainshock time and by omitting data immediately before/after the mainshock. Foreshock/aftershock identification is significantly degraded also by removing high frequencies (filtering seismic data above 25 Hz). We tested data from different years to understand seasonality at individual stations for the time period September to December and removed these effects. Comparing these seasonality effects defined from noise with our EQ results shows that foreshocks/aftershocks for the 2016 Norcia mainshock are well resolved. Training with data containing EQ offers a huge increase in classification performance over noise only, proving that EQ signals are the sole that enable assessing timing as a function of the fault status. To confirm our results and understand which stations are able to detect changes of fault properties we perform a further test cleaning the signals from the seasonality by confounding the DL with a shuffled noise (adversarial training).
-              We conclude that DL is able to recognize variations in the stress state and fracture during the seismic cycle. The model uses EQ-induced changes in seismic attenuation to distinguish foreshocks from aftershocks and time to failure. This is an important step in ongoing efforts to improve EQ prediction and precursor identification through the use of ML and DL.
-}
+  doi = {https://doi.org/10.5194/egusphere-egu23-5810},
+  abstract = {Fault zone properties can change significantly during the seismic
+              cycle in response to stress changes, microcracking and wall rock
+              damage. Lab experiments show consistent changes in elastic
+              properties prior to and after lab earthquakes (EQ) and previous
+              works show that machine learning/deep learning (ML/DL) techniques
+              are successful for capturing such changes. Here, we apply DL
+              techniques to assess whether similar changes occur during the
+              seismic cycle of tectonic EQ. The main motivation is to generalize
+              lab-based findings to tectonic faulting, to predict failure and
+              identify precursors. The novelty is that we use EQ traces as
+              probing signals to estimate the fault state. We train DL model to
+              distinguish foreshocks, aftershocks and time to failure of the Mw
+              6.5 2016 Norcia EQ in central Italy, October 30th 2016. We analyze
+              a 25-second window of 3-component data around the P- and S-wave
+              arrivals for events near the Norcia fault with M>0.5 and ±2 months
+              before/after the Norcia mainshock. Normalized waveforms are used to
+              train a Convolutional Neural Network (CNN). As a first task we
+              divide events into two classes (foreshocks/aftershocks), and then
+              refine the classification as a function of time-to-failure (TTF)
+              for the mainshock. Our DL model perform very well for TTF
+              classification into 2, 4, 8, or 9-classes for the 2 months
+              before/after the mainshock. We explore a range of seismic ray paths
+              near, through, and away from the Norcia mainshock fault zone. Model
+              performance exceeds 90% for most stations. Waveform investigations
+              show that wave amplitude is not the key factor; other waveform
+              properties dictate model performance. Models derived from seismic
+              spectra, rather than time-domain data, are equally good. We
+              challenged the model in several ways to confirm the results. We
+              found reduced performance in training the model with the wrong
+              mainshock time and by omitting data immediately before/after the
+              mainshock. Foreshock/aftershock identification is significantly
+              degraded also by removing high frequencies (filtering seismic data
+              above 25 Hz). We tested data from different years to understand
+              seasonality at individual stations for the time period September to
+              December and removed these effects. Comparing these seasonality
+              effects defined from noise with our EQ results shows that
+              foreshocks/aftershocks for the 2016 Norcia mainshock are well
+              resolved. Training with data containing EQ offers a huge increase
+              in classification performance over noise only, proving that EQ
+              signals are the sole that enable assessing timing as a function of
+              the fault status. To confirm our results and understand which
+              stations are able to detect changes of fault properties we perform
+              a further test cleaning the signals from the seasonality by
+              confounding the DL with a shuffled noise (adversarial training). We
+              conclude that DL is able to recognize variations in the stress
+              state and fracture during the seismic cycle. The model uses
+              EQ-induced changes in seismic attenuation to distinguish foreshocks
+              from aftershocks and time to failure. This is an important step in
+              ongoing efforts to improve EQ prediction and precursor
+              identification through the use of ML and DL. },
 }
 
 @article{trappolini2023diffsd,
-  title={DiffSD: Diffusion models for seismic denoising},
-  author={Trappolini, Daniele and Laurenti, Laura and Tinti, Elisa and Galasso, Fabio and Marone, Chris and Alberto, Michelini},
-  journal={EGU European Geoscience Union General Assembly 2023},
-  year={2023},
+  title = {DiffSD: Diffusion models for seismic denoising},
+  author = {Trappolini, Daniele and Laurenti, Laura and Tinti, Elisa and Galasso
+            , Fabio and Marone, Chris and Alberto, Michelini},
+  journal = {EGU European Geoscience Union General Assembly 2023},
+  year = {2023},
   bibtex_show = true,
   url = {https://meetingorganizer.copernicus.org/EGU23/EGU23-13811.html},
-  doi={https://doi.org/10.5194/egusphere-egu23-13811},
-  abstract = {Seismic waves contain information about the earthquake (EQ) source and many forms of noise deriving from the seismometer, anthropogenic effects, background noise associated with ocean waves, and microseismic noise. Separating the noise from the EQ signal is a critical first step in EQ physics and seismic waveform analysis. However, this is difficult because optimal parameters for filtering noise typically vary with time and may strongly alter the shape of the waveform. A few recent works have employed Deep Learning (DL) model for seismic denoising, among which we have taken as a benchmark Deep Denoiser and SEDENOSS. These models turn the noisy trace into a  2D signal (spectrograms) within the model to denoise the traces, making the process pretty heavy. We propose a novel DL-powered seismic denoising algorithm based on Diffusion Models (DMs), keeping the signal in 1D. DMs are the latest trend in Machine Learning (ML), having revolutionized the application fields of audio and image processing for denoising (DiffWave), synthesis (Stable Diffusion), and sequence modeling (STARS). The training of DMs proceeds by polluting a signal with noise until the signal has completely vanished into noise, then reversing the process by iterative denoising, conditioned on the latent signal representation. This makes DMs the ideal tool for seismic traces cleaning, as the model naturally learns from seismic sequences by denoising, which aligns the ML training procedure and the final task objective. In a preliminary evaluation, we used the Stanford Earthquake Dataset (STEAD); our proposed Diffusion-based Seismic Denoiser (DiffSD) outperforms the state-of-the-art DL methods on the Signal Noise Ratio (SNR),  Scale-Invariant Source to Distortion Ratio (SI-SDR), and Source to Distortion Ratio (SDR) metrics. DiffSD also yields qualitatively pleasing EQ traces out of visual inspection in time and frequency. Finally, DiffSD proceeds from regenerating clean EQ signals from noise, which opens the way to data-driven EQ sequence generations, potentially instrumental to further study and dataset augmentations.
+  doi = {https://doi.org/10.5194/egusphere-egu23-13811},
+  abstract = {Seismic waves contain information about the earthquake (EQ) source
+              and many forms of noise deriving from the seismometer,
+              anthropogenic effects, background noise associated with ocean waves
+              , and microseismic noise. Separating the noise from the EQ signal
+              is a critical first step in EQ physics and seismic waveform
+              analysis. However, this is difficult because optimal parameters for
+              filtering noise typically vary with time and may strongly alter the
+              shape of the waveform. A few recent works have employed Deep
+              Learning (DL) model for seismic denoising, among which we have
+              taken as a benchmark Deep Denoiser and SEDENOSS. These models turn
+              the noisy trace into a 2D signal (spectrograms) within the model to
+              denoise the traces, making the process pretty heavy. We propose a
+              novel DL-powered seismic denoising algorithm based on Diffusion
+              Models (DMs), keeping the signal in 1D. DMs are the latest trend in
+              Machine Learning (ML), having revolutionized the application fields
+              of audio and image processing for denoising (DiffWave), synthesis
+              (Stable Diffusion), and sequence modeling (STARS). The training of
+              DMs proceeds by polluting a signal with noise until the signal has
+              completely vanished into noise, then reversing the process by
+              iterative denoising, conditioned on the latent signal
+              representation. This makes DMs the ideal tool for seismic traces
+              cleaning, as the model naturally learns from seismic sequences by
+              denoising, which aligns the ML training procedure and the final
+              task objective. In a preliminary evaluation, we used the Stanford
+              Earthquake Dataset (STEAD); our proposed Diffusion-based Seismic
+              Denoiser (DiffSD) outperforms the state-of-the-art DL methods on
+              the Signal Noise Ratio (SNR), Scale-Invariant Source to Distortion
+              Ratio (SI-SDR), and Source to Distortion Ratio (SDR) metrics.
+              DiffSD also yields qualitatively pleasing EQ traces out of visual
+              inspection in time and frequency. Finally, DiffSD proceeds from
+              regenerating clean EQ signals from noise, which opens the way to
+              data-driven EQ sequence generations, potentially instrumental to
+              further study and dataset augmentations. },
 }
 
-}
 
 
 
 
 
 
-
-@InProceedings{Sofianos_2021_ICCV,
-    author    = {Sofianos, Theodoros and Sampieri, Alessio and Franco, Luca and Galasso, Fabio},
-    title     = {Space-Time-Separable Graph Convolutional Network for Pose Forecasting},
-    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
-    month     = {October},
-    year      = {2021},
-    pages     = {11209-11218},
-    html         = {https://openaccess.thecvf.com/content/ICCV2021/html/Sofianos_Space-Time-Separable_Graph_Convolutional_Network_for_Pose_Forecasting_ICCV_2021_paper.html},
-    arxiv       = {2110.04573},
-    abstract    = { Human pose forecasting is a complex structured-data sequence-modelling task, which has received increasing attention, also due to numerous potential applications. Research has mainly addressed the temporal dimension as time series and the interaction of human body joints with a kinematic tree or by a graph. This has decoupled the two aspects and leveraged progress from the relevant fields, but it has also limited the understanding of the complex structural joint spatio-temporal dynamics of the human pose. Here we propose a novel Space-Time-Separable Graph Convolutional Network (STS-GCN) for pose forecasting. For the first time, STS-GCN models the human pose dynamics only with a graph convolutional network (GCN), including the temporal evolution and the spatial joint interaction within a single-graph framework, which allows the cross-talk of motion and spatial correlations. Concurrently, STS-GCN is the first space-time-separable GCN: the space-time graph connectivity is factored into space and time affinity matrices, which bottlenecks the space-time cross-talk, while enabling full joint-joint and time-time correlations. Both affinity matrices are learnt end-to-end, which results in connections substantially deviating from the standard kinematic tree and the linear-time time series. In experimental evaluation on three complex, recent and large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18], STS-GCN outperforms the state-of-the-art, surpassing the current best technique [Mao et al. ECCV'20] by over 32% in average at the most difficult long-term predictions, while only requiring 1.7% of its parameters. We explain the results qualitatively and illustrate the graph interactions by the factored joint-joint and time-time learnt graph connections. Our source code is available at https://github.com/FraLuca/STSGCN
-    },
-    code = {https://github.com/FraLuca/STSGCN},
-    bibtex_show = true
-
+@inproceedings{Sofianos_2021_ICCV,
+  author = {Sofianos, Theodoros and Sampieri, Alessio and Franco, Luca and
+            Galasso, Fabio},
+  title = {Space-Time-Separable Graph Convolutional Network for Pose Forecasting
+           },
+  booktitle = {Proceedings of the IEEE/CVF International Conference on Computer
+               Vision (ICCV)},
+  month = {October},
+  year = {2021},
+  pages = {11209-11218},
+  html = {
+          https://openaccess.thecvf.com/content/ICCV2021/html/Sofianos_Space-Time-Separable_Graph_Convolutional_Network_for_Pose_Forecasting_ICCV_2021_paper.html
+          },
+  arxiv = {2110.04573},
+  abstract = { Human pose forecasting is a complex structured-data
+              sequence-modelling task, which has received increasing attention,
+              also due to numerous potential applications. Research has mainly
+              addressed the temporal dimension as time series and the interaction
+              of human body joints with a kinematic tree or by a graph. This has
+              decoupled the two aspects and leveraged progress from the relevant
+              fields, but it has also limited the understanding of the complex
+              structural joint spatio-temporal dynamics of the human pose. Here
+              we propose a novel Space-Time-Separable Graph Convolutional Network
+              (STS-GCN) for pose forecasting. For the first time, STS-GCN models
+              the human pose dynamics only with a graph convolutional network
+              (GCN), including the temporal evolution and the spatial joint
+              interaction within a single-graph framework, which allows the
+              cross-talk of motion and spatial correlations. Concurrently,
+              STS-GCN is the first space-time-separable GCN: the space-time graph
+              connectivity is factored into space and time affinity matrices,
+              which bottlenecks the space-time cross-talk, while enabling full
+              joint-joint and time-time correlations. Both affinity matrices are
+              learnt end-to-end, which results in connections substantially
+              deviating from the standard kinematic tree and the linear-time time
+              series. In experimental evaluation on three complex, recent and
+              large-scale benchmarks, Human3.6M [Ionescu et al. TPAMI'14], AMASS
+              [Mahmood et al. ICCV'19] and 3DPW [Von Marcard et al. ECCV'18],
+              STS-GCN outperforms the state-of-the-art, surpassing the current
+              best technique [Mao et al. ECCV'20] by over 32% in average at the
+              most difficult long-term predictions, while only requiring 1.7% of
+              its parameters. We explain the results qualitatively and illustrate
+              the graph interactions by the factored joint-joint and time-time
+              learnt graph connections. Our source code is available at
+              https://github.com/FraLuca/STSGCN },
+  code = {https://github.com/FraLuca/STSGCN},
+  bibtex_show = true,
 }
 
 
 @inproceedings{trappolini2022mesoscale,
-  title={Mesoscale precipitation nowcasting from weather radar data using space-time-separable graph convolutional networks},
-  author={Trappolini, Daniele and Scofano, Luca and Sampieri, Alessio and Messina, Francesco and Galasso, Fabio and Di Fabio, Saverio and Silvio Marzano, Frank},
-  booktitle={EGU General Assembly Conference Abstracts},
-  pages={EGU22--5361},
-  year={2022},
-  abstract={Forecasting weather systems are capable to model atmospheric phenomena at various space-time scales. At very short space-time nowcasting techniques are still relying on measured data processing from ground-based microwave radars and satellite-based geostationary spectrometers. In this respect, precipitation field nowcasting from a few minutes up to a few hours is one of the most challenging goals to provide rapid and accurate updated features for civil prevention and protection decision-makers (e.g., from emergency services, marine services, sport, and cultural events, air traffic control, emergency management, agricultural sector and moreover flood early-warning system). Deep learning precipitation nowcasting models, based on weather radar network reflectivity measurements, have recently exceeded the overall performance of traditional extrapolation models, becoming one of the hottest topics in this field. This work proposes a novel network architecture to increase the performance of deep learning mesoscale precipitation prediction. Since precipitation nowcasting can be viewed as a video prediction problem, we present an architecture based on Graph Convolutional Neural Network (GCNN) for video frame prediction. Our solution exploits, as a cornerstone, the topology of Space-Time-Separable Graph-Convolutional- Network (STS-GCN), originally used for posing forecasting. We have applied our model on the TAASRAD19 radar data set with the aim of comparing our performance with other models, namely the Stacked Generalization (SG) Trajectory Gated Recurrent Unit (TrajGRU) and S-PROG Spectral Lagrangian extrapolation program (S-PROG).The proposed model, named STSU-GCN (Space-Time-Separable Unet3d Graph Convolutional Network), has a structure composed of an encoder, decoder, and forecaster. The role of the encoder and decoder are accomplished by a Unet3d a structure borrowed with the specific purpose of modifying the spatial component, but not the temporal component. In the bottleneck of this Unet3D network, we use a graph-based forecaster. The performance of the STSU-GCN has been quantified using conventional metrics, such as the Critical Success Index (CSI), widely used in the meteorological community for the nowcasting task. Using TAASRAD19 radar data set and literature data, these CSI metrics have been applied to 4 different classes of rain rate, that is 5, 10, 20, 30 mm/h. Our STSU-GCN model has overperformed both TrajGRU and S-PROG in the classes 10 mm/h and 20 mm/h obtaining a CSI respectively of 0.148 and 0.097. On the other hand, STSU-GCN is underperforming in class 5mm per hour getting a CSI respectively of 0.099. Our STSU-GCN model is aligned with the results of the S-PROG benchmark, for the class 30 mm/h confirming a model skillful for classes with a high rain rate. In this work, we will also illustrate the results of the proposed STSU-GCN algorithm using case studies in the area of interest of the Italian Central Apennines during the summer of 2021. Statistical performances, potential developments, and critical issues of the STSU-GCN algorithm will be also discussed.
-
-  },
-  doi= {https://ui.adsabs.harvard.edu/link_gateway/2022EGUGA..24.5361T/doi:10.5194/egusphere-egu22-5361},
-  bibtex_show = true
+  title = {Mesoscale precipitation nowcasting from weather radar data using
+           space-time-separable graph convolutional networks},
+  author = {Trappolini, Daniele and Scofano, Luca and Sampieri, Alessio and
+            Messina, Francesco and Galasso, Fabio and Di Fabio, Saverio and
+            Silvio Marzano, Frank},
+  booktitle = {EGU General Assembly Conference Abstracts},
+  pages = {EGU22--5361},
+  year = {2022},
+  abstract = {Forecasting weather systems are capable to model atmospheric
+              phenomena at various space-time scales. At very short space-time
+              nowcasting techniques are still relying on measured data processing
+              from ground-based microwave radars and satellite-based
+              geostationary spectrometers. In this respect, precipitation field
+              nowcasting from a few minutes up to a few hours is one of the most
+              challenging goals to provide rapid and accurate updated features
+              for civil prevention and protection decision-makers (e.g., from
+              emergency services, marine services, sport, and cultural events,
+              air traffic control, emergency management, agricultural sector and
+              moreover flood early-warning system). Deep learning precipitation
+              nowcasting models, based on weather radar network reflectivity
+              measurements, have recently exceeded the overall performance of
+              traditional extrapolation models, becoming one of the hottest
+              topics in this field. This work proposes a novel network
+              architecture to increase the performance of deep learning mesoscale
+              precipitation prediction. Since precipitation nowcasting can be
+              viewed as a video prediction problem, we present an architecture
+              based on Graph Convolutional Neural Network (GCNN) for video frame
+              prediction. Our solution exploits, as a cornerstone, the topology
+              of Space-Time-Separable Graph-Convolutional- Network (STS-GCN),
+              originally used for posing forecasting. We have applied our model
+              on the TAASRAD19 radar data set with the aim of comparing our
+              performance with other models, namely the Stacked Generalization
+              (SG) Trajectory Gated Recurrent Unit (TrajGRU) and S-PROG Spectral
+              Lagrangian extrapolation program (S-PROG).The proposed model, named
+              STSU-GCN (Space-Time-Separable Unet3d Graph Convolutional Network),
+              has a structure composed of an encoder, decoder, and forecaster.
+              The role of the encoder and decoder are accomplished by a Unet3d a
+              structure borrowed with the specific purpose of modifying the
+              spatial component, but not the temporal component. In the
+              bottleneck of this Unet3D network, we use a graph-based forecaster.
+              The performance of the STSU-GCN has been quantified using
+              conventional metrics, such as the Critical Success Index (CSI),
+              widely used in the meteorological community for the nowcasting
+              task. Using TAASRAD19 radar data set and literature data, these CSI
+              metrics have been applied to 4 different classes of rain rate, that
+              is 5, 10, 20, 30 mm/h. Our STSU-GCN model has overperformed both
+              TrajGRU and S-PROG in the classes 10 mm/h and 20 mm/h obtaining a
+              CSI respectively of 0.148 and 0.097. On the other hand, STSU-GCN is
+              underperforming in class 5mm per hour getting a CSI respectively of
+              0.099. Our STSU-GCN model is aligned with the results of the S-PROG
+              benchmark, for the class 30 mm/h confirming a model skillful for
+              classes with a high rain rate. In this work, we will also
+              illustrate the results of the proposed STSU-GCN algorithm using
+              case studies in the area of interest of the Italian Central
+              Apennines during the summer of 2021. Statistical performances,
+              potential developments, and critical issues of the STSU-GCN
+              algorithm will be also discussed. },
+  doi = {
+         https://ui.adsabs.harvard.edu/link_gateway/2022EGUGA..24.5361T/doi:10.5194/egusphere-egu22-5361
+         },
+  bibtex_show = true,
 }
 
 @article{laurenti2022deep,
-  title={Deep learning for laboratory earthquake prediction and autoregressive forecasting of fault zone stress},
-  author={Laurenti, Laura and Tinti, Elisa and Galasso, Fabio and Franco, Luca and Marone, Chris},
-  journal={Earth and Planetary Science Letters},
-  volume={598},
-  pages={117825},
-  year={2022},
-  publisher={Elsevier},
-  abstract={Earthquake forecasting and prediction have long and in some cases sordid histories but recent work has rekindled interest based on advances in early warning, hazard assessment for induced seismicity and successful prediction of laboratory earthquakes. In the lab, frictional stick-slip events provide an analog for earthquakes and the seismic cycle. Labquakes are also ideal targets for machine learning (ML) because they can be produced in long sequences under controlled conditions. Indeed, recent works show that ML can predict several aspects of labquakes using fault zone acoustic emissions (AE). Here, we extend these works with: 1) deep learning (DL) methods for labquake prediction, 2) by introducing an autoregressive (AR) forecasting DL method to predict fault zone shear stress, and 3) by expanding the range of lab fault zones studied. The AR methods allow forecasting stress at future times via iterative predictions using previous measurements. Our DL methods outperform existing ML models and can predict based on limited training. We also explore forecasts beyond a single seismic cycle for aperiodic failure. We describe significant improvements to existing methods of labquake prediction and demonstrate: 1) that DL models based on Long-Short Term Memory and Convolution Neural Networks predict labquakes under conditions including pre-seismic creep, aperiodic events and alternating slow/fast events and 2) that fault zone stress can be predicted with fidelity, confirming that acoustic energy is a fingerprint of fault zone stress. Our DL methods predict time to start of failure (TTsF) and time to the end of Failure (TTeF) for labquakes. Interestingly, TTeF is successfully predicted in all seismic cycles, while the TTsF prediction varies with the amount of preseismic fault creep. We report AR methods to forecast the evolution of fault stress using three sequence modelling frameworks: LSTM, Temporal Convolution Network and Transformer Network. AR forecasting is distinct from existing predictive models, which predict only a target variable at a specific time. The results for forecasting beyond a single seismic cycle are limited but encouraging. Our ML/DL models outperform the state-of-the-art and our autoregressive model represents a novel framework that could enhance current methods of earthquake forecasting.
-
-  },
-  doi={https://doi.org/10.1016/j.epsl.2022.117825},
-  bibtex_show = true
+  title = {Deep learning for laboratory earthquake prediction and autoregressive
+           forecasting of fault zone stress},
+  author = {Laurenti, Laura and Tinti, Elisa and Galasso, Fabio and Franco, Luca
+            and Marone, Chris},
+  journal = {Earth and Planetary Science Letters},
+  volume = {598},
+  pages = {117825},
+  year = {2022},
+  publisher = {Elsevier},
+  abstract = {Earthquake forecasting and prediction have long and in some cases
+              sordid histories but recent work has rekindled interest based on
+              advances in early warning, hazard assessment for induced seismicity
+              and successful prediction of laboratory earthquakes. In the lab,
+              frictional stick-slip events provide an analog for earthquakes and
+              the seismic cycle. Labquakes are also ideal targets for machine
+              learning (ML) because they can be produced in long sequences under
+              controlled conditions. Indeed, recent works show that ML can
+              predict several aspects of labquakes using fault zone acoustic
+              emissions (AE). Here, we extend these works with: 1) deep learning
+              (DL) methods for labquake prediction, 2) by introducing an
+              autoregressive (AR) forecasting DL method to predict fault zone
+              shear stress, and 3) by expanding the range of lab fault zones
+              studied. The AR methods allow forecasting stress at future times
+              via iterative predictions using previous measurements. Our DL
+              methods outperform existing ML models and can predict based on
+              limited training. We also explore forecasts beyond a single seismic
+              cycle for aperiodic failure. We describe significant improvements
+              to existing methods of labquake prediction and demonstrate: 1) that
+              DL models based on Long-Short Term Memory and Convolution Neural
+              Networks predict labquakes under conditions including pre-seismic
+              creep, aperiodic events and alternating slow/fast events and 2)
+              that fault zone stress can be predicted with fidelity, confirming
+              that acoustic energy is a fingerprint of fault zone stress. Our DL
+              methods predict time to start of failure (TTsF) and time to the end
+              of Failure (TTeF) for labquakes. Interestingly, TTeF is
+              successfully predicted in all seismic cycles, while the TTsF
+              prediction varies with the amount of preseismic fault creep. We
+              report AR methods to forecast the evolution of fault stress using
+              three sequence modelling frameworks: LSTM, Temporal Convolution
+              Network and Transformer Network. AR forecasting is distinct from
+              existing predictive models, which predict only a target variable at
+              a specific time. The results for forecasting beyond a single
+              seismic cycle are limited but encouraging. Our ML/DL models
+              outperform the state-of-the-art and our autoregressive model
+              represents a novel framework that could enhance current methods of
+              earthquake forecasting. },
+  doi = {https://doi.org/10.1016/j.epsl.2022.117825},
+  bibtex_show = true,
 }
 
 
@@ -464,33 +1230,77 @@ abstract = {Considering the increasing aging of the population, multi-device mon
 
 
 @inproceedings{sampieri2022pose,
-  title={Pose Forecasting in Industrial Human-Robot Collaboration},
-  author={Sampieri, Alessio and Di Melendugno, Guido Maria D’Amely and Avogaro, Andrea and Cunico, Federico and Setti, Francesco and Skenderi, Geri and Cristani, Marco and Galasso, Fabio},
-  booktitle={European Conference on Computer Vision},
-  pages={51--69},
-  year={2022},
-  organization={Springer},
-  abstract = {
-            Pushing back the frontiers of collaborative robots in industrial environments, we propose a new Separable-Sparse Graph Convolutional Network (SeS-GCN) for pose forecasting. For the first time, SeS-GCN bottlenecks the interaction of the spatial, temporal and channel-wise dimensions in GCNs, and it learns sparse adjacency matrices by a teacher-student framework. Compared to the state-of-the-art, it only uses 1.72% of the parameters and it is ∼4 times faster, while still performing comparably in forecasting accuracy on Human3.6M at 1 s in the future, which enables cobots to be aware of human operators. As a second contribution, we present a new benchmark of Cobots and Humans in Industrial COllaboration (CHICO ). CHICO includes multi-view videos, 3D poses and trajectories of 20 human operators and cobots, engaging in 7 realistic industrial actions. Additionally, it reports 226 genuine collisions, taking place during the human-cobot interaction. We test SeS-GCN on CHICO for two important perception tasks in robotics: human pose forecasting, where it reaches an average error of 85.3 mm (MPJPE) at 1 sec in the future with a run time of 2.3 ms, and collision detection, by comparing the forecasted human motion with the known cobot motion, obtaining an F1-score of 0.64.
-  },
-  url= {https://link.springer.com/chapter/10.1007/978-3-031-19839-7_4},
-  code={https://github.com/AlessioSam/CHICO-PoseForecasting},
-  bibtex_show = true
+  title = {Pose Forecasting in Industrial Human-Robot Collaboration},
+  author = {Sampieri, Alessio and Di Melendugno, Guido Maria D’Amely and Avogaro
+            , Andrea and Cunico, Federico and Setti, Francesco and Skenderi, Geri
+            and Cristani, Marco and Galasso, Fabio},
+  booktitle = {European Conference on Computer Vision},
+  pages = {51--69},
+  year = {2022},
+  organization = {Springer},
+  abstract = { Pushing back the frontiers of collaborative robots in industrial
+              environments, we propose a new Separable-Sparse Graph Convolutional
+              Network (SeS-GCN) for pose forecasting. For the first time, SeS-GCN
+              bottlenecks the interaction of the spatial, temporal and
+              channel-wise dimensions in GCNs, and it learns sparse adjacency
+              matrices by a teacher-student framework. Compared to the
+              state-of-the-art, it only uses 1.72% of the parameters and it is ∼4
+              times faster, while still performing comparably in forecasting
+              accuracy on Human3.6M at 1 s in the future, which enables cobots to
+              be aware of human operators. As a second contribution, we present a
+              new benchmark of Cobots and Humans in Industrial COllaboration
+              (CHICO ). CHICO includes multi-view videos, 3D poses and
+              trajectories of 20 human operators and cobots, engaging in 7
+              realistic industrial actions. Additionally, it reports 226 genuine
+              collisions, taking place during the human-cobot interaction. We
+              test SeS-GCN on CHICO for two important perception tasks in
+              robotics: human pose forecasting, where it reaches an average error
+              of 85.3 mm (MPJPE) at 1 sec in the future with a run time of 2.3 ms
+              , and collision detection, by comparing the forecasted human motion
+              with the known cobot motion, obtaining an F1-score of 0.64. },
+  url = {https://link.springer.com/chapter/10.1007/978-3-031-19839-7_4},
+  code = {https://github.com/AlessioSam/CHICO-PoseForecasting},
+  bibtex_show = true,
 }
 
 
 @inproceedings{robbiano2022adversarial,
-  title={Adversarial branch architecture search for unsupervised domain adaptation},
-  author={Robbiano, Luca and Rahman, Muhammad Rameez Ur and Galasso, Fabio and Caputo, Barbara and Carlucci, Fabio Maria},
-  booktitle={Proceedings of the IEEE/CVF Winter Conference on Applications of Computer Vision},
-  pages={2918--2928},
-  year={2022},
-  abstract={Unsupervised Domain Adaptation (UDA) is a key issue in visual recognition, as it allows to bridge different visual domains enabling robust performances in the real world. To date, all proposed approaches rely on human expertise to manually adapt a given UDA method (e.g. DANN) to a specific backbone architecture (e.g. ResNet). This dependency on handcrafted designs limits the applicability of a given approach in time, as old methods need to be constantly adapted to novel backbones. Existing Neural Architecture Search (NAS) approaches cannot be directly applied to mitigate this issue, as they rely on labels that are not available in the UDA setting. Furthermore, most NAS methods search for full architectures, which precludes the use of pre-trained models, essential in a vast range of UDA settings for reaching SOTA results. To the best of our knowledge, no prior work has addressed these aspects in the context of NAS for UDA. Here we tackle both aspects with an Adversarial Branch Architecture Search for UDA (ABAS): i. we address the lack of target labels by a novel data-driven ensemble approach for model selection; and ii. we search for an auxiliary adversarial branch, attached to a pre-trained backbone, which drives the domain alignment. We extensively validate ABAS to improve two modern UDA techniques, DANN and ALDA, on three standard visual recognition datasets (Office31, Office-Home and PACS). In all cases, ABAS robustly finds the adversarial branch architectures and parameters which yield best performances. https://github.com/lr94/abas},
+  title = {Adversarial branch architecture search for unsupervised domain
+           adaptation},
+  author = {Robbiano, Luca and Rahman, Muhammad Rameez Ur and Galasso, Fabio and
+            Caputo, Barbara and Carlucci, Fabio Maria},
+  booktitle = {Proceedings of the IEEE/CVF Winter Conference on Applications of
+               Computer Vision},
+  pages = {2918--2928},
+  year = {2022},
+  abstract = {Unsupervised Domain Adaptation (UDA) is a key issue in visual
+              recognition, as it allows to bridge different visual domains
+              enabling robust performances in the real world. To date, all
+              proposed approaches rely on human expertise to manually adapt a
+              given UDA method (e.g. DANN) to a specific backbone architecture
+              (e.g. ResNet). This dependency on handcrafted designs limits the
+              applicability of a given approach in time, as old methods need to
+              be constantly adapted to novel backbones. Existing Neural
+              Architecture Search (NAS) approaches cannot be directly applied to
+              mitigate this issue, as they rely on labels that are not available
+              in the UDA setting. Furthermore, most NAS methods search for full
+              architectures, which precludes the use of pre-trained models,
+              essential in a vast range of UDA settings for reaching SOTA
+              results. To the best of our knowledge, no prior work has addressed
+              these aspects in the context of NAS for UDA. Here we tackle both
+              aspects with an Adversarial Branch Architecture Search for UDA
+              (ABAS): i. we address the lack of target labels by a novel
+              data-driven ensemble approach for model selection; and ii. we
+              search for an auxiliary adversarial branch, attached to a
+              pre-trained backbone, which drives the domain alignment. We
+              extensively validate ABAS to improve two modern UDA techniques,
+              DANN and ALDA, on three standard visual recognition datasets
+              (Office31, Office-Home and PACS). In all cases, ABAS robustly finds
+              the adversarial branch architectures and parameters which yield
+              best performances. https://github.com/lr94/abas},
   bibtex_show = true,
-  supp={https://openaccess.thecvf.com/content/WACV2022/supplemental/Robbiano_Adversarial_Branch_Architecture_WACV_2022_supplemental.pdf},
-  doi={https://doi.org/10.48550/arXiv.2102.06679},
-
+  supp = {
+          https://openaccess.thecvf.com/content/WACV2022/supplemental/Robbiano_Adversarial_Branch_Architecture_WACV_2022_supplemental.pdf
+          },
+  doi = {https://doi.org/10.48550/arXiv.2102.06679},
 }
-
-
-

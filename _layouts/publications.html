@@ -1,9 +1,9 @@
 ---
 layout: page
 ---
+
+<section class="publications-index">
+  {% bibliography --group_by year,type --group_order descending,ascending %}
+</section>
+
 {% include scripts/publications.html %}
-<div id="publications">
-  <section class="bg"></section>
-  <h1 class="title">{{ page.title }}</h1>
-  {% bibliography --group_by year --group_order descending %}
-</div>

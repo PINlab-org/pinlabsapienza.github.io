@@ -1,8 +1,9 @@
 - project:
     title: Graph Neural Networks for particle tracking in NA62 Experiment
     authors: Leonardo Plini, Gemma Tinti, Tommaso Spadaro, Fabio Galasso
-    event: # preprint
+    event: Nuovo Cimento C
     date: 2025
+    citekey: "Plini:2936731"
     image:
       path: "na62/teaser.jpg" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -11,8 +12,9 @@
 - project:
     title: Video Unlearning via Low-Rank Refusal Vector
     authors: Simone Facchiano, Stefano Serravalle, Matteo Migliarini, Edoardo De Matteis, Alessio Sampieri, Andrea Pilzer, Emanuele Rodolà, Indro Spinelli, Luca Franco, Fabio Galasso
-    event: # preprint
-    date: 2025
+    event: ICLR
+    date: 2026
+    citekey: facchiano2026video
     image:
       path: "video-unlearning/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -21,8 +23,9 @@
 - project:
     title: Human Motion Unlearning
     authors: Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso
-    event: # preprint
-    date: 2025
+    event: AAAI
+    date: 2026
+    citekey: dematteis2026hmu
     image:
       path: "hmu/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -32,8 +35,9 @@
 - project:
     title: Social EgoMesh Estimation
     authors: Luca Scofano, Alessio Sampieri, Edoardo De Matteis, Indro Spinelli, Fabio Galasso
-    event: WACV 2025
+    event: WACV
     date: 2025
+    citekey: Scofano_2025_WACV
     image:
       path: "seeme/teaser.jpg" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -42,8 +46,9 @@
 - project:
     title: Length-Aware Motion Synthesis via Latent Diffusion
     authors: Alessio Sampieri, Alessio Palma, Indro Spinelli, Fabio Galasso
-    event: ECCV 2024
+    event: ECCV
     date: 2024
+    citekey: sampieri2024lengthawaremotionsynthesislatent
     image:
       path: "ladiff/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -52,8 +57,9 @@
 - project:
     title: "PREGO: online mistake detection in PRocedural EGOcentric Videos"
     authors: Alessandro Flaborea, Guido Maria D'Amely Di Melendugno, Leonardo Plini, Luca Scofano, Edoardo De Matteis, Antonino Furnari, Giovanni Maria Farinella, Fabio Galasso
-    event: CVPR 2024
+    event: CVPR
     date: 2024
+    citekey: flaborea2024prego
     image:
       path: "prego/teaser.png" # path: assets/img/projects/
       alt: "Pictorial of the model"
@@ -62,8 +68,9 @@
 - project:
     title: Staged Contact-Aware Global Human Motion Forecasting
     authors: Luca Scofano,  Alessio Sampieri,  Elisabeth Schiele,  Edoardo De Matteis,  Laura Leal-Taixé,  and Fabio Galasso
-    event: BMVC 2023
+    event: BMVC
     date: 2023
+    citekey: scofano2023staged
     image:
       path: "stag/teaser.png" # path: assets/project/
       alt: "Pictorial of the model"
@@ -72,8 +79,9 @@
 - project:
     title: Multimodal Motion Conditioned Diffusion Model for Skeleton-based Video Anomaly Detection
     authors: Alessandro Flaborea, Luca Collorone, Guido D'Amely, Stefano D'Arrigo, Bardh Prenkaj and Fabio Galasso
-    event: ICCV 2023
+    event: ICCV
     date: 2023
+    citekey: flaborea2023mocodad
     image:
       path: "mocodad/mocodad.png" # path: assets/project/
       alt: "Pictorial of the model"
@@ -82,7 +90,9 @@
 - project:
     title: Hyperbolic Active Learning for Semantic Segmentation under Domain Shift
     authors: Luca Franco, Paolo Mandica, Konstantinos Kallidromitis, Yu-Teng Li, Devin Guillory and Fabio Galasso
-    date: 2023
+    event: ICML
+    date: 2024
+    citekey: franco2023halo
     image:
       path: "halo/halo.png" # path: assets/project/
       alt: "Teaser of the paper"
@@ -91,8 +101,9 @@
 - project:
     title: Best Practices for 2-Body Pose Forecasting
     authors: Muhammad Rameez Ur Rahman*,  Luca Scofano*,  Edoardo De Matteis,  Alessandro Flaborea,  Alessio Sampieri,  and Fabio Galasso
-    event: CVPR 2023 Precognition Workshop
+    event: CVPR Workshops
     date: 2023
+    citekey: Rahman_2023_CVPR
     image:
       path: "2body/model_ext.png" # path: assets/project/
       alt: "Teaser of the paper"
@@ -101,8 +112,9 @@
 - project:
     title: Are we certain it's anomalous?
     authors: Alessandro Flaborea, Bardh Prenkaj, Bharti Munjal, Marco Aurelio Sterpa, Dario Aragona, Luca Podo and Fabio Galasso
-    event: CVPR 2023 Visual Anomaly and Novelty Detection (VAND) Workshop
+    event: CVPR Workshops
     date: 2023
+    citekey: Flaborea_2023_CVPR
     image:
       path: "hypad/teaser_hypad.png" # path: assets/project/
       alt: "Teaser of the paper"
@@ -113,6 +125,7 @@
     authors: Luca Scofano,  Alessio Sampieri,  Giuseppe Re,  Matteo Almanza,  Alessandro Panconesi,  and Fabio Galasso
     event: Neural Processing Letters
     date: 2024
+    citekey: scofano2024nba
     image:
       path: "nba/teaser.png" # path: assets/project/
       alt: "Teaser of the paper"

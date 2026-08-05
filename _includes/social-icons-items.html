@@ -1,0 +1,68 @@
+{% assign social = include.social %}
+{% if social %}
+  {% assign webpage = social.webpage | default: social.Webpage %}
+  {% assign email = social.email | default: social.Email %}
+  {% assign orcid = social.orcid | default: social.Orcid %}
+  {% assign scholar = social.scholar | default: social.Scholar %}
+  {% assign research_gate = social.research_gate | default: social.Research_gate %}
+  {% assign linkedin = social.linkedin | default: social.LinkedIn %}
+  {% assign github = social.github | default: social.GitHub %}
+  {% assign twitter = social.twitter | default: social.Twitter %}
+  {% assign instagram = social.instagram | default: social.Instagram %}
+
+  {% if twitter %}
+    {% if twitter contains 'http' %}
+      <li class="list-inline-item"><a target="blank" href="{{ twitter }}"><i class="fab fa-twitter"></i></a></li>
+    {% else %}
+      <li class="list-inline-item"><a target="blank" href="https://twitter.com/{{ twitter }}"><i class="fab fa-twitter"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if linkedin %}
+    <li class="list-inline-item"><a target="blank" href="{{ linkedin }}"><i class="fab fa-linkedin"></i></a></li>
+  {% endif %}
+
+  {% if github %}
+    {% if github contains 'http' %}
+      <li class="list-inline-item"><a target="blank" href="{{ github }}"><i class="fab fa-github"></i></a></li>
+    {% else %}
+      <li class="list-inline-item"><a target="blank" href="https://github.com/{{ github }}"><i class="fab fa-github"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if webpage %}
+    <li class="list-inline-item"><a target="blank" href="{{ webpage }}"><i class="fas fa-globe"></i></a></li>
+  {% endif %}
+
+  {% if scholar %}
+    {% if scholar contains 'http' %}
+      <li class="list-inline-item"><a target="blank" href="{{ scholar }}"><i class="fab fa-google"></i></a></li>
+    {% else %}
+      <li class="list-inline-item"><a target="blank" href="https://scholar.google.com/citations?user={{ scholar }}"><i class="fab fa-google"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if orcid %}
+    <li class="list-inline-item"><a target="blank" href="https://orcid.org/{{ orcid }}"><i class="fab fa-orcid"></i></a></li>
+  {% endif %}
+
+  {% if research_gate %}
+    {% if research_gate contains 'http' %}
+      <li class="list-inline-item"><a target="blank" href="{{ research_gate }}"><i class="fab fa-researchgate"></i></a></li>
+    {% else %}
+      <li class="list-inline-item"><a target="blank" href="https://www.researchgate.net/profile/{{ research_gate }}"><i class="fab fa-researchgate"></i></a></li>
+    {% endif %}
+  {% endif %}
+
+  {% if email %}
+    <li class="list-inline-item"><a target="blank" href="mailto:{{ email | encode_email }}"><i class="fas fa-envelope"></i></a></li>
+  {% endif %}
+
+  {% if instagram %}
+    {% if instagram contains 'http' %}
+      <li class="list-inline-item"><a target="blank" href="{{ instagram }}"><i class="fab fa-instagram"></i></a></li>
+    {% else %}
+      <li class="list-inline-item"><a target="blank" href="https://instagram.com/{{ instagram }}"><i class="fab fa-instagram"></i></a></li>
+    {% endif %}
+  {% endif %}
+{% endif %}

@@ -1,0 +1,46 @@
+---
+layout: default
+---
+
+<article class="academic-project{% if page.layout == 'video-unlearning' %} academic-project-wide{% endif %}">
+  {% if page.citekey %}
+    {% capture ignored_citekey_output %}{% nocite page.citekey %}{% endcapture %}
+    {% bibliography --cited --template projectheader %}
+  {% else %}
+    <header class="academic-project-header">
+      <h1>{{ page.title }}</h1>
+      {% if page.venue %}<p class="academic-project-venue">{{ page.venue }}</p>{% endif %}
+      {% if page.authors %}<p class="academic-project-authors">{{ page.authors }}</p>{% endif %}
+      <div class="academic-project-links" aria-label="Project links">
+        {% if page.paper %}<a href="{{ page.paper }}" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Paper</a>{% endif %}
+        {% if page.code %}<a href="{{ page.code }}" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>{% endif %}
+        {% if page.video %}<a href="{{ page.video }}" target="_blank" rel="noopener"><i class="fas fa-play" aria-hidden="true"></i> Video</a>{% endif %}
+        {% if page.slides %}<a href="{{ page.slides }}" target="_blank" rel="noopener"><i class="fas fa-chalkboard" aria-hidden="true"></i> Slides</a>{% endif %}
+      </div>
+    </header>
+  {% endif %}
+
+    {% if page.teaser %}
+      <figure class="academic-project-teaser">
+        <img src="{{ page.teaser | relative_url }}" alt="{{ page.teaser_alt | default: page.title }}">
+      </figure>
+    {% endif %}
+
+  {% if page.abstract %}
+    <section class="academic-project-abstract">
+      <h2>Abstract</h2>
+      <p>{{ page.abstract }}</p>
+    </section>
+  {% elsif page.citekey %}
+    {% bibliography --cited --template projectabstract %}
+  {% endif %}
+
+  <div class="academic-project-content">
+    {{ content }}
+    {% if page.citekey %}
+      {% bibliography --cited --template projectbibtex %}
+    {% endif %}
+  </div>
+</article>
+
+<script src="{{ '/assets/js/project-page.js' | relative_url }}" defer></script>

@@ -1,97 +1,30 @@
 {%- assign entry = include.entry -%}
-{% if entry.type == "thesis" -%}
-  {{reference}}
-{%- else %}
-  <!-- Author -->
-  <div class="author">
-    {%- for author in entry.author_array -%}
-      {%- assign author_is_self = false -%}
-      {%- if author.last == site.scholar.last_name %}
-        {%- if site.scholar.first_name contains author.first -%}
-          {%- assign author_is_self = true -%}
-        {%- endif -%}
-      {%- endif -%}
-      {%- assign coauthor_url = nil -%}
-      {%- if site.data.coauthors[author.last] -%}
-        {%- for coauthor in site.data.coauthors[author.last] -%}
-          {%- if coauthor.firstname contains author.first -%}
-            {%- assign coauthor_url = coauthor.url -%}
-            {%- break -%}
-          {%- endif -%}
-        {%- endfor -%}
-      {%- endif -%}
-      
-      {%- if forloop.length == 1 -%}
-        {%- if author_is_self %}
-          <!-- <em>{{author.last}} {{author.first}}</em> -->
-          <em>{{author.first}} {{author.last}}</em>
-        {%- else -%}
-          <!-- {{author.last}} {{author.first}} -->
-          {{author.first}} {{author.last}}
+{%- capture authors -%}
+  {%- for author in entry.author_array -%}
+    {{ author.first }} {{ author.last }}{% unless forloop.last %}, {% endunless %}
+  {%- endfor -%}
+{%- endcapture -%}
 
-        {%- endif -%}
-      {%- else -%}
-        {%- unless forloop.last -%}
-          {% if author_is_self %}
-            <!-- <em>{{author.last}} {{author.first}}</em>,&nbsp; -->
-            <em>{{author.first}} {{author.last}}</em>,&nbsp;
+{%- assign venue = "" -%}
+{%- if entry.type == "article" -%}
+  {%- capture venue -%}{{ entry.journal }}{%- endcapture -%}
+{%- elsif entry.type == "inproceedings" -%}
+  {%- capture venue -%}{{ entry.booktitle }}{%- endcapture -%}
+{%- elsif entry.type == "phdthesis" -%}
+  {%- capture venue -%}PhD thesis, {{ entry.school }}{%- endcapture -%}
+{%- elsif entry.type == "mastersthesis" -%}
+  {%- capture venue -%}Master's thesis, {{ entry.school }}{%- endcapture -%}
+{%- elsif entry.eprint -%}
+  {%- capture venue -%}arXiv preprint{%- endcapture -%}
+{%- endif -%}
 
-          {%- else -%}
-            {% if coauthor_url -%}
-              <a href="{{coauthor_url}}" target="_blank" rel="noopener noreferrer">{{author.last}} {{author.first}}</a>,&nbsp;
-            {%- else -%}
-              <!-- {{author.last}} {{author.first}},&nbsp; -->
-              {{author.first}} {{author.last}},&nbsp;
-            {%- endif -%}
-          {%- endif -%}
-        {%- else -%}
-          {% if author_is_self -%}
-            <!-- and <em>{{author.last}} {{author.first}}</em> -->
-            and <em>{{author.first}} {{author.last}}</em>
-          {% else -%}
-            {%- if coauthor_url -%}
-              and <a href="{{coauthor_url}}" target="_blank" rel="noopener noreferrer">{{author.last}} {{author.first}}</a>
-            {% else -%}
-              <!-- and {{author.last}} {{author.first}} -->
-              and {{author.first}} {{author.last}}
-            {%- endif -%}
-          {%- endif -%}
-        {%- endunless -%}
-      {%- endif -%}
-    {%- endfor %}
-  </div>
-
-  <!-- Journal/Book title and date -->
-  {% assign thirdLine = "" %}
-  {% if entry.type == "article" -%}
-    {%- capture thirdLine -%}{{entry.journal}}{%- endcapture -%}
-  {%- elsif entry.type == "inproceedings" -%}
-    {%- capture thirdLine -%}In {{entry.booktitle}}{%- endcapture -%}
-  {%- elsif entry.type == "phdthesis" -%}
-    {%- capture thirdLine -%}PhD thesis, {{entry.school}}{%- endcapture -%}
-  {%- elsif entry.type == "mastersthesis" -%}
-    {% if entry.thesis_type -%}
-      {%- capture thirdLine -%}{{entry.thesis_type}}, {{entry.school}}{%- endcapture -%}
-    {% else %}
-      {%- capture thirdLine -%}Master's thesis, {{entry.school}}{%- endcapture -%}
-    {%- endif -%}
-  {%- endif -%}
-  {%- if entry.volume -%}
-    {%- capture thirdLine -%}{{ thirdLine }}{% if thirdLine != blank %}, {% endif %}vol. {{ entry.volume }}{%- endcapture -%}
-  {%- endif -%}
-  {%- if entry.pages -%}
-    {%- capture thirdLine -%}{{ thirdLine }}{% if thirdLine != blank %}, {% endif %}pp. {{ entry.pages }}{%- endcapture -%}
-  {%- endif -%}
-  {%- if entry.month -%}
-    {%- capture thirdLine -%}{{ thirdLine }}{% if thirdLine != blank %}, {% endif %}{{ entry.month | capitalize }}{%- endcapture -%}
-  {%- endif -%}
-  {%- if entry.year -%}
-    {%- capture thirdLine -%}{{ thirdLine }}{% if thirdLine != blank %}, {% endif %}{{ entry.year }}{%- endcapture -%}
-  {%- endif -%}
-  <!-- Title -->
-  <div class="title_pub">{{entry.title}}</div>
-
-  <div class="third-line">
-    {{ thirdLine | strip }}
+<div class="publication-title">{{ entry.title }}</div>
+<div class="publication-authors">{{ authors | strip }}</div>
+{% if entry.volume or entry.pages -%}
+  <div class="publication-details">
+    {% if entry.volume %}Vol. {{ entry.volume }}{% endif %}{% if entry.volume and entry.pages %}, {% endif %}{% if entry.pages %}pp. {{ entry.pages }}{% endif %}
   </div>
 {%- endif %}
+<div class="publication-venue">
+  {{ venue | strip | default: "Publication" }}{% if entry.year %} <span>{{ entry.year }}</span>{% endif %}
+</div>
