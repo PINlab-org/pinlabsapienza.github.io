@@ -1,11 +1,432 @@
-<!DOCTYPE html> <html lang="en"> <head> <!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=G-8FPXWY1XK9"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-8FPXWY1XK9'); </script> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!-- Favicon code from realfavicongenerator.net --> <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> <link rel="manifest" href="/site.webmanifest"> <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8b51a3"> <meta name="msapplication-TileColor" content="#822433"> <meta name="theme-color" content="#ffffff"> <!--jQuery--> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <!-- Fonts & Icons --> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous"> <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous"> <link href='//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'> <!-- CSS --> <link rel="stylesheet" href="/assets/css/main.css"> <!-- Begin Jekyll SEO tag v2.9.0 --> <title>Perception and Intelligence Laboratory (PINlab) | Department of Computer Science, Sapienza University of Rome, Italy</title> <meta name="generator" content="Jekyll v4.4.1" /> <meta property="og:title" content="Perception and Intelligence Laboratory (PINlab)" /> <meta name="author" content="PINlab" /> <meta property="og:locale" content="en_GB" /> <meta name="description" content="Human Motion Unlearning" /> <meta name="twitter:description" property="og:description" content="Human Motion Unlearning" /> <meta property="og:site_name" content="Perception and Intelligence Laboratory (PINlab)" /> <meta property="og:type" content="website" /> <meta name="twitter:card" content="summary" /> <meta name="twitter:title" content="Perception and Intelligence Laboratory (PINlab)" /> <meta name="twitter:site" content="@SapienzaPINlab" /> <meta name="twitter:creator" content="@PINlab" /> <script type="application/ld+json"> {"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"PINlab"},"description":"Human Motion Unlearning","headline":"Perception and Intelligence Laboratory (PINlab)","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png"},"name":"PINlab"},"url":"/hmu.html"}</script> <!-- End Jekyll SEO tag --> </head> <!--jQuery--> <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script> <nav class="navbar is-fixed-top" role="navigation" aria-label="main navigation" id="navbar"> <div class="container"> <!-- logo or branding image on left side --> <div class="navbar-brand"> <a class="navbar-brand" href="/"> <img src="/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png" width="60" height="60" class="d-inline-block align-top" alt=""> </a> <div role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"data-target="navbar-menu"> <span aria-hidden="true"></span> <span aria-hidden="true"></span> <span aria-hidden="true"></span> </div> </div> <!-- children of navbar-menu must be navbar-start and/or navbar-end --> <div class="navbar-menu" id="navbar-menu"> <div class="navbar-end"> <a class="navbar-item " href="/">Home</a> <a class="navbar-item" href="/people">People</a> <a class="navbar-item" href="/publications">Publications</a> <!-- <a class="navbar-item" href="/presentations">Presentations</a> --> <a class="navbar-item" href="/projects">Projects</a> <!-- <a class="navbar-item" href="/blog">Blog</a> <a class="navbar-item" href="/tags">Tags</a> --> </div> </div> </div> </nav> <script> document.addEventListener('DOMContentLoaded', function () { /* Get all "navbar-burger" elements */ var $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0); /* Check if there are any navbar burgers */ if ($navbarBurgers.length > 0) { /* Add a click event on each of them */ $navbarBurgers.forEach(function ($el) { $el.addEventListener('click', function () { /* Get the target from the "data-target" attribute */ var target = $el.dataset.target; var $target = document.getElementById(target); /* Toggle the class on both the "navbar-burger" and the "navbar-menu" */ $el.classList.toggle('is-active'); $target.classList.toggle('is-active'); }); }); } }); </script> <body> <div class="container"> <head> <link rel="stylesheet" href="/assets/css/edo.css"> </head> <style> .video-row { display: flex; flex-wrap: nowrap; overflow-x: auto; gap: 16px; padding-bottom: 10px; } .video-row .video-item { flex: 0 0 auto; /* Prevent shrinking, but allow growing */ width: clamp(200px, 25vw, 400px); /* Responsive width */ text-align: center; } .video-item video { width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); } .citation { background-color: #f9f9f9; border-left: 4px solid #ccc; padding: 1em; margin-top: 3em; font-family: monospace; } </style> <div id="hmu"> <section class="bg"></section> <h1 class="title"></h1> <div class="wrapper"> <div align="center"> <h1>Human Motion Unlearning</h1> <h2><i>arXiv preprint</i></h2> <h5 style="color:grey"> <i>Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso</i> </h5> </div> <hr> <p align="center"> <button type="button" class="btn btn-primary"><a href="#abstract">Abstract</a></button> <button type="button" class="btn btn-primary"><a href="https://arxiv.org/pdf/2503.18674">Paper</a></button> <button type="button" class="btn btn-primary"><a href="https://github.com/Mamiglia/hmu">Code</a></button> </p> <hr> <p align="center"> <img src="/assets/img/projects/hmu/teaser.png" width="700" height="600" alt="teaser image" /> </p> <hr> <h1 id="abstract">Abstract</h1> <p> We introduce the task of human motion unlearning to prevent the synthesis of toxic animations while preserving the general text-to-motion generative performance. Unlearning toxic motions is challenging as those can be generated from explicit text prompts and from implicit toxic combinations of safe motions (e.g., "kicking" is "loading and swinging a leg"). We propose the first motion unlearning benchmark by filtering toxic motions from the large and recent text-to-motion datasets of HumanML3D and Motion-X. We propose baselines, by adapting state-of-the-art image unlearning techniques to process spatio-temporal signals. Finally, we propose a novel motion unlearning model based on Latent Code Replacement, which we dub LCR. LCR is training-free and suitable to the discrete latent spaces of state-of-the-art text-to-motion diffusion models. LCR is simple and consistently outperforms baselines qualitatively and quantitatively. </p> <hr> <section id="forget" class="example-videos"> <h2>Forget Examples</h2> <p>Given a prompt describing a toxic action, we demonstrate how our LCR approach effectively unlearns it while preserving smoothness and motion realism.</p> <p><strong>Prompt:</strong> "A man kicks with force."</p> <div class="video-row"> <div class="video-item"> <h4>MoMask Dr</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.png"> <source src="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>Base MoMask</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.png"> <source src="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>LCR</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.png"> <source src="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>UCE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.png"> <source src="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>RECE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.png"> <source src="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4"> </video> </div> </div> <p><strong>Prompt:</strong> "A man punches forward violently."</p> <div class="video-row"> <div class="video-item"> <h4>MoMask Dr</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>Base MoMask</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>LCR</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>UCE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>RECE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> </div> <h2>Complex Motions</h2> <p>It's particularly remarkable that the generated motions are mostly identical to the original model, and that LCR is capable of erasing only the unsafe part of the motion, without altering the rest.</p> <p><strong>Prompt:</strong> "A man does a run-up to kick something lying on the ground."</p> <div class="video-row"> <div class="video-item"> <h4>Base MoMask</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>LCR</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>UCE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>RECE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.png"> <source src="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4"> </video> </div> </div> <p><strong>Prompt:</strong> "A man stands up from the ground and then kicks with force."</p> <div class="video-row"> <div class="video-item"> <h4>Base MoMask</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.png"> <source src="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>LCR</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.png"> <source src="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>UCE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.png"> <source src="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>RECE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.png"> <source src="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4"> </video> </div> </div> <p><strong>Prompt:</strong> "A man punches and then kicks the enemy."</p> <div class="video-row"> <div class="video-item"> <h4>Base MoMask</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.png"> <source src="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>LCR</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.png"> <source src="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>UCE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.png"> <source src="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4"> </video> </div> <div class="video-item"> <h4>RECE</h4> <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.png"> <source src="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4"> </video> </div> </div> </section> <h2>Citation</h2> <p>If you find this work useful in your research, please cite our paper:</p><pre class="citation">
-    @misc{dematteis2025humanmotionunlearning,
-      title={Human Motion Unlearning}, 
-      author={Edoardo De Matteis and Matteo Migliarini and Alessio Sampieri and Indro Spinelli and Fabio Galasso},
-      year={2025},
-      eprint={2503.18674},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV},
-      url={https://arxiv.org/abs/2503.18674}, 
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/main.css">
+
+  <!-- Favicon code from realfavicongenerator.net -->
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#8b51a3">
+<meta name="msapplication-TileColor" content="#822433">
+<meta name="theme-color" content="#ffffff">
+
+  <!-- Begin Jekyll SEO tag v2.9.0 -->
+<title>Human Motion Unlearning | PINlab</title>
+<meta name="generator" content="Jekyll v4.4.1" />
+<meta property="og:title" content="Human Motion Unlearning" />
+<meta name="author" content="PINlab" />
+<meta property="og:locale" content="en_GB" />
+<meta name="description" content="Human Motion Unlearning" />
+<meta name="twitter:description" property="og:description" content="Human Motion Unlearning" />
+<meta property="og:site_name" content="PINlab" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Human Motion Unlearning" />
+<meta name="twitter:site" content="@SapienzaPINlab" />
+<meta name="twitter:creator" content="@PINlab" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","author":{"@type":"Person","name":"PINlab"},"description":"Human Motion Unlearning","headline":"Human Motion Unlearning","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"/assets/img/Concluded_logo_y_padded_squared_Lesspadded.png"},"name":"PINlab"},"url":"/hmu.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+</head>
+
+
+  <body>
+
+    <div class="container-fluid">
+      <div><header class="site-header" role="banner">
+  
+
+  <nav class="navbar navbar-expand-sm navbar-light px-0">
+
+    <!-- Navbar brand -->
+    <a class="navbar-brand" href="/">PINlab</a>
+
+    <!-- Navbar toggler button -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+      aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Navbar links -->
+    <div class="collapse navbar-collapse" id="navbarToggler">
+      <ul class="navbar-nav mr-auto">
+        
+        <li>
+          <a class="nav-link" href="/people">People</a>
+        </li>
+        
+
+        
+        <li>
+          <a class="nav-link" href="/publications">Publications</a>
+        </li>
+        
+
+        
+        <li>
+          <a class="nav-link" href="/projects">Projects</a>
+        </li>
+        
+      </ul>
+    </div>
+
+  </nav>
+
+</header>
+</div>
+
+      <div class="mt-3">
+        <article class="academic-project">
+  
+    
+    <ol class="bibliography"><li><header class="academic-project-header">
+  <h1>Human Motion Unlearning</h1>
+  <p class="academic-project-venue">Proceedings of the AAAI Conference on Artificial Intelligence 2026</p>
+  <p class="academic-project-authors">Edoardo De Matteis, Matteo Migliarini, Alessio Sampieri, Indro Spinelli, Fabio Galasso</p>
+  <div class="academic-project-links" aria-label="Project links">
+    <a href="https://ojs.aaai.org/index.php/AAAI/article/view/37351" target="_blank" rel="noopener"><i class="fas fa-file-pdf" aria-hidden="true"></i> Paper</a>
+    <a href="https://github.com/Mamiglia/hmu" target="_blank" rel="noopener"><i class="fab fa-github" aria-hidden="true"></i> Code</a>
+    
+    
+  </div>
+</header>
+</li></ol>
+  
+
+    
+      <figure class="academic-project-teaser">
+        <img src="/assets/img/projects/hmu/teaser.png" alt="Human Motion Unlearning teaser">
+      </figure>
+    
+
+  
+    <section class="academic-project-abstract">
+      <h2>Abstract</h2>
+      <p>We introduce the task of human motion unlearning to prevent the synthesis of toxic animations while preserving the general text-to-motion generative performance. Unlearning toxic motions is challenging as those can be generated from explicit text prompts and from implicit toxic combinations of safe motions (e.g., "kicking" is "loading and swinging a leg"). We propose the first motion unlearning benchmark by filtering toxic motions from the large and recent text-to-motion datasets of HumanML3D and Motion-X. We propose baselines, by adapting state-of-the-art image unlearning techniques to process spatio-temporal signals. Finally, we propose a novel motion unlearning model based on Latent Code Replacement, which we dub LCR. LCR is training-free and suitable to the discrete latent spaces of state-of-the-art text-to-motion diffusion models. LCR is simple and consistently outperforms baselines qualitatively and quantitatively.</p>
+    </section>
+  
+
+  <div class="academic-project-content">
+    <style>
+.video-row {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 16px;
+    margin: 1rem 0 2rem;
+    padding-bottom: 10px;
     }
-    </pre></section> </div> </div> <!-- Footer --> <footer> <div class="footer"> Copyright © 2022 <a href=""></a>. Powered by Jekyll with <a href="https://github.com/chrjabs/Grape-Academic-Theme">Grape Academic Theme</a>. </div> </footer> </div> </body> </html>
+.video-row .video-item {
+flex: 0 0 auto; /* Prevent shrinking, but allow growing */
+width: clamp(200px, 25vw, 400px); /* Responsive width */
+text-align: center;
+}
+.video-row-carousel {
+position: relative;
+}
+.video-row-carousel .video-row {
+scroll-behavior: smooth;
+}
+.video-row-control {
+position: absolute;
+z-index: 1;
+top: calc(50% - 1rem);
+display: grid;
+width: 2rem;
+height: 2rem;
+padding: 0;
+border: 1px solid #7a1632;
+border-radius: 50%;
+background: #fff;
+color: #7a1632;
+place-items: center;
+}
+.video-row-control:hover,
+.video-row-control:focus-visible {
+background: #7a1632;
+color: #fff;
+}
+.video-row-control.previous {
+left: -1rem;
+}
+.video-row-control.next {
+right: -1rem;
+}
+.video-item video {
+width: 100%;
+height: auto;
+border-radius: 8px;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+</style>
+<section id="forget" class="example-videos">
+        <h2>Forget Examples</h2>
+        <p>Given a prompt describing a toxic action, we demonstrate how our LCR approach effectively unlearns it while preserving smoothness and motion realism.</p>
+        <p><strong>Prompt:</strong> "A man kicks with force."</p>
+        <div class="video-row">
+          <div class="video-item">
+            <h4>MoMask Dr</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="assets/hmu/toxic3_dr/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>Base MoMask</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="assets/hmu/toxic3_base/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>LCR</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="assets/hmu/toxic3_cp32/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>UCE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="assets/hmu/toxic3_uce/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>RECE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.png">
+              <source src="assets/hmu/toxic3_rece/joints/2/sample2_repeat0_len52_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p><strong>Prompt:</strong> "A man punches forward violently."</p>
+        <div class="video-row">
+          <div class="video-item">
+            <h4>MoMask Dr</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_dr/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>Base MoMask</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_base/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>LCR</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_cp32/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>UCE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_uce/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>RECE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_rece/joints/5/sample5_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <h2>Complex Motions</h2>
+        <p>It's particularly remarkable that the generated motions are mostly identical to the original model, and that LCR is capable of erasing only the unsafe part of the motion, without altering the rest.</p>
+        <p><strong>Prompt:</strong> "A man does a run-up to kick something lying on the ground."</p>
+        <div class="video-row">
+          <div class="video-item">
+            <h4>Base MoMask</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_base/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>LCR</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_cp32/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>UCE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_uce/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>RECE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.png">
+              <source src="assets/hmu/toxic_rece/joints/2/sample2_repeat0_len80_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p><strong>Prompt:</strong> "A man stands up from the ground and then kicks with force."</p>
+        <div class="video-row">
+          <div class="video-item">
+            <h4>Base MoMask</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="assets/hmu/toxic3_base/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>LCR</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="assets/hmu/toxic3_cp32/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>UCE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="assets/hmu/toxic3_uce/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>RECE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.png">
+              <source src="assets/hmu/toxic3_rece/joints/5/sample5_repeat0_len128_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+        <p><strong>Prompt:</strong> "A man punches and then kicks the enemy."</p>
+        <div class="video-row">
+          <div class="video-item">
+            <h4>Base MoMask</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="assets/hmu/toxic_base/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>LCR</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="assets/hmu/toxic_cp32/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>UCE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="assets/hmu/toxic_uce/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <h4>RECE</h4>
+            <video autoplay loop muted playsinline poster="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.png">
+              <source src="assets/hmu/toxic_rece/joints/10/sample10_repeat0_len196_mesh.mp4" type="video/mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+
+<script>
+document.querySelectorAll('.academic-project-content .video-row').forEach((row) => {
+  const carousel = document.createElement('div');
+  carousel.className = 'video-row-carousel';
+  row.parentNode.insertBefore(carousel, row);
+  carousel.appendChild(row);
+
+  [['previous', -0.8, 'Previous examples', 'fa-chevron-left'], ['next', 0.8, 'Next examples', 'fa-chevron-right']].forEach(([direction, amount, label, icon]) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `video-row-control ${direction}`;
+    button.setAttribute('aria-label', label);
+    button.title = label;
+    button.innerHTML = `<i class="fas ${icon}" aria-hidden="true"></i>`;
+    button.addEventListener('click', () => row.scrollBy({ left: row.clientWidth * amount, behavior: 'smooth' }));
+    carousel.appendChild(button);
+  });
+});
+</script>
+
+    
+      <ol class="bibliography"><li><section class="project-citation">
+  <h2>Citation</h2>
+  <p>If you find this work useful in your research, please cite our paper:</p>
+  <div class="publication-panel">
+    <pre><code>@inproceedings{dematteis2026hmu,
+  title = {Human Motion Unlearning},
+  volume = {40},
+  url = {https://ojs.aaai.org/index.php/AAAI/article/view/37351},
+  doi = {10.1609/aaai.v40i5.37351},
+  number = {5},
+  booktitle = {Proceedings of the AAAI Conference on Artificial Intelligence},
+  author = {De Matteis, Edoardo and Migliarini, Matteo and Sampieri, Alessio and Spinelli, Indro and Galasso, Fabio},
+  year = {2026},
+  month = mar,
+  pages = {3533-3541},
+}
+</code></pre>
+    <button type="button" class="publication-copy" data-copy-citation><i class="fas fa-copy" aria-hidden="true"></i> Copy</button>
+  </div>
+</section>
+</li></ol>
+    
+  </div>
+</article>
+
+<script src="/assets/js/project-page.js" defer></script>
+
+      </div>
+
+      <div>
+        <div id="footer" class="site-footer mt-5">
+  <div class="mt-3">
+    <div class="row d-flex">
+
+      <div class="col-sm-6">
+        <p class="font-weight-bold">PINlab</p>
+        <a class="footer-affiliation-logo" href="https://www.uniroma1.it/en/pagina-strutturale/home" target="_blank" rel="noopener">
+          <img src="/assets/img/sapienza-logo.png" alt="Sapienza University of Rome">
+        </a>
+        <a class="footer-pinlab-logo" href="/" aria-label="PINlab home">
+          <img src="/assets/img/full_logo.jpeg" alt="PINlab">
+        </a>
+      </div>
+
+      <div class="col-sm-3">
+        <p class="font-weight-bold">Links</p>
+        <ul class="list-unstyled">
+          <li><a href="https://github.com/PINlabSapienza">Github</a></li>
+          <li><a href="https://twitter.com/SapienzaPINlab">Twitter</a></li>
+        </ul>
+      </div>
+
+      <div class="col-sm-3">
+        <p class="font-weight-bold">Contact</p>
+
+        Department of Computer Science<br>
+        Sapienza University of Rome<br>
+        Italy<br>
+        <a href="mailto:pinlab.sapienza@gmail.com">pinlab.sapienza@gmail.com</a>
+      </div>
+    </div>
+
+    <div class="footer-copyright text-center py-3">
+      © 2026 PINlab
+      <span class="d-block">Built with <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a> and design adapted from <a href="https://github.com/rt2lab/rt2lab.github.io" target="_blank" rel="noopener">RT2Lab</a>.</span>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+
+  </body>
+
+</html>
