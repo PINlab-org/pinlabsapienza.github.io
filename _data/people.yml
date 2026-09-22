@@ -651,6 +651,32 @@
     instagram:
 
 - people:
+  image: \assets\img\people\hao.jpg # do not change
+  name: Xuanhao Fan
+  status: Ph.D. Student
+  category: "Student"
+
+  social:
+    webpage:
+    email: xuanhao.fan@uniroma1.it
+    orcid:
+    scholar: 
+    publons:
+    research_gate:
+    dblp: # Full URL
+    semantic_scholar: # Full URL
+    linkedin:
+    github: 
+    gitlab:
+    bitbucket:
+    google_plus:
+    mastodon:
+    twitter:
+    youtube:
+    facebook:
+    instagram:
+
+- people:
   image: \assets\img\people\stefanoS.jpeg # do not change
   name: Stefano Saravalle
   status: Ph.D. Student
